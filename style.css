@@ -247,10 +247,10 @@ body.has-promo .nav {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 40%;
-  height: 70vh;
-  min-height: 500px;
-  max-height: 760px;
+  width: 46%;
+  height: 78vh;
+  min-height: 560px;
+  max-height: 840px;
   z-index: 4;
   pointer-events: none;
 }
@@ -297,15 +297,15 @@ body.has-promo .nav {
   animation: float-badge-3 5.5s ease-in-out infinite;
 }
 
-/* People image — bottom right with a taller 70vh visual height */
+/* People image — bottom right with a larger hero presence */
 .hero__right {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 40%;
-  height: 70vh;
-  min-height: 500px;
-  max-height: 760px;
+  width: 46%;
+  height: 78vh;
+  min-height: 560px;
+  max-height: 840px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
