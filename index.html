@@ -1260,6 +1260,7 @@
         promoBar.style.height = '0';
         promoBar.style.opacity = '0';
         promoBar.style.padding = '0';
+        promoBar.dataset.dismissed = 'true';
         document.body.classList.remove('has-promo');
         localStorage.setItem('promo-dismissed', 'true');
         setTimeout(() => {
@@ -1269,14 +1270,29 @@
     }
   }
 
-  // Floating Navbar scroll transition
+  // Floating Navbar scroll transition + hide promo bar on scroll
   const navElement = document.querySelector('.nav');
+  const promoBarEl = document.getElementById('promo-bar');
   if (navElement) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
         navElement.classList.add('scrolled');
+        // Hide promo bar on scroll
+        if (promoBarEl && !promoBarEl.dataset.dismissed) {
+          promoBarEl.style.height = '0';
+          promoBarEl.style.opacity = '0';
+          promoBarEl.style.padding = '0';
+          document.body.classList.remove('has-promo');
+        }
       } else {
         navElement.classList.remove('scrolled');
+        // Show promo bar when back at top (unless manually dismissed)
+        if (promoBarEl && !promoBarEl.dataset.dismissed && localStorage.getItem('promo-dismissed') !== 'true') {
+          promoBarEl.style.height = '';
+          promoBarEl.style.opacity = '';
+          promoBarEl.style.padding = '';
+          document.body.classList.add('has-promo');
+        }
       }
     });
   }

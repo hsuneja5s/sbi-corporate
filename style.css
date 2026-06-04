@@ -88,17 +88,9 @@ body.has-promo .nav {
 }
 
 .nav.scrolled {
-  top: 0;
-  width: 100%;
-  max-width: 100%;
-  border-radius: 0;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 30px rgba(0, 33, 71, 0.05);
-  height: 68px;
+  top: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 32px rgba(0, 33, 71, 0.1);
 }
 
 .nav__inner {
