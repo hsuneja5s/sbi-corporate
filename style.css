@@ -338,74 +338,42 @@ body.has-promo .nav {
   justify-content: flex-start;
 }
 
-.hero__mockup-container {
+.hero__right-placeholder {
   position: relative;
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.persona-frame {
-  width: 320px;
-  height: 400px;
-  border-radius: 36px;
-  border: 4px solid rgba(255, 255, 255, 0.5);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 24px 60px rgba(0, 33, 71, 0.25);
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-}
-
-.persona-frame__img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center bottom;
+  min-height: 480px;
 }
 
-.persona-frame__overlay-card {
+.hero__right {
   position: absolute;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 18px;
-  padding: 10px 14px;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
   display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 8px 24px rgba(0, 33, 71, 0.15);
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.overlay-card__logo img {
-  height: 24px;
-  width: auto;
-}
-
-.overlay-card__info {
+.hero__personas-wrap {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  -webkit-mask-image: linear-gradient(135deg, transparent 15%, black 45%);
+  mask-image: linear-gradient(135deg, transparent 15%, black 45%);
 }
 
-.overlay-card__label {
-  font-size: 11px;
-  color: var(--color-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-}
-
-.overlay-card__value {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--color-navy);
+.hero__personas-img {
+  max-width: 100%;
+  max-height: 85%;
+  object-fit: contain;
+  object-position: right bottom;
 }
 
 .floating-badge {
@@ -432,20 +400,20 @@ body.has-promo .nav {
 }
 
 .badge-1 {
-  top: 10%;
-  left: -30px;
+  top: 15%;
+  left: 20px;
   animation: float-badge-1 5s ease-in-out infinite;
 }
 
 .badge-2 {
-  bottom: 28%;
-  right: -40px;
+  top: 45%;
+  right: 10px;
   animation: float-badge-2 6s ease-in-out infinite;
 }
 
 .badge-3 {
-  bottom: 8%;
-  left: -20px;
+  bottom: 15%;
+  left: 40px;
   animation: float-badge-3 5.5s ease-in-out infinite;
 }
 
