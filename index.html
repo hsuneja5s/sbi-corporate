@@ -86,116 +86,78 @@
      HERO
      ============================================= -->
 <section class="hero">
-  <div class="hero__content">
-    <!-- Trust badges -->
-    <div class="hero__badges">
-      <span class="hero__badge">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-          <path d="M6 1L7.5 4.5H11L8 7L9 11L6 9L3 11L4 7L1 4.5H4.5L6 1Z" fill="white" fill-opacity="0.8"/>
-        </svg>
-        200+ Years of Trust
-      </span>
-      <span class="hero__badge">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-          <circle cx="6" cy="6" r="5" stroke="white" stroke-opacity="0.8" stroke-width="1.5"/>
-          <path d="M4 6L5.5 7.5L8 4.5" stroke="white" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        Government-backed
-      </span>
-      <span class="hero__badge">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-          <rect x="1" y="2" width="10" height="8" rx="1" stroke="white" stroke-opacity="0.8" stroke-width="1.5"/>
-          <path d="M1 5H11" stroke="white" stroke-opacity="0.8" stroke-width="1.5"/>
-        </svg>
-        India's Largest Bank
-      </span>
-    </div>
+  <div class="hero__fade"></div>
+  <div class="container hero__container">
+    <!-- Left Column: Content -->
+    <div class="hero__left">
+      <!-- Heading -->
+      <h1 class="hero__title">
+        Banking at the Heart of<br>
+        <span class="accent">India's Growth</span>
+      </h1>
+      
+      <!-- Subtitle -->
+      <p class="hero__subtitle">Choose your journey to get started with custom savings accounts, loan benefits, and credit card offers.</p>
 
-    <!-- Heading -->
-    <h1 class="hero__title">
-      Banking at the Heart of<br>
-      <span class="accent">India's Growth</span>
-    </h1>
+      <!-- CTA tabs -->
+      <div class="hero__tabs-wrapper">
+        <div class="tab-list" role="tablist" id="hero-tabs">
+          <button class="tab-list__item" role="tab" data-tab="student">Student</button>
+          <button class="tab-list__item active" role="tab" aria-selected="true" data-tab="salaried">Salaried</button>
+          <button class="tab-list__item" role="tab" data-tab="business">Business Owner</button>
+          <button class="tab-list__item" role="tab" data-tab="retiree">Retiree</button>
+          <button class="tab-list__item" role="tab" data-tab="nri">NRI</button>
+        </div>
 
-    <!-- Stats row -->
-    <div class="hero__stats">
-      <span class="hero__stat">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/>
-          <path d="M5 8L7 10L11 6" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        22,000+ Branches
-      </span>
-      <span class="hero__stats-sep">|</span>
-      <span class="hero__stat">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/>
-          <path d="M5 8L7 10L11 6" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        62,000+ ATMs
-      </span>
-      <span class="hero__stats-sep">|</span>
-      <span class="hero__stat">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/>
-          <path d="M5 8L7 10L11 6" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        450M+ Customers
-      </span>
-    </div>
-
-    <!-- CTA tabs -->
-    <p class="hero__cta-label">Choose your journey to get started</p>
-
-    <div class="hero__tabs-wrapper">
-      <div class="tab-list" role="tablist" id="hero-tabs">
-        <button class="tab-list__item" role="tab" data-tab="student">Student</button>
-        <button class="tab-list__item active" role="tab" aria-selected="true" data-tab="salaried">Salaried</button>
-        <button class="tab-list__item" role="tab" data-tab="business">Business Owner</button>
-        <button class="tab-list__item" role="tab" data-tab="retiree">Retiree</button>
-        <button class="tab-list__item" role="tab" data-tab="nri">NRI</button>
-      </div>
-
-      <div class="tab-panel-card" id="hero-panel-card">
-        <p class="tab-panel-card__title" id="hero-panel-title">Maximize your earnings with custom salary benefits and credit card offers</p>
-        <div class="tab-panel-card__actions">
-          <a href="#" class="btn btn--primary" id="hero-panel-btn-primary">
-            <span class="btn-text">Start Salary Journey</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8H13M9 4L13 8L9 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-          <a href="#" class="btn btn--outline" id="hero-panel-btn-outline">Open Account Online</a>
+        <div class="tab-panel-card" id="hero-panel-card">
+          <p class="tab-panel-card__title" id="hero-panel-title">Maximize your earnings with custom salary benefits and credit card offers</p>
+          <div class="tab-panel-card__actions">
+            <a href="#" class="btn btn--primary" id="hero-panel-btn-primary">
+              <span class="btn-text">Start Salary Journey</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8H13M9 4L13 8L9 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#" class="btn btn--outline" id="hero-panel-btn-outline">Open Account Online</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Security row -->
-    <div class="hero__security">
-      <span class="hero__security-item">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-          <circle cx="6" cy="6" r="5" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
-          <path d="M4 6L5.5 7.5L8.5 4.5" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" stroke-linecap="round"/>
-        </svg>
-        SSL Secured
-      </span>
-      <span class="hero__security-item">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-          <circle cx="6" cy="6" r="5" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
-          <path d="M4 6L5.5 7.5L8.5 4.5" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" stroke-linecap="round"/>
-        </svg>
-        RBI Regulated
-      </span>
-      <span class="hero__security-item">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-          <circle cx="6" cy="6" r="5" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
-          <path d="M4 6L5.5 7.5L8.5 4.5" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" stroke-linecap="round"/>
-        </svg>
-        Your data is safe with us
-      </span>
+    <!-- Right Column: Visual Mockup -->
+    <div class="hero__right">
+      <div class="hero__mockup-container">
+        <!-- Floating Glass Badges -->
+        <div class="floating-badge badge-1">
+          <span class="badge-icon">👥</span>
+          <span class="badge-text">450M+ Customers</span>
+        </div>
+        <div class="floating-badge badge-2">
+          <span class="badge-icon">🏛️</span>
+          <span class="badge-text">22,000+ Branches</span>
+        </div>
+        <div class="floating-badge badge-3">
+          <span class="badge-icon">💳</span>
+          <span class="badge-text">62,000+ ATMs</span>
+        </div>
+        
+        <!-- Persona Frame -->
+        <div class="persona-frame">
+          <img src="images/hero_personas.png" alt="SBI Personas (Student, Salaried, Retiree)" class="persona-frame__img" />
+          <!-- Inner card overlay -->
+          <div class="persona-frame__overlay-card">
+            <div class="overlay-card__logo">
+              <img src="images/SBI-Logo-new-removebg-preview.webp" alt="SBI" />
+            </div>
+            <div class="overlay-card__info">
+              <span class="overlay-card__label">SBI YONO Accounts</span>
+              <span class="overlay-card__value">Active & Secure</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="hero__fade"></div>
 </section>
 
 <!-- =============================================
@@ -1203,7 +1165,7 @@
     });
   }
 
-  // Close promo banner announcement logic
+  // Close promo banner announcement logic and nav class sync
   const promoBar = document.getElementById('promo-bar');
   const promoCloseBtn = document.getElementById('promo-bar-close');
   if (promoBar && promoCloseBtn) {
@@ -1211,16 +1173,30 @@
     if (localStorage.getItem('promo-dismissed') === 'true') {
       promoBar.style.display = 'none';
     } else {
+      document.body.classList.add('has-promo');
       promoCloseBtn.addEventListener('click', () => {
         promoBar.style.height = '0';
         promoBar.style.opacity = '0';
         promoBar.style.padding = '0';
+        document.body.classList.remove('has-promo');
         localStorage.setItem('promo-dismissed', 'true');
         setTimeout(() => {
           promoBar.style.display = 'none';
         }, 200);
       });
     }
+  }
+
+  // Floating Navbar scroll transition
+  const navElement = document.querySelector('.nav');
+  if (navElement) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navElement.classList.add('scrolled');
+      } else {
+        navElement.classList.remove('scrolled');
+      }
+    });
   }
 
   // Promo Carousel Autoplay and Indicators
