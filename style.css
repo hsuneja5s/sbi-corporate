@@ -1095,3 +1095,13 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .justify-center { justify-content: center; }
 .justify-between { justify-content: space-between; }
 .w-full { width: 100%; }
+
+/* Tab content transition for smooth, low cognitive load updates */
+#hero-panel-card, #journey-products-grid, #journey-testimonial-card, #banking-products-grid {
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(4px);
+}
