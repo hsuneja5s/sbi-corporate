@@ -11,6 +11,17 @@
 </head>
 <body>
 
+<div class="promo-bar" id="promo-bar">
+  <div class="container">
+    <div class="promo-bar__inner">
+      <span class="promo-bar__tag">Offer</span>
+      <span class="promo-bar__text">Zero Processing Fee on SBI Home Loans. Limited period offer!</span>
+      <a href="#" class="promo-bar__link">Apply Now →</a>
+      <button class="promo-bar__close" id="promo-bar-close" aria-label="Close Announcement">&times;</button>
+    </div>
+  </div>
+</div>
+
 <!-- =============================================
      NAVIGATION
      ============================================= -->
@@ -592,6 +603,31 @@
 </section>
 
 <!-- =============================================
+     PROMOTIONAL BANNER
+     ============================================= -->
+<section class="promo-section">
+  <div class="container">
+    <div class="promo-banner">
+      <div class="promo-banner__content">
+        <span class="promo-banner__badge">Special Fixed Deposit</span>
+        <h3 class="promo-banner__title">SBI Amrit Kalash Scheme</h3>
+        <p class="promo-banner__desc">Secure your savings and earn attractive interest returns up to 7.60% p.a. for a specific tenure of 400 days.</p>
+        <div class="promo-banner__actions">
+          <a href="#" class="btn btn--primary">Invest Now</a>
+          <a href="#" class="btn btn--outline" style="background:transparent;color:white;border-color:rgba(255,255,255,0.4)">Calculate Yield</a>
+        </div>
+      </div>
+      <div class="promo-banner__visual">
+        <div class="promo-visual-card">
+          <div class="promo-visual-rate">7.60%</div>
+          <div class="promo-visual-label">Max Interest Rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
      BANKING PRODUCTS & SERVICES
      ============================================= -->
 <section class="section">
@@ -1121,6 +1157,26 @@
         }
       });
     });
+  }
+
+  // Close promo banner announcement logic
+  const promoBar = document.getElementById('promo-bar');
+  const promoCloseBtn = document.getElementById('promo-bar-close');
+  if (promoBar && promoCloseBtn) {
+    // Check if dismissed previously
+    if (localStorage.getItem('promo-dismissed') === 'true') {
+      promoBar.style.display = 'none';
+    } else {
+      promoCloseBtn.addEventListener('click', () => {
+        promoBar.style.height = '0';
+        promoBar.style.opacity = '0';
+        promoBar.style.padding = '0';
+        localStorage.setItem('promo-dismissed', 'true');
+        setTimeout(() => {
+          promoBar.style.display = 'none';
+        }, 200);
+      });
+    }
   }
 </script>
 
