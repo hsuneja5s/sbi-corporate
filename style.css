@@ -174,7 +174,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .hero {
   position: relative;
   min-height: 962px;
-  background: linear-gradient(149deg, #002147 0%, #012653 10%, #032b5f 20%, #033170 30%, #053679 40%, #073c86 50%, #0a4193 60%, #0d47a1 70%);
+  background: linear-gradient(149deg, rgba(0, 33, 71, 0.8) 0%, rgba(13, 71, 161, 0.85) 100%), url('images/hero_bg.png') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -728,9 +728,15 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
-.testimonial-card__avatar img { width: 32px; height: 32px; }
+.testimonial-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
 .testimonial-card__quote {
   font-size: 18px;
@@ -888,18 +894,18 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   align-items: center;
 }
 
-.phone-frame {
-  width: 240px;
-  height: 480px;
-  background: rgba(255,255,255,0.1);
-  border: 2px solid rgba(255,255,255,0.2);
-  border-radius: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255,255,255,0.4);
-  font-size: 14px;
-  font-weight: 500;
+.yono__app-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 520px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.yono__app-image:hover {
+  transform: translateY(-8px) scale(1.02);
 }
 
 /* =============================================
