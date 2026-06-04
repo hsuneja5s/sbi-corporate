@@ -1,0 +1,7 @@
+.DS_Store
+.gemini/
+.vercel/
+node_modules/
+dist/
+build/
+*.log
