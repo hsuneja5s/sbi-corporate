@@ -83,17 +83,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   flex-shrink: 0;
 }
 
-.nav__logo-icon {
-  width: 32px;
+.nav__logo-img {
   height: 32px;
-  background: var(--color-blue);
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 14px;
-  font-weight: 700;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav__links {
