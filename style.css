@@ -1168,110 +1168,77 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   background: var(--color-bg-light);
 }
 
-.promo-banner {
-  background: linear-gradient(135deg, var(--color-navy) 0%, #063162 100%);
-  color: white;
-  border-radius: var(--radius-lg);
-  padding: 48px;
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 48px;
-  align-items: center;
-  box-shadow: 0 10px 30px rgba(0, 33, 71, 0.15);
+.promo-carousel {
   position: relative;
+  width: 100%;
+  max-width: 1472px;
+  margin-inline: auto;
+  border-radius: var(--radius-lg);
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 33, 71, 0.12);
+  background: #ececf0;
+  aspect-ratio: 1820 / 831;
 }
 
-.promo-banner::before {
-  content: '';
+.promo-carousel__track-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.promo-carousel__track {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.promo-carousel__slide {
   position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(circle, rgba(255,179,0,0.1) 0%, transparent 70%);
-  border-radius: 50%;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
   pointer-events: none;
 }
 
-.promo-banner__badge {
-  display: inline-flex;
-  padding: 3px 10px;
-  background: rgba(255,179,0,0.2);
-  border: 1px solid rgba(255,179,0,0.3);
-  border-radius: var(--radius-pill);
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--color-gold);
-  margin-bottom: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  align-self: flex-start;
-  width: fit-content;
+.promo-carousel__slide.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.promo-banner__content {
+.promo-carousel__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.promo-carousel__nav {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  flex-direction: column;
+  gap: 8px;
+  z-index: 10;
 }
 
-.promo-banner__title {
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: 0.25px;
-  margin-bottom: 8px;
-  color: white;
+.promo-carousel__indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.25s, transform 0.25s;
 }
 
-.promo-banner__desc {
-  font-size: 16px;
-  color: rgba(255,255,255,0.8);
-  margin-bottom: 24px;
-  line-height: 1.5;
-  max-width: 600px;
+.promo-carousel__indicator:hover {
+  background: rgba(255, 255, 255, 0.8);
 }
 
-.promo-banner__actions {
-  display: flex;
-  gap: 12px;
-}
-
-.promo-banner__visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.promo-visual-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: var(--radius-lg);
-  padding: 24px 32px;
-  text-align: center;
-  backdrop-filter: blur(8px);
-  min-width: 200px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  animation: float 4s ease-in-out infinite;
-}
-
-.promo-visual-rate {
-  font-size: 40px;
-  font-weight: 800;
-  color: var(--color-gold);
-  line-height: 1.1;
-  margin-bottom: 4px;
-}
-
-.promo-visual-label {
-  font-size: 13px;
-  color: rgba(255,255,255,0.7);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0px); }
+.promo-carousel__indicator.active {
+  background: white;
+  transform: scale(1.2);
 }

@@ -603,25 +603,30 @@
 </section>
 
 <!-- =============================================
-     PROMOTIONAL BANNER
+     PROMOTIONAL BANNER CAROUSEL
      ============================================= -->
 <section class="promo-section">
   <div class="container">
-    <div class="promo-banner">
-      <div class="promo-banner__content">
-        <span class="promo-banner__badge">Special Fixed Deposit</span>
-        <h3 class="promo-banner__title">SBI Amrit Kalash Scheme</h3>
-        <p class="promo-banner__desc">Secure your savings and earn attractive interest returns up to 7.60% p.a. for a specific tenure of 400 days.</p>
-        <div class="promo-banner__actions">
-          <a href="#" class="btn btn--primary">Invest Now</a>
-          <a href="#" class="btn btn--outline" style="background:transparent;color:white;border-color:rgba(255,255,255,0.4)">Calculate Yield</a>
-        </div>
+    <div class="promo-carousel">
+      <div class="promo-carousel__track-container">
+        <ul class="promo-carousel__track" id="promo-carousel-track">
+          <li class="promo-carousel__slide active">
+            <img src="https://sbi.bank.in/documents/16012/44015527/Bank.SBI+English.jpg/286209bc-f7f7-d74a-c32c-6c85eec22ae1?t=1742360021250" alt="SBI Home Loans Special Rates Offer" />
+          </li>
+          <li class="promo-carousel__slide">
+            <img src="https://sbi.bank.in/documents/16012/52964925/SBI_Contact_Center_Web-Banner_1820px-X-831px-English+%282%29.jpg/be83a6ca-03ef-39ff-4e88-3a4948d91ed9?t=1766467245103" alt="SBI Contact Centre Support Services" />
+          </li>
+          <li class="promo-carousel__slide">
+            <img src="https://sbi.bank.in/documents/16012/44015527/230424-SBI_MSME_Loan_Banner--1.jpg/e3910e1a-0361-07f4-9499-abf71ba3baec?t=1713876610017" alt="SBI MSME Loans for Businesses" />
+          </li>
+        </ul>
       </div>
-      <div class="promo-banner__visual">
-        <div class="promo-visual-card">
-          <div class="promo-visual-rate">7.60%</div>
-          <div class="promo-visual-label">Max Interest Rate</div>
-        </div>
+      
+      <!-- Dots indicator -->
+      <div class="promo-carousel__nav" id="promo-carousel-nav">
+        <button class="promo-carousel__indicator active" aria-label="Slide 1"></button>
+        <button class="promo-carousel__indicator" aria-label="Slide 2"></button>
+        <button class="promo-carousel__indicator" aria-label="Slide 3"></button>
       </div>
     </div>
   </div>
@@ -1177,6 +1182,44 @@
         }, 200);
       });
     }
+  }
+
+  // Promo Carousel Autoplay and Indicators
+  const track = document.getElementById('promo-carousel-track');
+  const nav = document.getElementById('promo-carousel-nav');
+  if (track && nav) {
+    const slides = Array.from(track.children);
+    const indicators = Array.from(nav.children);
+    let currentIndex = 0;
+    let autoplayTimer;
+
+    function showSlide(index) {
+      slides[currentIndex].classList.remove('active');
+      indicators[currentIndex].classList.remove('active');
+      
+      currentIndex = index;
+      slides[currentIndex].classList.add('active');
+      indicators[currentIndex].classList.add('active');
+    }
+
+    function nextSlide() {
+      const nextIndex = (currentIndex + 1) % slides.length;
+      showSlide(nextIndex);
+    }
+
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        clearInterval(autoplayTimer);
+        showSlide(index);
+        startAutoplay();
+      });
+    });
+
+    function startAutoplay() {
+      autoplayTimer = setInterval(nextSlide, 5000);
+    }
+
+    startAutoplay();
   }
 </script>
 
