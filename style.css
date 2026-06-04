@@ -1242,3 +1242,163 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   background: white;
   transform: scale(1.2);
 }
+
+/* =============================================
+   Credit Cards Showcase (Revolut Style)
+   ============================================= */
+.cards-showcase-section {
+  background: #0d0d11;
+  color: white;
+  padding: 96px 0;
+  overflow: hidden;
+}
+
+.showcase__header {
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+  margin-bottom: 48px;
+}
+
+.showcase__title {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.8px;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.showcase__subtitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.showcase__cta-btn {
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  padding: 12px 28px;
+  background: white;
+  color: #0d0d11;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.showcase__cta-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+}
+
+/* 3D Deck Container */
+.deck-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 1500px;
+}
+
+.glass-screen {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: none;
+  border-radius: 24px 24px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  transform-style: preserve-3d;
+  transform: rotateX(16deg) rotateY(-5deg);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.cards-deck {
+  display: flex;
+  gap: 16px;
+  transform-style: preserve-3d;
+  padding-bottom: 40px;
+  position: relative;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.deck-card {
+  width: 180px;
+  aspect-ratio: 1 / 1.58;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: -10px 15px 30px rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  transform: rotateY(-36deg) rotateX(10deg) rotateZ(5deg);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease, border-color 0.4s ease, background 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.deck-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotate(90deg) scale(1.58);
+  transition: opacity 0.4s ease;
+}
+
+/* Hover cards micro-animations */
+.deck-card:hover {
+  transform: rotateY(-20deg) rotateX(5deg) rotateZ(2deg) translateY(-28px) translateZ(30px);
+  box-shadow: -15px 25px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Virtual Card glow state */
+.deck-card.virtual {
+  background: rgba(0, 229, 255, 0.03);
+  border-color: rgba(0, 229, 255, 0.35);
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.15), inset 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.deck-card.virtual::after {
+  content: 'VIRTUAL';
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(0, 229, 255, 0.8);
+  letter-spacing: 2px;
+  transform: translateZ(10px);
+}
+
+/* Toggle buttons */
+.deck-toggle {
+  display: flex;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-pill);
+  padding: 4px;
+  margin-top: 40px;
+}
+
+.deck-toggle__btn {
+  padding: 10px 24px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  transition: background 0.2s, color 0.2s;
+  background: transparent;
+  border: none;
+}
+
+.deck-toggle__btn.active {
+  background: white;
+  color: #0d0d11;
+}
