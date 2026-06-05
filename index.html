@@ -692,16 +692,18 @@
      ============================================= -->
   <section class="cards-showcase-section" id="cards-showcase">
     <div class="cards-sticky">
-      
-      <!-- Top Header Container (Aligned to grid) -->
-      <div class="container">
-        <div class="cards-header">
-          <div class="cards-header-left">
-            <span class="cards-section-tag">Premium Collection</span>
-            <h2 class="cards-section-title">Elevate your spend</h2>
-          </div>
-          <div class="cards-header-right">
-            <p class="cards-section-desc">Earn points on your purchases with one of our premium credit cards. Then redeem them for Airline Miles, luxury shopping vouchers, and travel rewards. T&amp;C apply.</p>
+
+      <!-- Header overlays the full-bleed columns -->
+      <div class="cards-header-overlay">
+        <div class="container">
+          <div class="cards-header">
+            <div class="cards-header-left">
+              <span class="cards-section-tag">Premium Collection</span>
+              <h2 class="cards-section-title">Elevate your spend</h2>
+            </div>
+            <div class="cards-header-right">
+              <p class="cards-section-desc">Earn points on your purchases with one of our premium credit cards. Then redeem them for Airline Miles, luxury shopping vouchers, and travel rewards. T&amp;C apply.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -754,27 +756,6 @@
           </div>
         </div>
 
-      </div>
-
-      <!-- Bottom Axis Container (Aligned to grid) -->
-      <div class="container">
-        <div class="cards-axis">
-          <div class="axis-item active" data-index="1">
-            <span class="axis-num">01</span>
-            <span class="axis-name">AURUM</span>
-          </div>
-          <div class="axis-item" data-index="2">
-            <span class="axis-num">02</span>
-            <span class="axis-name">ELITE</span>
-          </div>
-          <div class="axis-item" data-index="3">
-            <span class="axis-num">03</span>
-            <span class="axis-name">SIMPLYSAVE</span>
-          </div>
-          <div class="axis-indicator-line">
-            <div class="axis-indicator-fill" id="axis-indicator"></div>
-          </div>
-        </div>
       </div>
 
     </div>
@@ -1376,8 +1357,6 @@
     // Cards Showcase — Fluid Scroll-Driven Width Accordion (Palladio-style)
     const cardsSection = document.getElementById('cards-showcase');
     const cardsColumns = document.querySelectorAll('.cards-column');
-    const axisItems = document.querySelectorAll('.axis-item');
-    const indicatorFill = document.getElementById('axis-indicator');
 
     if (cardsSection && cardsColumns.length > 0) {
       // Linear interpolation helper
@@ -1406,14 +1385,11 @@
         return startKf.widths.map((w, idx) => lerp(w, endKf.widths[idx], t));
       }
 
-      // Set initial state immediately
+      // Set initial state
       const initialWidths = keyframes[0].widths;
       cardsColumns.forEach((col, idx) => {
         col.style.width = initialWidths[idx] + '%';
         if (idx === 0) col.classList.add('dominant');
-      });
-      axisItems.forEach((item, idx) => {
-        if (idx === 0) item.classList.add('active');
       });
 
       // Scroll-driven animation
@@ -1428,33 +1404,9 @@
         let progress = Math.max(0, Math.min(1, scrolled / maxScroll));
         const widths = getWidths(progress);
 
-        // Apply widths and determine dominant column
-        let dominantIdx = 0;
-        let maxW = 0;
         cardsColumns.forEach((col, idx) => {
           col.style.width = widths[idx] + '%';
-          if (widths[idx] > maxW) { maxW = widths[idx]; dominantIdx = idx; }
           col.classList.toggle('dominant', widths[idx] >= 50);
-        });
-
-        // Update axis indicators
-        axisItems.forEach((item, idx) => {
-          item.classList.toggle('active', idx === dominantIdx);
-        });
-
-        // Progress bar fills from 0% to 100%
-        if (indicatorFill) {
-          indicatorFill.style.width = (progress * 100) + '%';
-        }
-      });
-
-      // Click axis items → scroll to corresponding keyframe position
-      axisItems.forEach((item, index) => {
-        item.addEventListener('click', () => {
-          const sectionTop = cardsSection.offsetTop;
-          const maxScroll = cardsSection.offsetHeight - window.innerHeight;
-          const targetProgress = index * 0.5; // 0, 0.5, 1.0
-          window.scrollTo({ top: sectionTop + targetProgress * maxScroll, behavior: 'smooth' });
         });
       });
 
