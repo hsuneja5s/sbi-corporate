@@ -1704,24 +1704,17 @@ body.has-promo .nav {
   height: 100vh;
   overflow: hidden;
   display: flex;
-  align-items: center;
-}
-
-.cards-container {
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  padding-block: 64px;
+  padding-block: 48px;
   box-sizing: border-box;
 }
 
 .cards-header {
   display: grid;
-  grid-template-columns: 1.2fr 1.8fr 100px;
+  grid-template-columns: 1.2fr 1.8fr;
   gap: 48px;
   align-items: flex-start;
-  margin-bottom: 24px;
 }
 
 .cards-section-tag {
@@ -1729,7 +1722,7 @@ body.has-promo .nav {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #B22382; /* magenta accent */
+  color: #ffb300; /* gold accent */
   display: block;
   margin-bottom: 8px;
 }
@@ -1745,46 +1738,52 @@ body.has-promo .nav {
 
 .cards-section-desc {
   font-size: 15px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.7);
   margin: 0;
 }
 
-.cards-section-count {
-  font-family: monospace;
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.4);
-  text-align: right;
-  align-self: flex-start;
-}
-
-/* Sliding accordion columns */
+/* Full-bleed accordion columns track */
 .cards-columns-track {
   display: flex;
-  width: 100%;
-  height: 52vh; /* dynamic height within viewport */
-  gap: 24px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); /* breakouts of container width to full viewport width */
+  margin-right: calc(-50vw + 50%);
+  height: 55vh; /* dynamic height within viewport */
+  gap: 0px; /* no gaps to match the screenshot accordion style */
   box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cards-column {
   flex: 1;
   height: 100%;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 24px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  transition: flex 0.8s cubic-bezier(0.25, 1, 0.3, 1), 
-              background-color 0.8s cubic-bezier(0.25, 1, 0.3, 1), 
-              border-color 0.8s cubic-bezier(0.25, 1, 0.3, 1);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  transition: flex 0.8s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.cards-column:last-child {
+  border-right: none;
+}
+
+.cards-column[data-index="1"] {
+  background-color: #673391; /* purple */
+}
+
+.cards-column[data-index="2"] {
+  background-color: #B22382; /* magenta */
+}
+
+.cards-column[data-index="3"] {
+  background-color: #5553AA; /* blue/violet */
 }
 
 .cards-column.active {
-  flex: 3;
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.15);
+  flex: 3.5;
   cursor: default;
 }
 
@@ -1792,7 +1791,10 @@ body.has-promo .nav {
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 40px;
+  padding: 48px;
+  /* Align margins with page content using standard layout offsets */
+  padding-left: max(32px, calc((100vw - 1408px) / 2 + 32px));
+  padding-right: max(32px, calc((100vw - 1408px) / 2 + 32px));
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -1809,7 +1811,8 @@ body.has-promo .nav {
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 0.6s cubic-bezier(0.25, 1, 0.3, 1), 
-              transform 0.6s cubic-bezier(0.25, 1, 0.3, 1);
+              transform 0.6s cubic-bezier(0.25, 1, 0.3, 1),
+              max-width 0.6s cubic-bezier(0.25, 1, 0.3, 1);
   pointer-events: none;
 }
 
@@ -1817,19 +1820,20 @@ body.has-promo .nav {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+  max-width: 550px;
   transition-delay: 0.18s;
 }
 
 .card-type-tag {
   font-size: 11px;
   font-weight: 700;
-  color: #B22382;
+  color: rgba(255, 255, 255, 0.75);
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
 
 .card-name {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
@@ -1837,9 +1841,9 @@ body.has-promo .nav {
 }
 
 .card-desc {
-  font-size: 14px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
   margin: 0;
 }
 
@@ -1869,35 +1873,52 @@ body.has-promo .nav {
   background: #f0f0f0;
 }
 
-/* Card images */
+/* Card image positioning and transitions */
 .card-image-wrapper {
   position: absolute;
   bottom: 40px;
-  right: 32px;
-  width: 200px;
+  width: 320px;
   aspect-ratio: 1.58 / 1;
   transition: transform 0.8s cubic-bezier(0.25, 1, 0.3, 1), 
               width 0.8s cubic-bezier(0.25, 1, 0.3, 1), 
               bottom 0.8s cubic-bezier(0.25, 1, 0.3, 1), 
+              left 0.8s cubic-bezier(0.25, 1, 0.3, 1), 
               right 0.8s cubic-bezier(0.25, 1, 0.3, 1), 
               opacity 0.8s cubic-bezier(0.25, 1, 0.3, 1);
   transform-style: preserve-3d;
-  transform: rotateY(-25deg) rotateX(10deg) rotateZ(5deg);
-  opacity: 0.6;
 }
 
-/* Hovering inactive cards highlights them */
+/* Collapsed column card image: peeking out rules matching scroll interaction */
+
+/* 1. Columns before the active column: align to the right side so it peeks out next to active */
+.cards-column:has(~ .active) .card-image-wrapper {
+  left: auto;
+  right: -80px;
+  transform: rotateY(-30deg) rotateX(10deg) rotateZ(5deg) scale(0.9);
+  opacity: 0.55;
+}
+
+/* 2. Columns after the active column: align to the left side so it peeks out next to active */
+.active ~ .cards-column .card-image-wrapper {
+  left: -80px;
+  right: auto;
+  transform: rotateY(-30deg) rotateX(10deg) rotateZ(5deg) scale(0.9);
+  opacity: 0.55;
+}
+
+/* Hovering inactive cards increases visibility */
 .cards-column:not(.active):hover .card-image-wrapper {
-  opacity: 0.9;
-  transform: rotateY(-15deg) rotateX(5deg) rotateZ(2deg) translateY(-10px);
+  opacity: 0.85;
+  transform: rotateY(-20deg) rotateX(5deg) rotateZ(2deg) translateY(-5px) scale(0.95);
 }
 
-/* Active cards expand and sit centered */
+/* 3. Active card centers and enlarges */
 .cards-column.active .card-image-wrapper {
-  width: 320px;
-  bottom: 80px;
-  right: 50px;
-  transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+  width: 380px;
+  bottom: 50px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-15%) rotateY(0deg) rotateX(0deg) rotateZ(0deg);
   opacity: 1;
 }
 
@@ -1905,8 +1926,8 @@ body.has-promo .nav {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 14px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
 }
 
 /* Axis indicators */
@@ -1915,7 +1936,7 @@ body.has-promo .nav {
   align-items: center;
   gap: 48px;
   width: 100%;
-  margin-top: 24px;
+  margin-top: 12px;
   position: relative;
 }
 
@@ -1959,8 +1980,8 @@ body.has-promo .nav {
   left: 0;
   height: 100%;
   width: 33.33%;
-  background: linear-gradient(90deg, #673391, #B22382);
-  transition: width 0.6s cubic-bezier(0.25, 1, 0.3, 1);
+  background: linear-gradient(90deg, #ffb300, #B22382);
+  transition: left 0.6s cubic-bezier(0.25, 1, 0.3, 1);
   border-radius: 2px;
 }
 
@@ -1987,25 +2008,29 @@ body.has-promo .nav {
     flex-direction: column !important;
     gap: 16px !important;
     margin-bottom: 32px !important;
+    padding-inline: 20px !important;
   }
   .cards-section-title {
     font-size: 32px !important;
-  }
-  .cards-section-count {
-    display: none !important;
   }
   .cards-columns-track {
     display: flex !important;
     flex-direction: column !important;
     height: auto !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     gap: 24px !important;
+    border: none !important;
+    overflow: visible !important;
   }
   .cards-column {
     flex: none !important;
     width: 100% !important;
     height: auto !important;
     display: block !important;
-    background: rgba(255, 255, 255, 0.03) !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
   }
   .card-column-content {
     padding: 32px 24px !important;
@@ -2022,6 +2047,7 @@ body.has-promo .nav {
   .card-image-wrapper {
     position: relative !important;
     bottom: auto !important;
+    left: auto !important;
     right: auto !important;
     width: 100% !important;
     max-width: 280px !important;
