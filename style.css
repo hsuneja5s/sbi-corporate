@@ -472,6 +472,15 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   padding: 96px 0;
 }
 
+/* Ensure minimum 48px margin between active sections */
+.hero,
+#why-choose-sbi,
+#pathways-to-prosperity,
+.promo-section,
+#cards-showcase {
+  margin-bottom: 48px;
+}
+
 .section--alt { background: var(--color-bg-light); }
 .section--dark {
   background: var(--color-navy);
