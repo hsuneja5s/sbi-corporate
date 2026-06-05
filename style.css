@@ -1791,15 +1791,15 @@ body.has-promo .nav {
 }
 
 .cards-column[data-index="1"] {
-  background: linear-gradient(135deg, #2D2D2D 0%, #151515 50%, #0A0A0A 100%);
+  background: url('images/bg_aurum.png') no-repeat center center / cover;
 }
 
 .cards-column[data-index="2"] {
-  background: linear-gradient(135deg, #00b0ff 0%, #007bb6 50%, #005691 100%);
+  background: url('images/bg_elite.png') no-repeat center center / cover;
 }
 
 .cards-column[data-index="3"] {
-  background: linear-gradient(135deg, #cda250 0%, #8c621d 50%, #463007 100%);
+  background: url('images/bg_prime.png') no-repeat center center / cover;
 }
 
 .cards-column.dominant {
