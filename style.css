@@ -647,154 +647,305 @@ body.has-promo .nav {
 .why-card__check img { width: 16px; height: 16px; }
 
 /* =============================================
-   Our Journey — Carousel
+   Pathways to Prosperity — Horizontal Scroll Milestones
    ============================================= */
-.journey {
-  padding-top: 64px;
+/* Container for horizontal scrolling */
+.horizontal-scroll-section {
+  position: relative;
+  height: 500vh; /* scrollable length */
+  background: #001026; /* fallback dark background */
 }
 
-.journey__title { font-size: 24px; font-weight: 700; color: var(--color-navy); text-align: center; letter-spacing: 0.07px; margin-bottom: 8px; }
-.journey__sub   { font-size: 16px; color: var(--color-muted); text-align: center; letter-spacing: -0.31px; margin-bottom: 32px; }
-
-.journey__track {
+/* Sticky viewport container */
+.horizontal-scroll-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 8px;
-  scrollbar-width: none;
+  align-items: center;
 }
 
-.journey__track::-webkit-scrollbar { display: none; }
+/* Header floating over the sticky view */
+.horizontal-scroll-header {
+  position: absolute;
+  top: 48px;
+  left: 5%;
+  z-index: 10;
+  pointer-events: none;
+}
+.horizontal-scroll-header .section__title {
+  color: #ffffff;
+  font-size: 36px;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: -0.5px;
+}
+.horizontal-scroll-header .section__subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
 
-.journey-card {
-  flex: 0 0 315px;
-  scroll-snap-align: start;
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 24px;
+/* Horizontal sliding track containing the slides */
+.horizontal-scroll-track {
   display: flex;
-  gap: 16px;
+  width: 500vw; /* 5 slides */
+  height: 100vh;
+  will-change: transform;
 }
 
-.journey-card__icon {
-  width: 36px;
-  height: 36px;
-  background: rgba(13,71,161,0.1);
-  border-radius: var(--radius-md);
+/* View Timeline scroll timeline configuration */
+@supports (animation-timeline: view()) {
+  .horizontal-scroll-section {
+    view-timeline-name: --section-timeline;
+    view-timeline-axis: block;
+  }
+  .horizontal-scroll-track {
+    animation: scroll-horizontal linear both;
+    animation-timeline: --section-timeline;
+    animation-range: entry 100% exit 0%;
+  }
+}
+
+@keyframes scroll-horizontal {
+  to {
+    transform: translateX(-400vw); /* scroll to the fifth slide */
+  }
+}
+
+/* Individual full viewport slide */
+.horizontal-slide {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  position: relative;
 }
 
-.journey-card__icon img { width: 20px; height: 20px; }
-
-.journey-card__year {
-  display: inline-block;
-  padding: 2px 8px;
-  background: rgba(13,71,161,0.05);
-  border: 1px solid rgba(0,0,0,0.1);
-  border-radius: var(--radius-sm);
-  font-size: 12px;
-  font-weight: 500;
-  margin-bottom: 6px;
-}
-
-.journey-card__title { font-size: 16px; font-weight: 500; color: var(--color-text); letter-spacing: -0.31px; margin-bottom: 8px; }
-.journey-card__desc  { font-size: 14px; color: var(--color-muted); letter-spacing: -0.15px; line-height: 1.43; }
-
-/* =============================================
-   Financial Journey — Tab section
-   ============================================= */
-.journey-tabs {
-  background: var(--color-bg-alt);
-  border-radius: var(--radius-lg);
-  padding: 3px;
+/* Slide content wrapper */
+.slide-content {
   display: flex;
-  margin-bottom: 48px;
-}
-
-.journey-tabs__item {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  padding: 14px 9px;
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--color-text);
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  border: 1px solid transparent;
+  justify-content: space-between;
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  gap: 48px;
+  box-sizing: border-box;
+  margin-top: 64px;
 }
 
-.journey-tabs__item img { width: 16px; height: 16px; }
-
-.journey-tabs__item.active {
-  background: var(--color-blue);
+/* Slide info block (left side) */
+.slide-info {
+  flex: 0 0 360px;
   color: white;
 }
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 32px;
-}
-
-.product-card {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-
-.product-card__header {
-  padding: 24px 24px 0;
-}
-
-.product-card__title {
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--color-text);
-  letter-spacing: -0.44px;
-  margin-bottom: 6px;
-}
-
-.product-card__desc {
-  font-size: 16px;
-  color: var(--color-muted);
-  letter-spacing: -0.31px;
+.slide-num {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #00e5ff;
   margin-bottom: 16px;
 }
-
-.product-card__footer {
-  padding: 0 24px 24px;
+.slide-title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+.slide-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
 }
 
-.product-card__btn {
+/* Cards grid block (right side) */
+.slide-cards {
+  display: flex;
+  gap: 24px;
+  flex: 1;
+}
+
+/* Slide card - premium glassmorphism styling */
+.slide-card {
+  flex: 1;
+  min-width: 250px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 340px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.4s, 
+              background-color 0.4s, 
+              box-shadow 0.4s;
+  box-sizing: border-box;
+}
+
+.slide-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.slide-card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.slide-card__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+
+.slide-card__desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 12px;
+}
+
+.slide-card .card__badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 11px;
+  margin-bottom: 0;
+}
+.slide-card .card__badge--solid-gold {
+  background: linear-gradient(135deg, #ffb300 0%, #ffa000 100%);
+  color: #002147;
+  border: none;
+  box-shadow: 0 4px 12px rgba(255, 179, 0, 0.3);
+}
+.slide-card .card__badge--blue {
+  background: rgba(0, 229, 255, 0.15);
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  color: #00e5ff;
+}
+.slide-card .card__badge--green {
+  background: rgba(0, 230, 118, 0.15);
+  border: 1px solid rgba(0, 230, 118, 0.4);
+  color: #00e676;
+}
+
+/* Glassmorphic card footer & CTA button */
+.slide-card__footer {
+  width: 100%;
+}
+
+.slide-card .product-card__btn {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   width: 100%;
-  padding: 8px 13px;
-  background: white;
-  border: 1px solid var(--color-border);
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 1000px;
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: -0.15px;
-  cursor: pointer;
-  transition: background 0.15s;
+  transition: background 0.3s, border-color 0.3s, color 0.3s, transform 0.3s;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
-.product-card__btn:hover { background: var(--color-bg-light); }
-.product-card__btn img   { width: 16px; height: 16px; }
+.slide-card .product-card__btn:hover {
+  background: white;
+  color: #002147;
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive styles to collapse the horizontal scroll on tablets & mobile */
+@media (max-width: 1024px) {
+  .horizontal-scroll-section {
+    height: auto !important;
+  }
+  .horizontal-scroll-sticky {
+    position: relative !important;
+    top: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+    padding-bottom: 64px;
+  }
+  .horizontal-scroll-header {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    padding: 64px 24px 32px !important;
+    pointer-events: auto !important;
+  }
+  .horizontal-scroll-header .section__title {
+    font-size: 32px;
+  }
+  .horizontal-scroll-track {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+  }
+  .horizontal-slide {
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 48px 24px !important;
+    display: block !important;
+  }
+  .slide-content {
+    flex-direction: column !important;
+    gap: 32px !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+  }
+  .slide-info {
+    flex: none !important;
+    width: 100% !important;
+  }
+  .slide-title {
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+  .slide-cards {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 20px !important;
+  }
+  .slide-card {
+    height: auto !important;
+    min-height: auto !important;
+    padding: 24px !important;
+    gap: 24px;
+  }
+  .slide-card__desc {
+    margin-bottom: 16px;
+  }
+}
 
 .tools-section {
   background: var(--color-bg-light);

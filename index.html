@@ -423,162 +423,252 @@
   <!-- =============================================
      YOUR FINANCIAL JOURNEY
      ============================================= -->
-  <section class="section section--alt">
-    <div class="container">
-      <div class="section__header">
-        <h2 class="section__title">Your Financial Journey with SBI</h2>
-        <p class="section__subtitle">Personalized banking solutions for every stage of your life</p>
+  <section class="horizontal-scroll-section" id="pathways-to-prosperity">
+    <div class="horizontal-scroll-sticky">
+      <!-- Section header floating inside the sticky container -->
+      <div class="horizontal-scroll-header">
+        <h2 class="section__title">Pathways to Prosperity</h2>
+        <p class="section__subtitle">Explore how SBI partners with you at every stage of life</p>
       </div>
 
-      <!-- Tabs -->
-      <div class="journey-tabs" role="tablist" id="journey-tabs">
-        <button class="journey-tabs__item active" role="tab" aria-selected="true" data-journey="first-job">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <rect x="2" y="4" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5" />
-            <path d="M5 4V3C5 2.448 5.448 2 6 2H10C10.552 2 11 2.448 11 3V4" stroke="currentColor" stroke-width="1.5" />
-          </svg>
-          First Job
-        </button>
-        <button class="journey-tabs__item" role="tab" data-journey="family">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M8 2C6.343 2 5 3.343 5 5C5 6.657 6.343 8 8 8C9.657 8 11 6.657 11 5C11 3.343 9.657 2 8 2Z"
-              stroke="currentColor" stroke-width="1.5" />
-            <path d="M2 13C2 10.791 4.686 9 8 9C11.314 9 14 10.791 14 13" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" />
-          </svg>
-          Growing Family
-        </button>
-        <button class="journey-tabs__item" role="tab" data-journey="business">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M8 2L10 6H14L11 9L12 13L8 11L4 13L5 9L2 6H6L8 2Z" stroke="currentColor" stroke-width="1.5"
-              stroke-linejoin="round" />
-          </svg>
-          Business Launch
-        </button>
-        <button class="journey-tabs__item" role="tab" data-journey="retirement">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5" />
-            <path d="M8 5V9L10.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-          </svg>
-          Retirement Planning
-        </button>
-        <button class="journey-tabs__item" role="tab" data-journey="next-gen">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5" />
-            <path d="M4 8C4 5.791 5.791 4 8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-          </svg>
-          Next Generation
-        </button>
-      </div>
-
-      <!-- Products -->
-      <p class="section__subtitle text-center mb-24">Start your financial journey with the right banking partner</p>
-
-      <h3 style="font-size:20px;font-weight:500;color:var(--color-navy);letter-spacing:-0.45px;margin-bottom:24px;">
-        Recommended Products for You</h3>
-
-      <div class="products-grid" id="journey-products-grid">
-        <div class="product-card">
-          <div class="product-card__header">
-            <div style="display:flex;align-items:center;justify-content:space-between;" class="product-card-badge-row">
-              <h4 class="product-card__title">Salary Account</h4>
-              <span class="card__badge card__badge--solid-gold">Popular</span>
+      <!-- Horizontal scrolling track -->
+      <div class="horizontal-scroll-track" id="horizontal-track">
+        
+        <!-- Slide 1: Career / Starting Out -->
+        <div class="horizontal-slide" style="background-image: linear-gradient(180deg, rgba(0, 33, 71, 0.4) 0%, rgba(0, 33, 71, 0.85) 100%), url('images/milestone_career.png');">
+          <div class="slide-content">
+            <div class="slide-info">
+              <span class="slide-num">01 / Career</span>
+              <h3 class="slide-title">Embarking on Independence</h3>
+              <p class="slide-desc">Build a strong financial foundation with high-yield salary accounts, smart rewards cards, and quick personal credit lines.</p>
             </div>
-            <p class="product-card__desc">Zero balance account with exclusive benefits</p>
-          </div>
-          <div class="product-card__footer">
-            <button class="product-card__btn">
-              <span class="btn-text">Open Account</span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-card__header">
-            <div style="display:flex;align-items:center;justify-content:space-between;" class="product-card-badge-row">
-              <h4 class="product-card__title">Credit Card</h4>
-              <span class="card__badge card__badge--solid-gold" style="display:none;"></span>
+            
+            <div class="slide-cards">
+              <!-- Card 1 -->
+              <div class="slide-card">
+                <div class="slide-card__header">
+                  <h4 class="slide-card__title">Salary Account</h4>
+                  <span class="card__badge card__badge--solid-gold">Bestseller</span>
+                  <p class="slide-card__desc">Zero-balance account with full digital benefits and premium insurance covers.</p>
+                </div>
+                <div class="slide-card__footer">
+                  <a href="#" class="product-card__btn">Open Account</a>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="slide-card">
+                <div class="slide-card__header">
+                  <h4 class="slide-card__title">SimplySAVE Card</h4>
+                  <span class="card__badge card__badge--blue">Rewards</span>
+                  <p class="slide-card__desc">Accelerated reward points on everyday spending, dining, and fuel purchases.</p>
+                </div>
+                <div class="slide-card__footer">
+                  <a href="#" class="product-card__btn">Apply Now</a>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="slide-card">
+                <div class="slide-card__header">
+                  <h4 class="slide-card__title">Personal Loan</h4>
+                  <span class="card__badge card__badge--green">Instant</span>
+                  <p class="slide-card__desc">Collateral-free instant funding for personal goals with zero prepayment charges.</p>
+                </div>
+                <div class="slide-card__footer">
+                  <a href="#" class="product-card__btn">Check Eligibility</a>
+                </div>
+              </div>
             </div>
-            <p class="product-card__desc">Build your credit score with responsible spending</p>
-          </div>
-          <div class="product-card__footer">
-            <button class="product-card__btn">
-              <span class="btn-text">Apply Now</span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
           </div>
         </div>
 
-        <div class="product-card">
-          <div class="product-card__header">
-            <div style="display:flex;align-items:center;justify-content:space-between;" class="product-card-badge-row">
-              <h4 class="product-card__title">Personal Loan</h4>
-              <span class="card__badge card__badge--solid-gold" style="display:none;"></span>
+        <!-- Slide 2: Family -->
+        <div class="horizontal-slide" style="background-image: linear-gradient(180deg, rgba(0, 33, 71, 0.4) 0%, rgba(0, 33, 71, 0.85) 100%), url('images/milestone_family.png');">
+          <div class="slide-content">
+            <div class="slide-info">
+              <span class="slide-num">02 / Family</span>
+              <h3 class="slide-title">Nurturing Together</h3>
+              <p class="slide-desc">Secure your family's future and dream home with the nation's most trusted credit services.</p>
             </div>
-            <p class="product-card__desc">Quick funds for your personal goals</p>
-          </div>
-          <div class="product-card__footer">
-            <button class="product-card__btn">
-              <span class="btn-text">Check Eligibility</span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tools -->
-      <div class="tools-section">
-        <h4 class="tools-section__title">Financial Tools &amp; Calculators</h4>
-        <div class="tools-grid">
-          <div class="tool-card">
-            <div>
-              <div class="tool-card__info-title">Budget Calculator</div>
-              <div class="tool-card__info-desc">Plan your monthly expenses</div>
+            
+            <div class="slide-cards">
+              <!-- Card 1 -->
+              <div class="slide-card">
+                <div class="slide-card__header">
+                  <h4 class="slide-card__title">SBI Home Loan</h4>
+                  <span class="card__badge card__badge--solid-gold">Low EMIs</span>
+                  <p class="slide-card__desc">Own your dream home with low rates, zero processing fees, and instant approvals.</p>
+                </div>
+                <div class="slide-card__footer">
+                  <a href="#" class="product-card__btn">Learn More</a>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="slide-card">
+                <div class="slide-card__header">
+                  <h4 class="slide-card__title">Education Loan</h4>
+                  <span class="card__badge card__badge--blue">Concession</span>
+                  <p class="slide-card__desc">Fueling global academic dreams with customized repayment plans and tax savings.</p>
+                </div>
+                <div class="slide-card__footer">
+                  <a href="#" class="product-card__btn">Apply Now</a>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="slide-card">
+                <div class="slide-card__header">
+                  <h4 class="slide-card__title">Life Insurance</h4>
+                  <span class="card__badge card__badge--green">Term</span>
+                  <p class="slide-card__desc">Comprehensive security wrappers protecting your loved ones in every step.</p>
+                </div>
+                <div class="slide-card__footer">
+                  <a href="#" class="product-card__btn">Get Quote</a>
+                </div>
+              </div>
             </div>
-            <button class="btn btn--outline btn--sm">Try it</button>
           </div>
-          <div class="tool-card">
-            <div>
-              <div class="tool-card__info-title">Credit Score Check</div>
-              <div class="tool-card__info-desc">Know your creditworthiness</div>
+        </div>
+
+        <!-- Slide 3: Enterprise -->
+        <div class="horizontal-slide" style="background-image: linear-gradient(180deg, rgba(0, 33, 71, 0.4) 0%, rgba(0, 33, 71, 0.85) 100%), url('images/milestone_enterprise.png');">
+          <div class="slide-content">
+            <div class="slide-info">
+              <span class="slide-num">03 / Enterprise</span>
+              <h3 class="slide-title">Building the Future</h3>
+              <p class="slide-desc">Scale your business or startup with seamless corporate banking accounts and unsecured funding schemes.</p>
             </div>
-            <button class="btn btn--outline btn--sm">Try it</button>
+            
+            <div class="slide-cards">
+              <!-- Card 1 -->
+              <div class="slide-card">
+                <div class="slide-card__header">
+                  <h4 class="slide-card__title">Current Account</h4>
+                  <span class="card__badge card__badge--solid-gold">Overdraft</span>
+                  <p class="slide-card__desc">Streamline cash flows with unlimited transactions and low maintenance fees.</p>
+                </div>
+                <div class="slide-card__footer">
+                  <a href="#" class="product-card__btn">Open Account</a>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="slide-card">
+                <div class="slide-card__header">
+                  <h4 class="slide-card__title">Mudra Loan</h4>
+                  <span class="card__badge card__badge--blue">Collateral-Free</span>
+                  <p class="slide-card__desc">Quick business funding up to ₹10 Lakhs to support local startups and microenterprises.</p>
+                </div>
+                <div class="slide-card__footer">
+                  <a href="#" class="product-card__btn">Check Eligibility</a>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="slide-card">
+                <div class="slide-card__header">
+                  <h4 class="slide-card__title">Corporate Card</h4>
+                  <span class="card__badge card__badge--green">Expense Tech</span>
+                  <p class="slide-card__desc">Optimize company spends and employee disbursements dynamically.</p>
+                </div>
+                <div class="slide-card__footer">
+                  <a href="#" class="product-card__btn">Apply Now</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Testimonial -->
-      <div class="testimonial-card" id="journey-testimonial-card">
-        <div class="testimonial-card__avatar">
-          <img src="images/avatar_priya.png" alt="Priya Sharma, Software Engineer" id="journey-testimonial-avatar" />
+        <!-- Slide 4: Retirement -->
+        <div class="horizontal-slide" style="background-image: linear-gradient(180deg, rgba(0, 33, 71, 0.4) 0%, rgba(0, 33, 71, 0.85) 100%), url('images/milestone_retirement.png');">
+          <div class="slide-content">
+            <div class="slide-info">
+              <span class="slide-num">04 / Retirement</span>
+              <h3 class="slide-title">Preserving the Legacy</h3>
+              <p class="slide-desc">Enjoy your golden years with stable high-yield senior citizen schemes and automated monthly pension services.</p>
+            </div>
+            
+            <div class="slide-cards">
+              <!-- Card 1 -->
+              <div class="slide-card">
+                <div class="slide-card__header">
+                  <h4 class="slide-card__title">Senior Citizen Savings</h4>
+                  <span class="card__badge card__badge--solid-gold">7.80% p.a.</span>
+                  <p class="slide-card__desc">Safe, government-backed savings offering maximum returns and direct quarterly payouts.</p>
+                </div>
+                <div class="slide-card__footer">
+                  <a href="#" class="product-card__btn">Invest Now</a>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="slide-card">
+                <div class="slide-card__header">
+                  <h4 class="slide-card__title">Pension Account</h4>
+                  <span class="card__badge card__badge--blue">Direct Credit</span>
+                  <p class="slide-card__desc">Direct monthly pension payouts with exclusive healthcare discount options.</p>
+                </div>
+                <div class="slide-card__footer">
+                  <a href="#" class="product-card__btn">Open Account</a>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="slide-card">
+                <div class="slide-card__header">
+                  <h4 class="slide-card__title">Tax-Saving FD</h4>
+                  <span class="card__badge card__badge--green">80C Tax Free</span>
+                  <p class="slide-card__desc">Grow your savings securely while fully optimizing your tax liabilities.</p>
+                </div>
+                <div class="slide-card__footer">
+                  <a href="#" class="product-card__btn">Calculate Yield</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <p class="testimonial-card__quote" id="journey-testimonial-quote">"SBI helped me start my financial journey
-            with confidence"</p>
-          <p class="testimonial-card__author" id="journey-testimonial-author">Priya Sharma, Software Engineer</p>
-        </div>
-      </div>
 
-      <!-- CTA -->
-      <div class="cta-center">
-        <a href="#" class="btn btn--primary btn--lg">
-          Start Your Career Banking
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M3 8H13M9 4L13 8L9 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </a>
-        <p class="cta-sub">Need guidance? Book an appointment with our branch advisor</p>
+        <!-- Slide 5: Next Generation -->
+        <div class="horizontal-slide" style="background-image: linear-gradient(180deg, rgba(0, 33, 71, 0.4) 0%, rgba(0, 33, 71, 0.85) 100%), url('images/milestone_future.png');">
+          <div class="slide-content">
+            <div class="slide-info">
+              <span class="slide-num">05 / Future</span>
+              <h3 class="slide-title">Empowering Tomorrow</h3>
+              <p class="slide-desc">Help the youth learn savings habits with smart student accounts and secure junior payment cards.</p>
+            </div>
+            
+            <div class="slide-cards">
+              <!-- Card 1 -->
+              <div class="slide-card">
+                <div class="slide-card__header">
+                  <h4 class="slide-card__title">Pehla Kadam Savings</h4>
+                  <span class="card__badge card__badge--solid-gold">Zero Balance</span>
+                  <p class="slide-card__desc">Minor account with interactive banking options and guardian controls.</p>
+                </div>
+                <div class="slide-card__footer">
+                  <a href="#" class="product-card__btn">Open Account</a>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="slide-card">
+                <div class="slide-card__header">
+                  <h4 class="slide-card__title">Youth Debit Card</h4>
+                  <span class="card__badge card__badge--blue">Contactless</span>
+                  <p class="slide-card__desc">Tap-and-pay transactions with daily spending limits for young adults.</p>
+                </div>
+                <div class="slide-card__footer">
+                  <a href="#" class="product-card__btn">Apply Now</a>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="slide-card">
+                <div class="slide-card__header">
+                  <h4 class="slide-card__title">Sukanya Samriddhi</h4>
+                  <span class="card__badge card__badge--green">High Interest</span>
+                  <p class="slide-card__desc">Special tax-free high-yield interest savings scheme for the girl child.</p>
+                </div>
+                <div class="slide-card__footer">
+                  <a href="#" class="product-card__btn">Invest Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1106,69 +1196,7 @@
       }
     };
 
-    // Data for Your Financial Journey
-    const journeyData = {
-      'first-job': {
-        products: [
-          { title: "Salary Account", desc: "Zero balance account with exclusive benefits", btn: "Open Account", badge: "Popular" },
-          { title: "Credit Card", desc: "Build your credit score with responsible spending", btn: "Apply Now", badge: "" },
-          { title: "Personal Loan", desc: "Quick funds for your personal goals", btn: "Check Eligibility", badge: "" }
-        ],
-        testimonial: {
-          quote: '"SBI helped me start my financial journey with confidence"',
-          author: "Priya Sharma, Software Engineer",
-          avatar: "images/avatar_priya.png"
-        }
-      },
-      'family': {
-        products: [
-          { title: "Home Loan", desc: "Low interest rates and zero processing fees", btn: "Check Interest Rates", badge: "Low Rates" },
-          { title: "Education Loan", desc: "Financing for your children's dream education", btn: "Apply Now", badge: "" },
-          { title: "Life Insurance", desc: "Robust protection for your family's future", btn: "Get Quote", badge: "" }
-        ],
-        testimonial: {
-          quote: '"SBI Home Loans made buying our first family house incredibly easy and stress-free."',
-          author: "Rohan & Meera Sen, Homeowners",
-          avatar: "images/avatar_aarav.png"
-        }
-      },
-      'business': {
-        products: [
-          { title: "Current Account", desc: "Unlimited transactions with business overdraft", btn: "Open Account", badge: "Business" },
-          { title: "SME Mudra Loan", desc: "Collateral-free loans up to ₹10 Lakhs", btn: "Check Eligibility", badge: "Govt. Scheme" },
-          { title: "Corporate Cards", desc: "Simplify employee and company expense management", btn: "Apply Now", badge: "" }
-        ],
-        testimonial: {
-          quote: '"SBI’s Mudra Loan was the launchpad our startup needed to expand production."',
-          author: "Anand Patel, Startup Founder",
-          avatar: "images/avatar_aarav.png"
-        }
-      },
-      'retirement': {
-        products: [
-          { title: "Senior Citizen Savings", desc: "High interest rates with quarterly interest payouts", btn: "Invest Now", badge: "High Yield" },
-          { title: "Pension Account", desc: "Hassle-free direct pension credit and benefits", btn: "Open Account", badge: "" },
-          { title: "Tax-Saving FD", desc: "Secure returns with Section 80C tax benefits", btn: "Calculate Return", badge: "" }
-        ],
-        testimonial: {
-          quote: '"I enjoy a peaceful retirement knowing my savings are growing securely with SBI."',
-          author: "Col. Suresh Nair (Retd.)",
-          avatar: "images/avatar_suresh.png"
-        }
-      },
-      'next-gen': {
-        products: [
-          { title: "Student Savings", desc: "Zero balance account for youth under 25", btn: "Open Account", badge: "Zero Balance" },
-          { title: "Education Loan", desc: "Special interest concessions for premier institutions", btn: "Calculate EMI", badge: "" },
-          { title: "Youth Debit Card", desc: "Exclusive rewards and contactless payments", btn: "Apply Now", badge: "" }
-        ],
-        testimonial: {
-          quote: '"My student account made managing pocket money and college expenses a breeze."',
-          author: "Aarav Mehta, College Student",
-          avatar: "images/avatar_aarav.png"
-        }
-      }
-    };
+
 
     // Data for Banking Products & Services
     const bankingData = {
@@ -1235,54 +1263,32 @@
       });
     }
 
-    // Set up Financial Journey Tab switcher
-    const journeyTabsContainer = document.getElementById('journey-tabs');
-    const journeyGrid = document.getElementById('journey-products-grid');
-    const journeyTestimonial = document.getElementById('journey-testimonial-card');
-    if (journeyTabsContainer && journeyGrid && journeyTestimonial) {
-      journeyTabsContainer.querySelectorAll('[role="tab"]').forEach(tab => {
-        tab.addEventListener('click', () => {
-          // Toggle active tabs
-          journeyTabsContainer.querySelectorAll('[role="tab"]').forEach(t => {
-            t.classList.remove('active');
-            t.removeAttribute('aria-selected');
-          });
-          tab.classList.add('active');
-          tab.setAttribute('aria-selected', 'true');
-
-          const journeyKey = tab.getAttribute('data-journey');
-          const data = journeyData[journeyKey];
-          if (data) {
-            // Animate products grid
-            updateContainerContent(journeyGrid, () => {
-              const cards = journeyGrid.querySelectorAll('.product-card');
-              data.products.forEach((prod, index) => {
-                const card = cards[index];
-                if (card) {
-                  card.querySelector('.product-card__title').innerText = prod.title;
-                  card.querySelector('.product-card__desc').innerText = prod.desc;
-                  card.querySelector('.product-card__btn .btn-text').innerText = prod.btn;
-
-                  const badge = card.querySelector('.card__badge');
-                  if (prod.badge) {
-                    badge.innerText = prod.badge;
-                    badge.style.display = 'inline-flex';
-                  } else {
-                    badge.style.display = 'none';
-                  }
-                }
-              });
-            });
-
-            // Animate testimonial
-            updateContainerContent(journeyTestimonial, () => {
-              document.getElementById('journey-testimonial-quote').innerText = data.testimonial.quote;
-              document.getElementById('journey-testimonial-author').innerText = data.testimonial.author;
-              document.getElementById('journey-testimonial-avatar').src = data.testimonial.avatar;
-            });
+    // Fallback scroll listener for browsers that do not support CSS scroll-driven animations
+    if (!CSS.supports('(animation-timeline: scroll()) and (animation-range: 0% 100%)')) {
+      const track = document.getElementById('horizontal-track');
+      const container = document.getElementById('pathways-to-prosperity');
+      if (track && container) {
+        window.addEventListener('scroll', () => {
+          const rect = container.getBoundingClientRect();
+          const containerHeight = rect.height;
+          const viewportHeight = window.innerHeight;
+          
+          // Calculate scroll progress within the container
+          const scrolled = -rect.top;
+          const maxScroll = containerHeight - viewportHeight;
+          
+          if (scrolled >= 0 && scrolled <= maxScroll) {
+            const progress = scrolled / maxScroll;
+            // Map progress to translate value in vw (400vw max for 5 slides)
+            const percent = progress * 400;
+            track.style.transform = `translateX(-${percent}vw)`;
+          } else if (scrolled < 0) {
+            track.style.transform = 'translateX(0vw)';
+          } else {
+            track.style.transform = 'translateX(-400vw)';
           }
         });
-      });
+      }
     }
 
     // Set up Banking Products Tab switcher
