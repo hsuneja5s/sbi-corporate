@@ -1704,7 +1704,7 @@ body.has-promo .nav {
    ============================================= */
 .cards-showcase-section {
   position: relative;
-  height: 300vh; /* scrollable length */
+  height: 350vh; /* scrollable length */
   background: #ffffff;
   color: #1a1a2e;
   overflow: visible;
@@ -1731,14 +1731,15 @@ body.has-promo .nav {
 }
 
 .cards-header-overlay .container {
+  max-width: none;
+  margin: 0;
+  padding-left: 56px;
+  padding-right: 56px;
   pointer-events: auto;
 }
 
 .cards-header {
-  display: grid;
-  grid-template-columns: 1.2fr 1.8fr;
-  gap: 48px;
-  align-items: flex-start;
+  display: block;
 }
 
 .cards-section-tag {
@@ -1829,8 +1830,8 @@ body.has-promo .nav {
   flex-shrink: 0;
   opacity: 0;
   transform: translateY(16px);
-  transition: opacity 0.5s cubic-bezier(0.25, 1, 0.3, 1),
-              transform 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
   z-index: 2;
@@ -1840,7 +1841,6 @@ body.has-promo .nav {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
-  transition-delay: 0.2s;
 }
 
 /* Elite Column background cursive script overlay */
@@ -1849,19 +1849,13 @@ body.has-promo .nav {
   position: absolute;
   top: 55%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%);
   width: 90%;
   height: 90%;
   background: url('images/elite_script.png') no-repeat center center / contain;
   opacity: 0.14;
   pointer-events: none;
   z-index: 1;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.25, 1, 0.3, 1);
-}
-
-.cards-column[data-index="2"].dominant::before {
-  transform: translate(-50%, -50%) scale(1.08);
-  opacity: 0.20;
 }
 
 .card-type-tag {
@@ -1924,14 +1918,13 @@ body.has-promo .nav {
   transform-origin: bottom center;
   opacity: 0.8;
   z-index: 2;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.3, 1),
-              opacity 0.6s cubic-bezier(0.25, 1, 0.3, 1);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .cards-column.dominant .card-image-wrapper {
   transform: translateX(-50%) scale(1) translateY(0);
   opacity: 1;
-  transition-delay: 0.15s;
 }
 
 .showcase-card-img {
