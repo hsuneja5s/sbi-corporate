@@ -1214,9 +1214,10 @@ body.has-promo .nav {
    YONO Section
    ============================================= */
 .yono {
-  background: linear-gradient(135deg, var(--color-navy) 0%, #0d47a1 100%);
+  background: linear-gradient(225deg, #280072 0%, #741062 50%, #bc1e54 100%);
   color: white;
   padding: 96px 0;
+  overflow: hidden;
 }
 
 .yono__inner {
@@ -1251,10 +1252,18 @@ body.has-promo .nav {
 }
 
 .yono-stat {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-lg);
-  padding: 16px;
+  padding: 18px 24px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.yono-stat:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .yono-stat__value { font-size: 24px; font-weight: 700; color: white; margin-bottom: 4px; }
@@ -1271,20 +1280,23 @@ body.has-promo .nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  right: -20px;
 }
 
 .yono__app-image {
-  max-width: 100%;
+  max-width: 110%;
   height: auto;
-  max-height: 520px;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  transition: transform 0.3s ease;
+  max-height: 580px;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.35));
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.3, 1);
 }
 
 .yono__app-image:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-12px) scale(1.03);
 }
 
 /* =============================================
@@ -1779,15 +1791,15 @@ body.has-promo .nav {
 }
 
 .cards-column[data-index="1"] {
-  background-color: #673391;
+  background: linear-gradient(135deg, #2D2D2D 0%, #151515 50%, #0A0A0A 100%);
 }
 
 .cards-column[data-index="2"] {
-  background-color: #B22382;
+  background: linear-gradient(135deg, #00b0ff 0%, #007bb6 50%, #005691 100%);
 }
 
 .cards-column[data-index="3"] {
-  background-color: #5553AA;
+  background: linear-gradient(135deg, #cda250 0%, #8c621d 50%, #463007 100%);
 }
 
 .cards-column.dominant {
@@ -1821,6 +1833,7 @@ body.has-promo .nav {
   transition: opacity 0.5s cubic-bezier(0.25, 1, 0.3, 1),
               transform 0.5s cubic-bezier(0.25, 1, 0.3, 1);
   pointer-events: none;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
 
 .cards-column.dominant .card-column-info {
