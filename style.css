@@ -1649,7 +1649,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
    ============================================= */
 .cards-showcase-section {
   position: relative;
-  height: 350vh; /* scrollable length */
+  height: 450vh; /* scrollable length */
   background: #ffffff;
   color: #1a1a2e;
   overflow: visible;
@@ -1730,6 +1730,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   overflow: hidden;
   cursor: pointer;
   border-right: 1px solid rgba(255, 255, 255, 0.18);
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .cards-column:last-child {
@@ -1852,15 +1854,15 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   background: #f0f0f0;
 }
 
-/* Card image — left-aligned at bottom of column */
+/* Card image — right-aligned at bottom of column */
 .card-image-wrapper {
   position: absolute;
   bottom: 32px;
-  left: 56px;
+  right: 56px;
   width: 440px;
   max-width: 90%;
   transform: scale(0.65) translateY(20px);
-  transform-origin: bottom left;
+  transform-origin: bottom right;
   opacity: 0.8;
   z-index: 2;
   transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
