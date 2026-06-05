@@ -1315,11 +1315,14 @@
       // Linear interpolation helper
       function lerp(a, b, t) { return a + (b - a) * t; }
 
-      // Width keyframes mirroring Palladio GSAP timeline percentages
+      // Width keyframes:
+      // - Progress 0.0 (Aurum active): Aurum gets 80%, Elite gets 20%, Prime gets 0%
+      // - Progress 0.5 (Elite active): Aurum gets 0%, Elite gets 80%, Prime gets 20%
+      // - Progress 1.0 (Prime active): Aurum gets 0%, Elite gets 0%, Prime gets 100%
       const keyframes = [
-        { progress: 0.0,  widths: [75, 20, 5]  },
-        { progress: 0.5,  widths: [5, 75, 20]  },
-        { progress: 1.0,  widths: [5, 20, 75]  }
+        { progress: 0.0,  widths: [80, 20, 0]  },
+        { progress: 0.5,  widths: [0, 80, 20]  },
+        { progress: 1.0,  widths: [0, 0, 100]  }
       ];
 
       function getWidths(progress) {
@@ -1338,15 +1341,27 @@
         return startKf.widths.map((w, idx) => lerp(w, endKf.widths[idx], t));
       }
 
-      // Set initial state
-      const initialWidths = keyframes[0].widths;
-      cardsColumns.forEach((col, idx) => {
-        col.style.width = initialWidths[idx] + '%';
-        if (idx === 0) col.classList.add('dominant');
-      });
+      function updateColumnStyles(col, idx, width) {
+        col.style.width = width + '%';
+        
+        // Smoothly fade out the column opacity as it collapses from 20% to 0%
+        let opacity = 1;
+        if (width <= 20) {
+          opacity = width / 20;
+        }
+        col.style.opacity = opacity;
 
-      // Scroll-driven animation
-      window.addEventListener('scroll', () => {
+        // Hide borders and pointer events on collapsed columns
+        if (width <= 0.1) {
+          col.style.borderRight = 'none';
+          col.style.pointerEvents = 'none';
+        } else {
+          col.style.borderRight = idx === cardsColumns.length - 1 ? 'none' : '1px solid rgba(255, 255, 255, 0.18)';
+          col.style.pointerEvents = '';
+        }
+      }
+
+      function triggerScroll() {
         if (window.innerWidth <= 1024) return;
 
         const rect = cardsSection.getBoundingClientRect();
@@ -1358,9 +1373,33 @@
         const widths = getWidths(progress);
 
         cardsColumns.forEach((col, idx) => {
-          col.style.width = widths[idx] + '%';
+          updateColumnStyles(col, idx, widths[idx]);
           col.classList.toggle('dominant', widths[idx] >= 50);
         });
+      }
+
+      // Set initial state
+      const initialWidths = keyframes[0].widths;
+      cardsColumns.forEach((col, idx) => {
+        updateColumnStyles(col, idx, initialWidths[idx]);
+        if (idx === 0) col.classList.add('dominant');
+      });
+
+      // Scroll-driven animation
+      window.addEventListener('scroll', triggerScroll);
+
+      // Handle window resizing to clean up styles on mobile
+      window.addEventListener('resize', () => {
+        if (window.innerWidth <= 1024) {
+          cardsColumns.forEach((col) => {
+            col.style.width = '';
+            col.style.opacity = '';
+            col.style.pointerEvents = '';
+            col.style.borderRight = '';
+          });
+        } else {
+          triggerScroll();
+        }
       });
 
       // Click columns → scroll to focus that card
