@@ -84,16 +84,19 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-body.has-promo .nav {
-  top: 58px;
-}
-
 /* Scrolled state transitions to a light glassmorphism to look readable over scrolled white sections */
 .nav.scrolled {
   top: 12px;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(0, 33, 71, 0.1);
   box-shadow: 0 8px 32px rgba(0, 33, 71, 0.1);
+}
+
+/* Hide on scroll down, show on scroll up */
+.nav.nav--hidden {
+  transform: translate(-50%, -100px) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 /* ── Logo (left, absolute so links stay centered) ── */
@@ -1558,65 +1561,7 @@ body.has-promo .nav {
 /* =============================================
    Promotional Elements
    ============================================= */
-/* Top Promo Bar */
-.promo-bar {
-  background: linear-gradient(90deg, #ffb300 0%, #ffa000 100%);
-  color: var(--color-navy);
-  font-size: 13px;
-  font-weight: 600;
-  padding: 8px 0;
-  position: relative;
-  z-index: 101;
-  transition: height 0.2s ease, opacity 0.2s ease, padding 0.2s ease;
-  overflow: hidden;
-  height: 38px;
-}
 
-.promo-bar__inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  position: relative;
-  padding-right: 32px;
-}
-
-.promo-bar__tag {
-  background: var(--color-navy);
-  color: white;
-  padding: 1px 6px;
-  border-radius: 4px;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.promo-bar__link {
-  color: var(--color-navy);
-  text-decoration: underline;
-  transition: opacity 0.15s;
-}
-
-.promo-bar__link:hover {
-  opacity: 0.8;
-}
-
-.promo-bar__close {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 20px;
-  line-height: 1;
-  color: var(--color-navy);
-  opacity: 0.6;
-  transition: opacity 0.15s;
-  padding: 4px;
-}
-
-.promo-bar__close:hover {
-  opacity: 1;
-}
 
 /* Mid Page Promo Banner */
 .promo-section {

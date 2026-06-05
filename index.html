@@ -13,16 +13,6 @@
 
 <body>
 
-  <div class="promo-bar" id="promo-bar">
-    <div class="container">
-      <div class="promo-bar__inner">
-        <span class="promo-bar__tag">Offer</span>
-        <span class="promo-bar__text">Zero Processing Fee on SBI Home Loans. Limited period offer!</span>
-        <a href="#" class="promo-bar__link">Apply Now →</a>
-        <button class="promo-bar__close" id="promo-bar-close" aria-label="Close Announcement">&times;</button>
-      </div>
-    </div>
-  </div>
 
   <!-- =============================================
      NAVIGATION
@@ -1255,53 +1245,28 @@
       });
     }
 
-    // Close promo banner announcement logic and nav class sync
-    const promoBar = document.getElementById('promo-bar');
-    const promoCloseBtn = document.getElementById('promo-bar-close');
-    if (promoBar && promoCloseBtn) {
-      // Check if dismissed previously
-      if (localStorage.getItem('promo-dismissed') === 'true') {
-        promoBar.style.display = 'none';
-      } else {
-        document.body.classList.add('has-promo');
-        promoCloseBtn.addEventListener('click', () => {
-          promoBar.style.height = '0';
-          promoBar.style.opacity = '0';
-          promoBar.style.padding = '0';
-          promoBar.dataset.dismissed = 'true';
-          document.body.classList.remove('has-promo');
-          localStorage.setItem('promo-dismissed', 'true');
-          setTimeout(() => {
-            promoBar.style.display = 'none';
-          }, 200);
-        });
-      }
-    }
-
-    // Floating Navbar scroll transition + hide promo bar on scroll
+    // Scroll-reveal navigation bar logic (hide on scroll down, show on scroll up)
     const navElement = document.querySelector('.nav');
-    const promoBarEl = document.getElementById('promo-bar');
     if (navElement) {
+      let lastScrollY = window.scrollY;
       window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        const currentScrollY = window.scrollY;
+        
+        // Handle background visual transition (glassmorphism scrolled style)
+        if (currentScrollY > 50) {
           navElement.classList.add('scrolled');
-          // Hide promo bar on scroll
-          if (promoBarEl && !promoBarEl.dataset.dismissed) {
-            promoBarEl.style.height = '0';
-            promoBarEl.style.opacity = '0';
-            promoBarEl.style.padding = '0';
-            document.body.classList.remove('has-promo');
-          }
         } else {
           navElement.classList.remove('scrolled');
-          // Show promo bar when back at top (unless manually dismissed)
-          if (promoBarEl && !promoBarEl.dataset.dismissed && localStorage.getItem('promo-dismissed') !== 'true') {
-            promoBarEl.style.height = '';
-            promoBarEl.style.opacity = '';
-            promoBarEl.style.padding = '';
-            document.body.classList.add('has-promo');
-          }
         }
+        
+        // Hide on scroll down, reveal on scroll up
+        if (currentScrollY > lastScrollY && currentScrollY > 150) {
+          navElement.classList.add('nav--hidden');
+        } else {
+          navElement.classList.remove('nav--hidden');
+        }
+        
+        lastScrollY = currentScrollY;
       });
     }
 
