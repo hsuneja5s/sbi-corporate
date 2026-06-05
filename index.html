@@ -710,7 +710,7 @@
       <div class="cards-columns-track">
         
         <!-- Column 1: Aurum -->
-        <div class="cards-column active" data-index="1">
+        <div class="cards-column" data-index="1">
           <div class="card-column-content">
             <div class="card-column-info">
               <span class="card-type-tag">Super Premium</span>
@@ -1373,82 +1373,99 @@
       startAutoplay();
     }
 
-    // Cards Showcase Scroll-Driven & Click Controller
+    // Cards Showcase — Fluid Scroll-Driven Width Accordion (Palladio-style)
     const cardsSection = document.getElementById('cards-showcase');
     const cardsColumns = document.querySelectorAll('.cards-column');
     const axisItems = document.querySelectorAll('.axis-item');
     const indicatorFill = document.getElementById('axis-indicator');
 
     if (cardsSection && cardsColumns.length > 0) {
-      // Toggle card slide active state on window scroll
-      window.addEventListener('scroll', () => {
-        if (window.innerWidth <= 1024) {
-          // Disable scroll interactions on mobile/tablet
-          return;
+      // Linear interpolation helper
+      function lerp(a, b, t) { return a + (b - a) * t; }
+
+      // Width keyframes mirroring Palladio GSAP timeline percentages
+      const keyframes = [
+        { progress: 0.0,  widths: [75, 20, 5]  },
+        { progress: 0.5,  widths: [5, 75, 20]  },
+        { progress: 1.0,  widths: [5, 20, 75]  }
+      ];
+
+      function getWidths(progress) {
+        progress = Math.max(0, Math.min(1, progress));
+        let startKf = keyframes[0];
+        let endKf = keyframes[keyframes.length - 1];
+        for (let i = 0; i < keyframes.length - 1; i++) {
+          if (progress >= keyframes[i].progress && progress <= keyframes[i + 1].progress) {
+            startKf = keyframes[i];
+            endKf = keyframes[i + 1];
+            break;
+          }
         }
+        const range = endKf.progress - startKf.progress;
+        const t = range > 0 ? (progress - startKf.progress) / range : 0;
+        return startKf.widths.map((w, idx) => lerp(w, endKf.widths[idx], t));
+      }
+
+      // Set initial state immediately
+      const initialWidths = keyframes[0].widths;
+      cardsColumns.forEach((col, idx) => {
+        col.style.width = initialWidths[idx] + '%';
+        if (idx === 0) col.classList.add('dominant');
+      });
+      axisItems.forEach((item, idx) => {
+        if (idx === 0) item.classList.add('active');
+      });
+
+      // Scroll-driven animation
+      window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 1024) return;
+
         const rect = cardsSection.getBoundingClientRect();
         const scrolled = -rect.top;
         const maxScroll = rect.height - window.innerHeight;
-
         if (maxScroll <= 0) return;
 
-        let progress = scrolled / maxScroll;
-        progress = Math.max(0, Math.min(1, progress));
+        let progress = Math.max(0, Math.min(1, scrolled / maxScroll));
+        const widths = getWidths(progress);
 
-        // Active card index logic (0.33 bounds)
-        let activeIndex = 1;
-        if (progress > 0.33 && progress <= 0.66) {
-          activeIndex = 2;
-        } else if (progress > 0.66) {
-          activeIndex = 3;
-        }
-
-        // Apply active states
+        // Apply widths and determine dominant column
+        let dominantIdx = 0;
+        let maxW = 0;
         cardsColumns.forEach((col, idx) => {
-          if (idx + 1 === activeIndex) {
-            col.classList.add('active');
-          } else {
-            col.classList.remove('active');
-          }
+          col.style.width = widths[idx] + '%';
+          if (widths[idx] > maxW) { maxW = widths[idx]; dominantIdx = idx; }
+          col.classList.toggle('dominant', widths[idx] >= 50);
         });
 
+        // Update axis indicators
         axisItems.forEach((item, idx) => {
-          if (idx + 1 === activeIndex) {
-            item.classList.add('active');
-          } else {
-            item.classList.remove('active');
-          }
+          item.classList.toggle('active', idx === dominantIdx);
         });
 
+        // Progress bar fills from 0% to 100%
         if (indicatorFill) {
-          indicatorFill.style.width = `${activeIndex * 33.33}%`;
+          indicatorFill.style.width = (progress * 100) + '%';
         }
       });
 
-      // Clicking axis items scrolls smoothly to the corresponding frame trigger
+      // Click axis items → scroll to corresponding keyframe position
       axisItems.forEach((item, index) => {
         item.addEventListener('click', () => {
           const sectionTop = cardsSection.offsetTop;
-          const sectionHeight = cardsSection.offsetHeight;
-          const targetScroll = sectionTop + (index * (sectionHeight - window.innerHeight) / 2) + 10;
-          window.scrollTo({
-            top: targetScroll,
-            behavior: 'smooth'
-          });
+          const maxScroll = cardsSection.offsetHeight - window.innerHeight;
+          const targetProgress = index * 0.5; // 0, 0.5, 1.0
+          window.scrollTo({ top: sectionTop + targetProgress * maxScroll, behavior: 'smooth' });
         });
       });
 
-      // Clicking columns directly scrolls smoothly to activate them
+      // Click columns → scroll to focus that card
       cardsColumns.forEach((col, index) => {
         col.addEventListener('click', () => {
-          if (!col.classList.contains('active')) {
+          if (!col.classList.contains('dominant')) {
             const sectionTop = cardsSection.offsetTop;
-            const sectionHeight = cardsSection.offsetHeight;
-            const targetScroll = sectionTop + (index * (sectionHeight - window.innerHeight) / 2) + 10;
-            window.scrollTo({
-              top: targetScroll,
-              behavior: 'smooth'
-            });
+            const maxScroll = cardsSection.offsetHeight - window.innerHeight;
+            const targetProgress = index * 0.5;
+            window.scrollTo({ top: sectionTop + targetProgress * maxScroll, behavior: 'smooth' });
           }
         });
       });
