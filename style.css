@@ -1964,3 +1964,13 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     margin-top: 16px !important;
   }
 }
+
+@media (min-width: 1025px) {
+  #why-choose-sbi,
+  #banking-products,
+  .yono {
+    padding-left: 120px !important;
+    padding-right: 120px !important;
+  }
+}
+
