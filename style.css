@@ -1969,10 +1969,26 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 @media (min-width: 1025px) {
   #why-choose-sbi,
-  #banking-products,
-  .yono {
+  #banking-products {
     padding-left: 120px !important;
     padding-right: 120px !important;
+  }
+
+  .yono {
+    margin-left: 120px !important;
+    margin-right: 120px !important;
+    margin-bottom: 96px !important;
+    margin-top: 48px !important;
+    border-radius: 24px !important;
+    padding-left: 64px !important;
+    padding-right: 64px !important;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+
+  .yono .container {
+    max-width: none !important;
+    padding: 0 !important;
   }
 }
 
