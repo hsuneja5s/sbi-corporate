@@ -790,8 +790,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   border-left: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Hover expansion */
-.pathways-column:hover {
+/* Hover & Scroll-Active expansion */
+.pathways-column:hover,
+.pathways-column.active {
   flex: 0 0 40vw;
 }
 
@@ -811,7 +812,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: opacity 0.6s cubic-bezier(0.25, 1, 0.3, 1);
 }
 
-.pathways-column:hover::before {
+.pathways-column:hover::before,
+.pathways-column.active::before {
   opacity: 0;
 }
 
@@ -884,9 +886,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transform: translateX(6px);
 }
 
-/* Hover States Reveal Content with a slight delay for smooth coordination */
+/* Hover & Scroll-Active States Reveal Content with a slight delay for smooth coordination */
 .pathways-column:hover .column-header,
-.pathways-column:hover .column-body {
+.pathways-column:hover .column-body,
+.pathways-column.active .column-header,
+.pathways-column.active .column-body {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
@@ -901,7 +905,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: border-color 0.6s;
 }
 
-.pathways-column:hover .column-footer {
+.pathways-column:hover .column-footer,
+.pathways-column.active .column-footer {
   border-top-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -916,7 +921,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
               text-shadow 0.6s cubic-bezier(0.25, 1, 0.3, 1);
 }
 
-.pathways-column:hover .column-title {
+.pathways-column:hover .column-title,
+.pathways-column.active .column-title {
   color: #B22382; /* brand accent color when white background is revealed */
   text-shadow: none;
 }

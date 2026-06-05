@@ -1171,37 +1171,74 @@
       });
     }
 
-    // Fallback scroll listener for browsers that do not support CSS scroll-driven animations
-    if (!CSS.supports('(animation-timeline: scroll()) and (animation-range: 0% 100%)')) {
-      const track = document.getElementById('horizontal-track');
-      const container = document.getElementById('pathways-to-prosperity');
-      if (track && container) {
-        window.addEventListener('scroll', () => {
-          // Disable horizontal tracking on tablet/mobile screens
-          if (window.innerWidth <= 1024) {
-            track.style.transform = '';
-            return;
-          }
-          const rect = container.getBoundingClientRect();
-          const containerHeight = rect.height;
-          const viewportHeight = window.innerHeight;
+    // Pathways to Prosperity scroll-active cards and fallback translation logic
+    const pathwaysSection = document.getElementById('pathways-to-prosperity');
+    const pathwaysColumns = document.querySelectorAll('.pathways-column');
+    const pathwaysTrack = document.getElementById('horizontal-track');
 
-          // Calculate scroll progress within the container
-          const scrolled = -rect.top;
-          const maxScroll = containerHeight - viewportHeight;
+    if (pathwaysSection && pathwaysColumns.length > 0) {
+      let hoveredIndex = -1;
+      let lastProgress = 0;
 
-          if (scrolled >= 0 && scrolled <= maxScroll) {
-            const progress = scrolled / maxScroll;
-            // Map progress to translate value in vw (130vw max for the full-width accordion track)
-            const percent = progress * 130;
-            track.style.transform = `translateX(-${percent}vw)`;
-          } else if (scrolled < 0) {
-            track.style.transform = 'translateX(0vw)';
-          } else {
-            track.style.transform = 'translateX(-130vw)';
-          }
+      function updatePathwaysState() {
+        if (window.innerWidth <= 1024) {
+          pathwaysColumns.forEach(col => col.classList.remove('active'));
+          if (pathwaysTrack) pathwaysTrack.style.transform = '';
+          return;
+        }
+
+        // Translate the track horizontally if CSS scroll-driven animations are unsupported
+        if (pathwaysTrack && !CSS.supports('(animation-timeline: scroll()) and (animation-range: 0% 100%)')) {
+          const percent = lastProgress * 130;
+          pathwaysTrack.style.transform = `translateX(-${percent}vw)`;
+        }
+
+        // Determine active column index based on scroll progress
+        let activeIdx = -1;
+        if (lastProgress >= 0.15 && lastProgress < 0.29) activeIdx = 0;
+        else if (lastProgress >= 0.29 && lastProgress < 0.43) activeIdx = 1;
+        else if (lastProgress >= 0.43 && lastProgress < 0.57) activeIdx = 2;
+        else if (lastProgress >= 0.57 && lastProgress < 0.71) activeIdx = 3;
+        else if (lastProgress >= 0.71 && lastProgress < 0.85) activeIdx = 4;
+
+        // Hovered column overrides scroll-active column
+        const finalActiveIdx = hoveredIndex !== -1 ? hoveredIndex : activeIdx;
+
+        pathwaysColumns.forEach((col, idx) => {
+          col.classList.toggle('active', idx === finalActiveIdx);
         });
       }
+
+      function handlePathwaysScroll() {
+        if (window.innerWidth <= 1024) return;
+        const rect = pathwaysSection.getBoundingClientRect();
+        const scrolled = -rect.top;
+        const maxScroll = rect.height - window.innerHeight;
+        if (maxScroll > 0) {
+          lastProgress = Math.max(0, Math.min(1, scrolled / maxScroll));
+        }
+        updatePathwaysState();
+      }
+
+      // Attach hover overrides
+      pathwaysColumns.forEach((col, idx) => {
+        col.addEventListener('mouseenter', () => {
+          hoveredIndex = idx;
+          updatePathwaysState();
+        });
+        col.addEventListener('mouseleave', () => {
+          hoveredIndex = -1;
+          updatePathwaysState();
+        });
+      });
+
+      window.addEventListener('scroll', handlePathwaysScroll);
+      window.addEventListener('resize', () => {
+        handlePathwaysScroll();
+        updatePathwaysState();
+      });
+
+      handlePathwaysScroll(); // initial state trigger
     }
 
     // Set up Banking Products Tab switcher
