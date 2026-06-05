@@ -60,72 +60,68 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 64px);
-  max-width: 1200px;
+  max-width: 1264px;
   z-index: 100;
-  height: 72px;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  height: 68px;
+  box-sizing: border-box;
+
+  /* Glassmorphism pill */
+  background: linear-gradient(
+    93.43deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.36) 100%
+  );
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 33, 71, 0.06);
+  border-radius: 100px;
+  box-shadow: 0px 8px 32px 0px rgba(0, 33, 71, 0.06);
+
+  /* Layout */
   display: flex;
   align-items: center;
-  padding: 0 24px;
+  padding: 6px 25px;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.nav .container {
-  width: 100%;
-  max-width: 100%;
-  padding: 0;
-  margin: 0;
-  height: 100%;
 }
 
 body.has-promo .nav {
   top: 58px;
 }
 
+/* Scrolled state transitions to a light glassmorphism to look readable over scrolled white sections */
 .nav.scrolled {
   top: 12px;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 33, 71, 0.1);
   box-shadow: 0 8px 32px rgba(0, 33, 71, 0.1);
 }
 
-.nav__inner {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
+/* ── Logo (left, absolute so links stay centered) ── */
 .nav__logo {
   position: absolute;
-  left: 0;
-  height: 100%;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 18px;
-  color: var(--color-navy);
-  white-space: nowrap;
+  text-decoration: none;
   flex-shrink: 0;
 }
 
-.nav__logo-img {
+.nav__logo img {
   height: 52px;
   width: auto;
-  object-fit: contain;
+  display: block;
 }
 
+/* ── Nav links (centered) ── */
 .nav__links {
   display: flex;
   align-items: center;
   gap: 4px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .nav__link {
@@ -133,47 +129,80 @@ body.has-promo .nav {
   align-items: center;
   gap: 4px;
   padding: 6px 12px;
+  border-radius: 8px;
+  text-decoration: none;
   font-size: 14px;
   font-weight: 600;
-  color: var(--color-navy);
-  border-radius: var(--radius-sm);
-  transition: all 0.2s ease;
+  color: #ffffff;
   white-space: nowrap;
+  transition: all 0.25s ease;
+  cursor: pointer;
 }
 
 .nav__link:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nav.scrolled .nav__link {
+  color: var(--color-navy);
+}
+
+.nav.scrolled .nav__link:hover {
   background: rgba(0, 33, 71, 0.06);
   color: var(--color-blue);
 }
 
+/* Chevron icon next to each link */
 .nav__link-chevron {
   width: 12px;
   height: 12px;
   opacity: 0.5;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
 }
 
+/* Ensure SVG strokes inherit colors properly */
+.nav__link-chevron path {
+  stroke: currentColor;
+}
+
+/* ── Login button (right, absolute) ── */
 .nav__actions {
   position: absolute;
-  right: 0;
-  height: 100%;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
 }
 
-.nav__badge {
-  display: inline-flex;
+.nav__btn-login {
+  display: flex;
   align-items: center;
-  gap: 4px;
-  padding: 2px 8px;
-  background: rgba(13,71,161,0.05);
-  border: 1px solid rgba(13,71,161,0.2);
-  border-radius: var(--radius-sm);
-  font-size: 12px;
+  justify-content: center;
+  background: #0d47a1;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
   font-weight: 500;
-  color: var(--color-blue);
+  letter-spacing: -0.15px;
+  border-radius: 100px;
+  border: none;
+  width: 96px;
+  height: 48px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
   white-space: nowrap;
+}
+
+.nav__btn-login:hover {
+  background: #0c3d8f;
+  transform: translateY(-1px);
+}
+
+.nav__btn-login:active {
+  transform: translateY(0);
 }
 
 .btn {
@@ -248,9 +277,9 @@ body.has-promo .nav {
   right: 0;
   bottom: 0;
   width: 46%;
-  height: 110vh;
+  height: 78vh;
   min-height: 560px;
-  max-height: 1180px;
+  max-height: 840px;
   z-index: 4;
   pointer-events: none;
 }
@@ -303,9 +332,9 @@ body.has-promo .nav {
   right: 0;
   bottom: 0;
   width: 46%;
-  height: 110vh;
+  height: 78vh;
   min-height: 560px;
-  max-height: 1180px;
+  max-height: 840px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
