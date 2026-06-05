@@ -264,7 +264,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  padding: 60px 32px;
+  padding: 60px 0;
   z-index: 2;
 }
 
