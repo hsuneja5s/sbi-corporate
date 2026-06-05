@@ -670,41 +670,93 @@
   </section>
 
   <!-- =============================================
-     CREDIT CARDS SHOWCASE (REVOLUT STYLE)
+     CREDIT CARDS SHOWCASE (HORIZONTAL ACCORDION SLIDER)
      ============================================= -->
-  <section class="cards-showcase-section">
-    <div class="container">
-      <div class="showcase__header">
-        <h2 class="showcase__title">Elevate your spend</h2>
-        <p class="showcase__subtitle">Earn points on your purchases with one of our premium credit cards. Then redeem
-          them for Airline Miles, luxury shopping vouchers, and travel rewards. T&amp;C apply.</p>
-
-        <div style="display:flex; justify-content:center; margin-top:24px;">
-          <a href="#" class="btn btn--white btn--lg showcase__cta-btn">Start earning</a>
+  <section class="cards-showcase-section" id="cards-showcase">
+    <div class="cards-sticky">
+      <div class="container cards-container">
+        
+        <!-- Header -->
+        <div class="cards-header">
+          <div class="cards-header-left">
+            <span class="cards-section-tag">Premium Collection</span>
+            <h2 class="cards-section-title">Elevate your spend</h2>
+          </div>
+          <div class="cards-header-right">
+            <p class="cards-section-desc">Earn points on your purchases with one of our premium credit cards. Then redeem them for Airline Miles, luxury shopping vouchers, and travel rewards. T&amp;C apply.</p>
+          </div>
+          <span class="cards-section-count">[03]</span>
         </div>
-      </div>
 
-      <!-- 3D Card Showcase Deck -->
-      <div class="deck-container">
-        <div class="glass-screen">
-          <div class="cards-deck" id="cards-deck">
-            <div class="deck-card card-1">
-              <img src="images/card_simplysave.png" alt="SBI SimplySAVE Card" />
+        <!-- Sliding Columns -->
+        <div class="cards-columns-track">
+          
+          <!-- Column 1: Aurum -->
+          <div class="cards-column active" data-index="1">
+            <div class="card-column-content">
+              <div class="card-column-info">
+                <span class="card-type-tag">Super Premium</span>
+                <h3 class="card-name">SBI AURUM</h3>
+                <p class="card-desc">Indulge in curated luxury, unlimited domestic &amp; international airport lounge access, and elite rewards designed exclusively for high achievers.</p>
+                <a href="#" class="btn btn--gold card-cta">Apply for Aurum</a>
+              </div>
+              <div class="card-image-wrapper">
+                <img src="images/card_aurum.png" alt="SBI AURUM Card" class="showcase-card-img" />
+              </div>
             </div>
-            <div class="deck-card card-2">
-              <img src="images/card_aurum.png" alt="SBI AURUM Card" />
+          </div>
+
+          <!-- Column 2: Elite -->
+          <div class="cards-column" data-index="2">
+            <div class="card-column-content">
+              <div class="card-column-info">
+                <span class="card-type-tag">Premium Travel &amp; Lifestyle</span>
+                <h3 class="card-name">SBI Card ELITE</h3>
+                <p class="card-desc">Experience global travel privileges, complimentary movie tickets, premium lounge access, and rewards on dining and department store spends.</p>
+                <a href="#" class="btn btn--blue card-cta">Apply for Elite</a>
+              </div>
+              <div class="card-image-wrapper">
+                <img src="images/card_elite.png" alt="SBI Card Elite" class="showcase-card-img" />
+              </div>
             </div>
-            <div class="deck-card card-3">
-              <img src="images/card_platinum.png" alt="SBI Platinum Card" />
+          </div>
+
+          <!-- Column 3: SimplySAVE -->
+          <div class="cards-column" data-index="3">
+            <div class="card-column-content">
+              <div class="card-column-info">
+                <span class="card-type-tag">Everyday Savings</span>
+                <h3 class="card-name">SBI SimplySAVE</h3>
+                <p class="card-desc">Accelerate your everyday savings on groceries, dining, movies, and department stores. Enjoy instant fuel surcharge waivers and card lock features.</p>
+                <a href="#" class="btn btn--white card-cta">Apply for SimplySAVE</a>
+              </div>
+              <div class="card-image-wrapper">
+                <img src="images/card_simplysave.png" alt="SBI SimplySAVE Card" class="showcase-card-img" />
+              </div>
             </div>
+          </div>
+
+        </div>
+
+        <!-- Axis indicator line -->
+        <div class="cards-axis">
+          <div class="axis-item active" data-index="1">
+            <span class="axis-num">01</span>
+            <span class="axis-name">AURUM</span>
+          </div>
+          <div class="axis-item" data-index="2">
+            <span class="axis-num">02</span>
+            <span class="axis-name">ELITE</span>
+          </div>
+          <div class="axis-item" data-index="3">
+            <span class="axis-num">03</span>
+            <span class="axis-name">SIMPLYSAVE</span>
+          </div>
+          <div class="axis-indicator-line">
+            <div class="axis-indicator-fill" id="axis-indicator"></div>
           </div>
         </div>
 
-        <!-- Toggle buttons -->
-        <div class="deck-toggle">
-          <button class="deck-toggle__btn active" id="btn-physical">Physical cards</button>
-          <button class="deck-toggle__btn" id="btn-virtual">Virtual cards</button>
-        </div>
       </div>
     </div>
   </section>
@@ -1302,25 +1354,83 @@
       startAutoplay();
     }
 
-    // Cards Deck toggle logic
-    const btnPhysical = document.getElementById('btn-physical');
-    const btnVirtual = document.getElementById('btn-virtual');
-    const cardsDeck = document.getElementById('cards-deck');
-    if (btnPhysical && btnVirtual && cardsDeck) {
-      btnPhysical.addEventListener('click', () => {
-        btnPhysical.classList.add('active');
-        btnVirtual.classList.remove('active');
-        cardsDeck.querySelectorAll('.deck-card').forEach(card => {
-          card.classList.remove('virtual');
-          card.querySelector('img').style.opacity = '1';
+    // Cards Showcase Scroll-Driven & Click Controller
+    const cardsSection = document.getElementById('cards-showcase');
+    const cardsColumns = document.querySelectorAll('.cards-column');
+    const axisItems = document.querySelectorAll('.axis-item');
+    const indicatorFill = document.getElementById('axis-indicator');
+
+    if (cardsSection && cardsColumns.length > 0) {
+      // Toggle card slide active state on window scroll
+      window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 1024) {
+          // Disable scroll interactions on mobile/tablet
+          return;
+        }
+        const rect = cardsSection.getBoundingClientRect();
+        const scrolled = -rect.top;
+        const maxScroll = rect.height - window.innerHeight;
+        
+        if (maxScroll <= 0) return;
+        
+        let progress = scrolled / maxScroll;
+        progress = Math.max(0, Math.min(1, progress));
+        
+        // Active card index logic (0.33 bounds)
+        let activeIndex = 1;
+        if (progress > 0.33 && progress <= 0.66) {
+          activeIndex = 2;
+        } else if (progress > 0.66) {
+          activeIndex = 3;
+        }
+        
+        // Apply active states
+        cardsColumns.forEach((col, idx) => {
+          if (idx + 1 === activeIndex) {
+            col.classList.add('active');
+          } else {
+            col.classList.remove('active');
+          }
+        });
+        
+        axisItems.forEach((item, idx) => {
+          if (idx + 1 === activeIndex) {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        });
+        
+        if (indicatorFill) {
+          indicatorFill.style.width = `${activeIndex * 33.33}%`;
+        }
+      });
+
+      // Clicking axis items scrolls smoothly to the corresponding frame trigger
+      axisItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+          const sectionTop = cardsSection.offsetTop;
+          const sectionHeight = cardsSection.offsetHeight;
+          const targetScroll = sectionTop + (index * (sectionHeight - window.innerHeight) / 2) + 10;
+          window.scrollTo({
+            top: targetScroll,
+            behavior: 'smooth'
+          });
         });
       });
-      btnVirtual.addEventListener('click', () => {
-        btnVirtual.classList.add('active');
-        btnPhysical.classList.remove('active');
-        cardsDeck.querySelectorAll('.deck-card').forEach(card => {
-          card.classList.add('virtual');
-          card.querySelector('img').style.opacity = '0.15';
+
+      // Clicking columns directly scrolls smoothly to activate them
+      cardsColumns.forEach((col, index) => {
+        col.addEventListener('click', () => {
+          if (!col.classList.contains('active')) {
+            const sectionTop = cardsSection.offsetTop;
+            const sectionHeight = cardsSection.offsetHeight;
+            const targetScroll = sectionTop + (index * (sectionHeight - window.innerHeight) / 2) + 10;
+            window.scrollTo({
+              top: targetScroll,
+              behavior: 'smooth'
+            });
+          }
         });
       });
     }
