@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,1364 +10,1434 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<div class="promo-bar" id="promo-bar">
-  <div class="container">
-    <div class="promo-bar__inner">
-      <span class="promo-bar__tag">Offer</span>
-      <span class="promo-bar__text">Zero Processing Fee on SBI Home Loans. Limited period offer!</span>
-      <a href="#" class="promo-bar__link">Apply Now →</a>
-      <button class="promo-bar__close" id="promo-bar-close" aria-label="Close Announcement">&times;</button>
+  <div class="promo-bar" id="promo-bar">
+    <div class="container">
+      <div class="promo-bar__inner">
+        <span class="promo-bar__tag">Offer</span>
+        <span class="promo-bar__text">Zero Processing Fee on SBI Home Loans. Limited period offer!</span>
+        <a href="#" class="promo-bar__link">Apply Now →</a>
+        <button class="promo-bar__close" id="promo-bar-close" aria-label="Close Announcement">&times;</button>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- =============================================
+  <!-- =============================================
      NAVIGATION
      ============================================= -->
-<nav class="nav" aria-label="Main navigation">
+  <nav class="nav" aria-label="Main navigation">
 
-  <!-- Logo -->
-  <a class="nav__logo" href="/" aria-label="State Bank of India — Home">
-    <img
-      src="images/SBI-Logo-new-removebg-preview.webp"
-      alt="State Bank of India"
-    />
-  </a>
+    <!-- Logo -->
+    <a class="nav__logo" href="/" aria-label="State Bank of India — Home">
+      <img src="images/SBI-Logo-new-removebg-preview.webp" alt="State Bank of India" />
+    </a>
 
-  <!-- Centre links -->
-  <ul class="nav__links" role="list">
-    <li>
-      <a class="nav__link" href="#">
-        Personal Banking
-        <svg class="nav__link-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-          <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </li>
-    <li>
-      <a class="nav__link" href="#">
-        Business Banking
-        <svg class="nav__link-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-          <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </li>
-    <li>
-      <a class="nav__link" href="#">
-        NRI Services
-        <svg class="nav__link-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-          <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </li>
-    <li>
-      <a class="nav__link" href="#">
-        Digital Banking
-        <svg class="nav__link-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-          <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </li>
-    <li>
-      <a class="nav__link" href="#">
-        About Us
-        <svg class="nav__link-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-          <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </li>
-  </ul>
+    <!-- Centre links -->
+    <ul class="nav__links" role="list">
+      <li>
+        <a class="nav__link" href="#">
+          Personal Banking
+          <svg class="nav__link-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a class="nav__link" href="#">
+          Business Banking
+          <svg class="nav__link-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a class="nav__link" href="#">
+          NRI Services
+          <svg class="nav__link-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a class="nav__link" href="#">
+          Digital Banking
+          <svg class="nav__link-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a class="nav__link" href="#">
+          About Us
+          <svg class="nav__link-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </li>
+    </ul>
 
-  <!-- Login button -->
-  <div class="nav__actions">
-    <a class="nav__btn-login" href="#">Login</a>
-  </div>
+    <!-- Login button -->
+    <div class="nav__actions">
+      <a class="nav__btn-login" href="#">Login</a>
+    </div>
 
-</nav>
+  </nav>
 
-<!-- =============================================
+  <!-- =============================================
      HERO
      ============================================= -->
-<section class="hero">
-  <div class="hero__fade"></div>
-  <div class="container hero__container">
-    <!-- Left Column: Content -->
-    <div class="hero__left">
-      <!-- Heading -->
-      <h1 class="hero__title">
-        Banking at the Heart of<br>
-        <span class="accent">India's Growth</span>
-      </h1>
-      
-      <!-- Subtitle -->
-      <p class="hero__subtitle">Choose your journey to get started with custom savings accounts, loan benefits, and credit card offers.</p>
+  <section class="hero">
+    <div class="hero__fade"></div>
+    <div class="container hero__container">
+      <!-- Left Column: Content -->
+      <div class="hero__left">
+        <!-- Heading -->
+        <h1 class="hero__title">
+          Banking at the Heart of<br>
+          <span class="accent">India's Growth</span>
+        </h1>
 
-      <!-- CTA tabs -->
-      <div class="hero__tabs-wrapper">
-        <div class="tab-list" role="tablist" id="hero-tabs">
-          <button class="tab-list__item active" role="tab" aria-selected="true" data-tab="personal">Personal</button>
-          <button class="tab-list__item" role="tab" data-tab="student">Student</button>
-          <button class="tab-list__item" role="tab" data-tab="business">Business Owner</button>
-          <button class="tab-list__item" role="tab" data-tab="retiree">Retiree</button>
-          <button class="tab-list__item" role="tab" data-tab="nri">NRI</button>
-        </div>
+        <!-- Subtitle -->
+        <p class="hero__subtitle">Choose your journey to get started with custom savings accounts, loan benefits, and
+          credit card offers.</p>
 
-        <div class="tab-panel-card" id="hero-panel-card">
-          <p class="tab-panel-card__title" id="hero-panel-title">Maximize your earnings with custom personal banking benefits and credit card offers</p>
-          <div class="tab-panel-card__actions">
-            <a href="#" class="btn btn--primary" id="hero-panel-btn-primary">
-              <span class="btn-text">Start Personal Journey</span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8H13M9 4L13 8L9 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-            <a href="#" class="btn btn--outline" id="hero-panel-btn-outline">Open Account Online</a>
+        <!-- CTA tabs -->
+        <div class="hero__tabs-wrapper">
+          <div class="tab-list" role="tablist" id="hero-tabs">
+            <button class="tab-list__item active" role="tab" aria-selected="true" data-tab="personal">Personal</button>
+            <button class="tab-list__item" role="tab" data-tab="student">Student</button>
+            <button class="tab-list__item" role="tab" data-tab="business">Business Owner</button>
+            <button class="tab-list__item" role="tab" data-tab="retiree">Retiree</button>
+            <button class="tab-list__item" role="tab" data-tab="nri">NRI</button>
+          </div>
+
+          <div class="tab-panel-card" id="hero-panel-card">
+            <p class="tab-panel-card__title" id="hero-panel-title">Maximize your earnings with custom personal banking
+              benefits and credit card offers</p>
+            <div class="tab-panel-card__actions">
+              <a href="#" class="btn btn--primary" id="hero-panel-btn-primary">
+                <span class="btn-text">Start Personal Journey</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8H13M9 4L13 8L9 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a href="#" class="btn btn--outline" id="hero-panel-btn-outline">Open Account Online</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Right Column Placeholder for Spacing & Floating Badges -->
-    <div class="hero__right-placeholder">
-      <!-- Floating Glass Badges -->
-      <div class="floating-badge badge-1">
-        <span class="badge-icon">👥</span>
-        <span class="badge-text">450M+ Customers</span>
-      </div>
-      <div class="floating-badge badge-2">
-        <span class="badge-icon">🏛️</span>
-        <span class="badge-text">22,000+ Branches</span>
-      </div>
-      <div class="floating-badge badge-3">
-        <span class="badge-icon">💳</span>
-        <span class="badge-text">62,000+ ATMs</span>
+      <!-- Right Column Placeholder for Spacing & Floating Badges -->
+      <div class="hero__right-placeholder">
+        <!-- Floating Glass Badges -->
+        <div class="floating-badge badge-1">
+          <span class="badge-icon">👥</span>
+          <span class="badge-text">450M+ Customers</span>
+        </div>
+        <div class="floating-badge badge-2">
+          <span class="badge-icon">🏛️</span>
+          <span class="badge-text">22,000+ Branches</span>
+        </div>
+
       </div>
     </div>
-  </div>
 
-  <!-- Absolute bottom-fixed personas image -->
-  <div class="hero__right">
-    <div class="hero__personas-wrap">
-      <img src="images/People.png" alt="SBI Personas" class="hero__personas-img" />
+    <!-- Absolute bottom-fixed personas image -->
+    <div class="hero__right">
+      <div class="hero__personas-wrap">
+        <img src="images/People.png" alt="SBI Personas" class="hero__personas-img" />
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- =============================================
+  <!-- =============================================
      WHY CHOOSE SBI
      ============================================= -->
-<section class="section">
-  <div class="container">
-    <div class="section__header">
-      <h2 class="section__title">Why Choose SBI?</h2>
-      <p class="section__subtitle">India's most trusted banking partner for over two centuries</p>
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Why Choose SBI?</h2>
+        <p class="section__subtitle">India's most trusted banking partner for over two centuries</p>
+      </div>
+
+      <div class="why-grid">
+        <!-- Card 1: Scale -->
+        <div class="card">
+          <div class="card__header">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+              <div class="card__icon-wrap card__icon-wrap--blue">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <rect x="4" y="8" width="24" height="16" rx="2" stroke="#0d47a1" stroke-width="2" />
+                  <path d="M4 13H28M12 13V24" stroke="#0d47a1" stroke-width="2" />
+                </svg>
+              </div>
+              <span class="card__badge card__badge--blue">Scale</span>
+            </div>
+            <h3 class="card__title">Unmatched Scale</h3>
+            <p class="card__desc">Every corner of India, always by your side</p>
+          </div>
+          <div class="card__content">
+            <div class="why-card__stats">
+              <div>
+                <div class="why-stat__value">22,141</div>
+                <div class="why-stat__label">Branches</div>
+              </div>
+              <div>
+                <div class="why-stat__value">62,617</div>
+                <div class="why-stat__label">ATMs</div>
+              </div>
+              <div>
+                <div class="why-stat__value">34</div>
+                <div class="why-stat__label">Countries</div>
+              </div>
+              <div>
+                <div class="why-stat__value">250,000+</div>
+                <div class="why-stat__label">Employees</div>
+              </div>
+            </div>
+            <p class="why-card__note">From bustling metros to remote villages, SBI is present in every corner of India
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: Trust -->
+        <div class="card">
+          <div class="card__header">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+              <div class="card__icon-wrap card__icon-wrap--gold">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path d="M16 4L18 12H26L20 17L22 25L16 21L10 25L12 17L6 12H14L16 4Z" stroke="#ffb300" stroke-width="2"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <span class="card__badge card__badge--gold">Trust</span>
+            </div>
+            <h3 class="card__title">200 Years of Trust</h3>
+            <p class="card__desc">India's oldest and most trusted bank</p>
+          </div>
+          <div class="card__content">
+            <div class="why-card__checklist">
+              <span class="why-card__check">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="7" fill="rgba(255,179,0,0.15)" />
+                  <path d="M5 8L7 10L11 6" stroke="#ffb300" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                Founded in 1806
+              </span>
+              <span class="why-card__check">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="7" fill="rgba(255,179,0,0.15)" />
+                  <path d="M5 8L7 10L11 6" stroke="#ffb300" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                Government-backed security
+              </span>
+              <span class="why-card__check">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="7" fill="rgba(255,179,0,0.15)" />
+                  <path d="M5 8L7 10L11 6" stroke="#ffb300" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                Nation's first bank
+              </span>
+              <span class="why-card__check">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="7" fill="rgba(255,179,0,0.15)" />
+                  <path d="M5 8L7 10L11 6" stroke="#ffb300" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                RBI regulated &amp; DICGC insured
+              </span>
+            </div>
+            <p class="why-card__note">Generations of families have trusted SBI with their financial dreams</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Innovation -->
+        <div class="card">
+          <div class="card__header">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+              <div class="card__icon-wrap card__icon-wrap--green">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path
+                    d="M16 4C10.477 4 6 8.477 6 14C6 17.5 7.8 20.6 10.5 22.4V26H21.5V22.4C24.2 20.6 26 17.5 26 14C26 8.477 21.523 4 16 4Z"
+                    stroke="#1b5e20" stroke-width="2" />
+                  <path d="M13 26H19M16 26V30" stroke="#1b5e20" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <span class="card__badge card__badge--green">Innovation</span>
+            </div>
+            <h3 class="card__title">Digital Innovation</h3>
+            <p class="card__desc">Leading India's digital banking revolution</p>
+          </div>
+          <div class="card__content">
+            <div class="why-card__stats">
+              <div>
+                <div class="why-stat__value why-stat__value--green">56M+</div>
+                <div class="why-stat__label">YONO Users</div>
+              </div>
+              <div>
+                <div class="why-stat__value why-stat__value--green">150M+</div>
+                <div class="why-stat__label">Transactions/Month</div>
+              </div>
+              <div>
+                <div class="why-stat__value why-stat__value--green">89%</div>
+                <div class="why-stat__label">Digital Adoption</div>
+              </div>
+              <div>
+                <div class="why-stat__value why-stat__value--green">4.3/5</div>
+                <div class="why-stat__label">App Rating</div>
+              </div>
+            </div>
+            <p class="why-card__note">AI-powered banking, seamless digital experiences, and cutting-edge security</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Our Journey -->
+      <div class="journey">
+        <h3 class="journey__title">Our Journey</h3>
+        <p class="journey__sub">From 1806 to today — a legacy of trust and innovation</p>
+
+        <div class="journey__track">
+          <div class="journey-card">
+            <div class="journey-card__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect x="2" y="4" width="16" height="12" rx="2" stroke="#0d47a1" stroke-width="1.5" />
+                <path d="M2 8H18" stroke="#0d47a1" stroke-width="1.5" />
+              </svg>
+            </div>
+            <div>
+              <span class="journey-card__year">1806</span>
+              <div class="journey-card__title">The Beginning</div>
+              <div class="journey-card__desc">Bank of Calcutta established, marking the birth of modern banking in India
+              </div>
+            </div>
+          </div>
+          <div class="journey-card">
+            <div class="journey-card__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect x="2" y="4" width="16" height="12" rx="2" stroke="#0d47a1" stroke-width="1.5" />
+                <path d="M2 8H18" stroke="#0d47a1" stroke-width="1.5" />
+              </svg>
+            </div>
+            <div>
+              <span class="journey-card__year">1921</span>
+              <div class="journey-card__title">Imperial Bank of India</div>
+              <div class="journey-card__desc">Amalgamation of three presidency banks to form Imperial Bank of India
+              </div>
+            </div>
+          </div>
+          <div class="journey-card">
+            <div class="journey-card__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 2L11.5 7H17L12.5 10L14 15L10 12L6 15L7.5 10L3 7H8.5L10 2Z" stroke="#0d47a1"
+                  stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div>
+              <span class="journey-card__year">1955</span>
+              <div class="journey-card__title">Birth of SBI</div>
+              <div class="journey-card__desc">Imperial Bank of India nationalized to form State Bank of India</div>
+            </div>
+          </div>
+          <div class="journey-card">
+            <div class="journey-card__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect x="2" y="4" width="16" height="12" rx="2" stroke="#0d47a1" stroke-width="1.5" />
+                <path d="M2 8H18" stroke="#0d47a1" stroke-width="1.5" />
+              </svg>
+            </div>
+            <div>
+              <span class="journey-card__year">1960</span>
+              <div class="journey-card__title">Expanding Reach</div>
+              <div class="journey-card__desc">Seven state-associated banks join the SBI family, expanding nationwide
+                presence</div>
+            </div>
+          </div>
+          <div class="journey-card">
+            <div class="journey-card__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect x="5" y="2" width="10" height="16" rx="2" stroke="#0d47a1" stroke-width="1.5" />
+                <circle cx="10" cy="15" r="1" fill="#0d47a1" />
+              </svg>
+            </div>
+            <div>
+              <span class="journey-card__year">1995</span>
+              <div class="journey-card__title">Digital Revolution Begins</div>
+              <div class="journey-card__desc">Launched internet banking services, pioneering digital banking in India
+              </div>
+            </div>
+          </div>
+          <div class="journey-card">
+            <div class="journey-card__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="8" stroke="#0d47a1" stroke-width="1.5" />
+                <path d="M6 10H14M10 6V14" stroke="#0d47a1" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div>
+              <span class="journey-card__year">2008</span>
+              <div class="journey-card__title">International Expansion</div>
+              <div class="journey-card__desc">Established presence in over 30 countries across 5 continents</div>
+            </div>
+          </div>
+          <div class="journey-card">
+            <div class="journey-card__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect x="5" y="2" width="10" height="16" rx="2" stroke="#0d47a1" stroke-width="1.5" />
+                <circle cx="10" cy="15" r="1" fill="#0d47a1" />
+              </svg>
+            </div>
+            <div>
+              <span class="journey-card__year">2017</span>
+              <div class="journey-card__title">YONO Launch</div>
+              <div class="journey-card__desc">Launched YONO — India's first integrated digital banking platform</div>
+            </div>
+          </div>
+          <div class="journey-card">
+            <div class="journey-card__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 2L11.5 7H17L12.5 10L14 15L10 12L6 15L7.5 10L3 7H8.5L10 2Z" stroke="#0d47a1"
+                  stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div>
+              <span class="journey-card__year">2026</span>
+              <div class="journey-card__title">Banking for Bharat</div>
+              <div class="journey-card__desc">450M+ customers, 22,000+ branches — India's most trusted banking partner
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="why-grid">
-      <!-- Card 1: Scale -->
-      <div class="card">
-        <div class="card__header">
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
-            <div class="card__icon-wrap card__icon-wrap--blue">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <rect x="4" y="8" width="24" height="16" rx="2" stroke="#0d47a1" stroke-width="2"/>
-                <path d="M4 13H28M12 13V24" stroke="#0d47a1" stroke-width="2"/>
-              </svg>
-            </div>
-            <span class="card__badge card__badge--blue">Scale</span>
-          </div>
-          <h3 class="card__title">Unmatched Scale</h3>
-          <p class="card__desc">Every corner of India, always by your side</p>
-        </div>
-        <div class="card__content">
-          <div class="why-card__stats">
-            <div>
-              <div class="why-stat__value">22,141</div>
-              <div class="why-stat__label">Branches</div>
-            </div>
-            <div>
-              <div class="why-stat__value">62,617</div>
-              <div class="why-stat__label">ATMs</div>
-            </div>
-            <div>
-              <div class="why-stat__value">34</div>
-              <div class="why-stat__label">Countries</div>
-            </div>
-            <div>
-              <div class="why-stat__value">250,000+</div>
-              <div class="why-stat__label">Employees</div>
-            </div>
-          </div>
-          <p class="why-card__note">From bustling metros to remote villages, SBI is present in every corner of India</p>
-        </div>
-      </div>
-
-      <!-- Card 2: Trust -->
-      <div class="card">
-        <div class="card__header">
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
-            <div class="card__icon-wrap card__icon-wrap--gold">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <path d="M16 4L18 12H26L20 17L22 25L16 21L10 25L12 17L6 12H14L16 4Z" stroke="#ffb300" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <span class="card__badge card__badge--gold">Trust</span>
-          </div>
-          <h3 class="card__title">200 Years of Trust</h3>
-          <p class="card__desc">India's oldest and most trusted bank</p>
-        </div>
-        <div class="card__content">
-          <div class="why-card__checklist">
-            <span class="why-card__check">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <circle cx="8" cy="8" r="7" fill="rgba(255,179,0,0.15)"/>
-                <path d="M5 8L7 10L11 6" stroke="#ffb300" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-              Founded in 1806
-            </span>
-            <span class="why-card__check">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <circle cx="8" cy="8" r="7" fill="rgba(255,179,0,0.15)"/>
-                <path d="M5 8L7 10L11 6" stroke="#ffb300" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-              Government-backed security
-            </span>
-            <span class="why-card__check">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <circle cx="8" cy="8" r="7" fill="rgba(255,179,0,0.15)"/>
-                <path d="M5 8L7 10L11 6" stroke="#ffb300" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-              Nation's first bank
-            </span>
-            <span class="why-card__check">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <circle cx="8" cy="8" r="7" fill="rgba(255,179,0,0.15)"/>
-                <path d="M5 8L7 10L11 6" stroke="#ffb300" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-              RBI regulated &amp; DICGC insured
-            </span>
-          </div>
-          <p class="why-card__note">Generations of families have trusted SBI with their financial dreams</p>
-        </div>
-      </div>
-
-      <!-- Card 3: Innovation -->
-      <div class="card">
-        <div class="card__header">
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
-            <div class="card__icon-wrap card__icon-wrap--green">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <path d="M16 4C10.477 4 6 8.477 6 14C6 17.5 7.8 20.6 10.5 22.4V26H21.5V22.4C24.2 20.6 26 17.5 26 14C26 8.477 21.523 4 16 4Z" stroke="#1b5e20" stroke-width="2"/>
-                <path d="M13 26H19M16 26V30" stroke="#1b5e20" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <span class="card__badge card__badge--green">Innovation</span>
-          </div>
-          <h3 class="card__title">Digital Innovation</h3>
-          <p class="card__desc">Leading India's digital banking revolution</p>
-        </div>
-        <div class="card__content">
-          <div class="why-card__stats">
-            <div>
-              <div class="why-stat__value why-stat__value--green">56M+</div>
-              <div class="why-stat__label">YONO Users</div>
-            </div>
-            <div>
-              <div class="why-stat__value why-stat__value--green">150M+</div>
-              <div class="why-stat__label">Transactions/Month</div>
-            </div>
-            <div>
-              <div class="why-stat__value why-stat__value--green">89%</div>
-              <div class="why-stat__label">Digital Adoption</div>
-            </div>
-            <div>
-              <div class="why-stat__value why-stat__value--green">4.3/5</div>
-              <div class="why-stat__label">App Rating</div>
-            </div>
-          </div>
-          <p class="why-card__note">AI-powered banking, seamless digital experiences, and cutting-edge security</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Our Journey -->
-    <div class="journey">
-      <h3 class="journey__title">Our Journey</h3>
-      <p class="journey__sub">From 1806 to today — a legacy of trust and innovation</p>
-
-      <div class="journey__track">
-        <div class="journey-card">
-          <div class="journey-card__icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <rect x="2" y="4" width="16" height="12" rx="2" stroke="#0d47a1" stroke-width="1.5"/>
-              <path d="M2 8H18" stroke="#0d47a1" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <div>
-            <span class="journey-card__year">1806</span>
-            <div class="journey-card__title">The Beginning</div>
-            <div class="journey-card__desc">Bank of Calcutta established, marking the birth of modern banking in India</div>
-          </div>
-        </div>
-        <div class="journey-card">
-          <div class="journey-card__icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <rect x="2" y="4" width="16" height="12" rx="2" stroke="#0d47a1" stroke-width="1.5"/>
-              <path d="M2 8H18" stroke="#0d47a1" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <div>
-            <span class="journey-card__year">1921</span>
-            <div class="journey-card__title">Imperial Bank of India</div>
-            <div class="journey-card__desc">Amalgamation of three presidency banks to form Imperial Bank of India</div>
-          </div>
-        </div>
-        <div class="journey-card">
-          <div class="journey-card__icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M10 2L11.5 7H17L12.5 10L14 15L10 12L6 15L7.5 10L3 7H8.5L10 2Z" stroke="#0d47a1" stroke-width="1.5" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div>
-            <span class="journey-card__year">1955</span>
-            <div class="journey-card__title">Birth of SBI</div>
-            <div class="journey-card__desc">Imperial Bank of India nationalized to form State Bank of India</div>
-          </div>
-        </div>
-        <div class="journey-card">
-          <div class="journey-card__icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <rect x="2" y="4" width="16" height="12" rx="2" stroke="#0d47a1" stroke-width="1.5"/>
-              <path d="M2 8H18" stroke="#0d47a1" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <div>
-            <span class="journey-card__year">1960</span>
-            <div class="journey-card__title">Expanding Reach</div>
-            <div class="journey-card__desc">Seven state-associated banks join the SBI family, expanding nationwide presence</div>
-          </div>
-        </div>
-        <div class="journey-card">
-          <div class="journey-card__icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <rect x="5" y="2" width="10" height="16" rx="2" stroke="#0d47a1" stroke-width="1.5"/>
-              <circle cx="10" cy="15" r="1" fill="#0d47a1"/>
-            </svg>
-          </div>
-          <div>
-            <span class="journey-card__year">1995</span>
-            <div class="journey-card__title">Digital Revolution Begins</div>
-            <div class="journey-card__desc">Launched internet banking services, pioneering digital banking in India</div>
-          </div>
-        </div>
-        <div class="journey-card">
-          <div class="journey-card__icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <circle cx="10" cy="10" r="8" stroke="#0d47a1" stroke-width="1.5"/>
-              <path d="M6 10H14M10 6V14" stroke="#0d47a1" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div>
-            <span class="journey-card__year">2008</span>
-            <div class="journey-card__title">International Expansion</div>
-            <div class="journey-card__desc">Established presence in over 30 countries across 5 continents</div>
-          </div>
-        </div>
-        <div class="journey-card">
-          <div class="journey-card__icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <rect x="5" y="2" width="10" height="16" rx="2" stroke="#0d47a1" stroke-width="1.5"/>
-              <circle cx="10" cy="15" r="1" fill="#0d47a1"/>
-            </svg>
-          </div>
-          <div>
-            <span class="journey-card__year">2017</span>
-            <div class="journey-card__title">YONO Launch</div>
-            <div class="journey-card__desc">Launched YONO — India's first integrated digital banking platform</div>
-          </div>
-        </div>
-        <div class="journey-card">
-          <div class="journey-card__icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M10 2L11.5 7H17L12.5 10L14 15L10 12L6 15L7.5 10L3 7H8.5L10 2Z" stroke="#0d47a1" stroke-width="1.5" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div>
-            <span class="journey-card__year">2026</span>
-            <div class="journey-card__title">Banking for Bharat</div>
-            <div class="journey-card__desc">450M+ customers, 22,000+ branches — India's most trusted banking partner</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =============================================
+  <!-- =============================================
      YOUR FINANCIAL JOURNEY
      ============================================= -->
-<section class="section section--alt">
-  <div class="container">
-    <div class="section__header">
-      <h2 class="section__title">Your Financial Journey with SBI</h2>
-      <p class="section__subtitle">Personalized banking solutions for every stage of your life</p>
-    </div>
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Your Financial Journey with SBI</h2>
+        <p class="section__subtitle">Personalized banking solutions for every stage of your life</p>
+      </div>
 
-    <!-- Tabs -->
-    <div class="journey-tabs" role="tablist" id="journey-tabs">
-      <button class="journey-tabs__item active" role="tab" aria-selected="true" data-journey="first-job">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <rect x="2" y="4" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M5 4V3C5 2.448 5.448 2 6 2H10C10.552 2 11 2.448 11 3V4" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-        First Job
-      </button>
-      <button class="journey-tabs__item" role="tab" data-journey="family">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M8 2C6.343 2 5 3.343 5 5C5 6.657 6.343 8 8 8C9.657 8 11 6.657 11 5C11 3.343 9.657 2 8 2Z" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M2 13C2 10.791 4.686 9 8 9C11.314 9 14 10.791 14 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        Growing Family
-      </button>
-      <button class="journey-tabs__item" role="tab" data-journey="business">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M8 2L10 6H14L11 9L12 13L8 11L4 13L5 9L2 6H6L8 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-        </svg>
-        Business Launch
-      </button>
-      <button class="journey-tabs__item" role="tab" data-journey="retirement">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M8 5V9L10.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        Retirement Planning
-      </button>
-      <button class="journey-tabs__item" role="tab" data-journey="next-gen">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M4 8C4 5.791 5.791 4 8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        Next Generation
-      </button>
-    </div>
+      <!-- Tabs -->
+      <div class="journey-tabs" role="tablist" id="journey-tabs">
+        <button class="journey-tabs__item active" role="tab" aria-selected="true" data-journey="first-job">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5" />
+            <path d="M5 4V3C5 2.448 5.448 2 6 2H10C10.552 2 11 2.448 11 3V4" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+          First Job
+        </button>
+        <button class="journey-tabs__item" role="tab" data-journey="family">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8 2C6.343 2 5 3.343 5 5C5 6.657 6.343 8 8 8C9.657 8 11 6.657 11 5C11 3.343 9.657 2 8 2Z"
+              stroke="currentColor" stroke-width="1.5" />
+            <path d="M2 13C2 10.791 4.686 9 8 9C11.314 9 14 10.791 14 13" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" />
+          </svg>
+          Growing Family
+        </button>
+        <button class="journey-tabs__item" role="tab" data-journey="business">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8 2L10 6H14L11 9L12 13L8 11L4 13L5 9L2 6H6L8 2Z" stroke="currentColor" stroke-width="1.5"
+              stroke-linejoin="round" />
+          </svg>
+          Business Launch
+        </button>
+        <button class="journey-tabs__item" role="tab" data-journey="retirement">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5" />
+            <path d="M8 5V9L10.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+          Retirement Planning
+        </button>
+        <button class="journey-tabs__item" role="tab" data-journey="next-gen">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5" />
+            <path d="M4 8C4 5.791 5.791 4 8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+          Next Generation
+        </button>
+      </div>
 
-    <!-- Products -->
-    <p class="section__subtitle text-center mb-24">Start your financial journey with the right banking partner</p>
+      <!-- Products -->
+      <p class="section__subtitle text-center mb-24">Start your financial journey with the right banking partner</p>
 
-    <h3 style="font-size:20px;font-weight:500;color:var(--color-navy);letter-spacing:-0.45px;margin-bottom:24px;">Recommended Products for You</h3>
+      <h3 style="font-size:20px;font-weight:500;color:var(--color-navy);letter-spacing:-0.45px;margin-bottom:24px;">
+        Recommended Products for You</h3>
 
-    <div class="products-grid" id="journey-products-grid">
-      <div class="product-card">
-        <div class="product-card__header">
-          <div style="display:flex;align-items:center;justify-content:space-between;" class="product-card-badge-row">
-            <h4 class="product-card__title">Salary Account</h4>
-            <span class="card__badge card__badge--solid-gold">Popular</span>
+      <div class="products-grid" id="journey-products-grid">
+        <div class="product-card">
+          <div class="product-card__header">
+            <div style="display:flex;align-items:center;justify-content:space-between;" class="product-card-badge-row">
+              <h4 class="product-card__title">Salary Account</h4>
+              <span class="card__badge card__badge--solid-gold">Popular</span>
+            </div>
+            <p class="product-card__desc">Zero balance account with exclusive benefits</p>
           </div>
-          <p class="product-card__desc">Zero balance account with exclusive benefits</p>
+          <div class="product-card__footer">
+            <button class="product-card__btn">
+              <span class="btn-text">Open Account</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="product-card__footer">
-          <button class="product-card__btn">
-            <span class="btn-text">Open Account</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
+
+        <div class="product-card">
+          <div class="product-card__header">
+            <div style="display:flex;align-items:center;justify-content:space-between;" class="product-card-badge-row">
+              <h4 class="product-card__title">Credit Card</h4>
+              <span class="card__badge card__badge--solid-gold" style="display:none;"></span>
+            </div>
+            <p class="product-card__desc">Build your credit score with responsible spending</p>
+          </div>
+          <div class="product-card__footer">
+            <button class="product-card__btn">
+              <span class="btn-text">Apply Now</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__header">
+            <div style="display:flex;align-items:center;justify-content:space-between;" class="product-card-badge-row">
+              <h4 class="product-card__title">Personal Loan</h4>
+              <span class="card__badge card__badge--solid-gold" style="display:none;"></span>
+            </div>
+            <p class="product-card__desc">Quick funds for your personal goals</p>
+          </div>
+          <div class="product-card__footer">
+            <button class="product-card__btn">
+              <span class="btn-text">Check Eligibility</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
-      <div class="product-card">
-        <div class="product-card__header">
-          <div style="display:flex;align-items:center;justify-content:space-between;" class="product-card-badge-row">
-            <h4 class="product-card__title">Credit Card</h4>
-            <span class="card__badge card__badge--solid-gold" style="display:none;"></span>
+      <!-- Tools -->
+      <div class="tools-section">
+        <h4 class="tools-section__title">Financial Tools &amp; Calculators</h4>
+        <div class="tools-grid">
+          <div class="tool-card">
+            <div>
+              <div class="tool-card__info-title">Budget Calculator</div>
+              <div class="tool-card__info-desc">Plan your monthly expenses</div>
+            </div>
+            <button class="btn btn--outline btn--sm">Try it</button>
           </div>
-          <p class="product-card__desc">Build your credit score with responsible spending</p>
-        </div>
-        <div class="product-card__footer">
-          <button class="product-card__btn">
-            <span class="btn-text">Apply Now</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
+          <div class="tool-card">
+            <div>
+              <div class="tool-card__info-title">Credit Score Check</div>
+              <div class="tool-card__info-desc">Know your creditworthiness</div>
+            </div>
+            <button class="btn btn--outline btn--sm">Try it</button>
+          </div>
         </div>
       </div>
 
-      <div class="product-card">
-        <div class="product-card__header">
-          <div style="display:flex;align-items:center;justify-content:space-between;" class="product-card-badge-row">
-            <h4 class="product-card__title">Personal Loan</h4>
-            <span class="card__badge card__badge--solid-gold" style="display:none;"></span>
-          </div>
-          <p class="product-card__desc">Quick funds for your personal goals</p>
+      <!-- Testimonial -->
+      <div class="testimonial-card" id="journey-testimonial-card">
+        <div class="testimonial-card__avatar">
+          <img src="images/avatar_priya.png" alt="Priya Sharma, Software Engineer" id="journey-testimonial-avatar" />
         </div>
-        <div class="product-card__footer">
-          <button class="product-card__btn">
-            <span class="btn-text">Check Eligibility</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
+        <div>
+          <p class="testimonial-card__quote" id="journey-testimonial-quote">"SBI helped me start my financial journey
+            with confidence"</p>
+          <p class="testimonial-card__author" id="journey-testimonial-author">Priya Sharma, Software Engineer</p>
         </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-center">
+        <a href="#" class="btn btn--primary btn--lg">
+          Start Your Career Banking
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8H13M9 4L13 8L9 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <p class="cta-sub">Need guidance? Book an appointment with our branch advisor</p>
       </div>
     </div>
+  </section>
 
-    <!-- Tools -->
-    <div class="tools-section">
-      <h4 class="tools-section__title">Financial Tools &amp; Calculators</h4>
-      <div class="tools-grid">
-        <div class="tool-card">
-          <div>
-            <div class="tool-card__info-title">Budget Calculator</div>
-            <div class="tool-card__info-desc">Plan your monthly expenses</div>
-          </div>
-          <button class="btn btn--outline btn--sm">Try it</button>
-        </div>
-        <div class="tool-card">
-          <div>
-            <div class="tool-card__info-title">Credit Score Check</div>
-            <div class="tool-card__info-desc">Know your creditworthiness</div>
-          </div>
-          <button class="btn btn--outline btn--sm">Try it</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Testimonial -->
-    <div class="testimonial-card" id="journey-testimonial-card">
-      <div class="testimonial-card__avatar">
-        <img src="images/avatar_priya.png" alt="Priya Sharma, Software Engineer" id="journey-testimonial-avatar" />
-      </div>
-      <div>
-        <p class="testimonial-card__quote" id="journey-testimonial-quote">"SBI helped me start my financial journey with confidence"</p>
-        <p class="testimonial-card__author" id="journey-testimonial-author">Priya Sharma, Software Engineer</p>
-      </div>
-    </div>
-
-    <!-- CTA -->
-    <div class="cta-center">
-      <a href="#" class="btn btn--primary btn--lg">
-        Start Your Career Banking
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M3 8H13M9 4L13 8L9 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-      <p class="cta-sub">Need guidance? Book an appointment with our branch advisor</p>
-    </div>
-  </div>
-</section>
-
-<!-- =============================================
+  <!-- =============================================
      PROMOTIONAL BANNER CAROUSEL
      ============================================= -->
-<section class="promo-section">
-  <div class="container">
-    <div class="promo-carousel">
-      <div class="promo-carousel__track-container">
-        <ul class="promo-carousel__track" id="promo-carousel-track">
-          <li class="promo-carousel__slide active">
-            <img src="https://sbi.bank.in/documents/16012/44015527/Bank.SBI+English.jpg/286209bc-f7f7-d74a-c32c-6c85eec22ae1?t=1742360021250" alt="SBI Home Loans Special Rates Offer" />
-          </li>
-          <li class="promo-carousel__slide">
-            <img src="https://sbi.bank.in/documents/16012/52964925/SBI_Contact_Center_Web-Banner_1820px-X-831px-English+%282%29.jpg/be83a6ca-03ef-39ff-4e88-3a4948d91ed9?t=1766467245103" alt="SBI Contact Centre Support Services" />
-          </li>
-          <li class="promo-carousel__slide">
-            <img src="https://sbi.bank.in/documents/16012/44015527/230424-SBI_MSME_Loan_Banner--1.jpg/e3910e1a-0361-07f4-9499-abf71ba3baec?t=1713876610017" alt="SBI MSME Loans for Businesses" />
-          </li>
-        </ul>
-      </div>
-      
-      <!-- Dots indicator -->
-      <div class="promo-carousel__nav" id="promo-carousel-nav">
-        <button class="promo-carousel__indicator active" aria-label="Slide 1"></button>
-        <button class="promo-carousel__indicator" aria-label="Slide 2"></button>
-        <button class="promo-carousel__indicator" aria-label="Slide 3"></button>
+  <section class="promo-section">
+    <div class="container">
+      <div class="promo-carousel">
+        <div class="promo-carousel__track-container">
+          <ul class="promo-carousel__track" id="promo-carousel-track">
+            <li class="promo-carousel__slide active">
+              <img
+                src="https://sbi.bank.in/documents/16012/44015527/Bank.SBI+English.jpg/286209bc-f7f7-d74a-c32c-6c85eec22ae1?t=1742360021250"
+                alt="SBI Home Loans Special Rates Offer" />
+            </li>
+            <li class="promo-carousel__slide">
+              <img
+                src="https://sbi.bank.in/documents/16012/52964925/SBI_Contact_Center_Web-Banner_1820px-X-831px-English+%282%29.jpg/be83a6ca-03ef-39ff-4e88-3a4948d91ed9?t=1766467245103"
+                alt="SBI Contact Centre Support Services" />
+            </li>
+            <li class="promo-carousel__slide">
+              <img
+                src="https://sbi.bank.in/documents/16012/44015527/230424-SBI_MSME_Loan_Banner--1.jpg/e3910e1a-0361-07f4-9499-abf71ba3baec?t=1713876610017"
+                alt="SBI MSME Loans for Businesses" />
+            </li>
+          </ul>
+        </div>
+
+        <!-- Dots indicator -->
+        <div class="promo-carousel__nav" id="promo-carousel-nav">
+          <button class="promo-carousel__indicator active" aria-label="Slide 1"></button>
+          <button class="promo-carousel__indicator" aria-label="Slide 2"></button>
+          <button class="promo-carousel__indicator" aria-label="Slide 3"></button>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- =============================================
+  <!-- =============================================
      BANKING PRODUCTS & SERVICES
      ============================================= -->
-<section class="section">
-  <div class="container">
-    <div class="section__header">
-      <h2 class="section__title">Banking Products &amp; Services</h2>
-      <p class="section__subtitle">Comprehensive financial solutions tailored to your needs</p>
-    </div>
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Banking Products &amp; Services</h2>
+        <p class="section__subtitle">Comprehensive financial solutions tailored to your needs</p>
+      </div>
 
-    <!-- Tabs -->
-    <div class="products-tab-list" role="tablist" id="banking-tabs">
-      <button class="products-tab-list__item active" role="tab" aria-selected="true" data-tab="everyday">Everyday Banking</button>
-      <button class="products-tab-list__item" role="tab" data-tab="loans">Loans</button>
-      <button class="products-tab-list__item" role="tab" data-tab="cards">Cards</button>
-      <button class="products-tab-list__item" role="tab" data-tab="investments">Investments</button>
-      <button class="products-tab-list__item" role="tab" data-tab="insurance">Insurance</button>
-    </div>
+      <!-- Tabs -->
+      <div class="products-tab-list" role="tablist" id="banking-tabs">
+        <button class="products-tab-list__item active" role="tab" aria-selected="true" data-tab="everyday">Everyday
+          Banking</button>
+        <button class="products-tab-list__item" role="tab" data-tab="loans">Loans</button>
+        <button class="products-tab-list__item" role="tab" data-tab="cards">Cards</button>
+        <button class="products-tab-list__item" role="tab" data-tab="investments">Investments</button>
+        <button class="products-tab-list__item" role="tab" data-tab="insurance">Insurance</button>
+      </div>
 
-    <!-- Products -->
-    <div class="banking-products-grid" id="banking-products-grid">
-      <div class="banking-card">
-        <div class="banking-card__header">
-          <h4 class="banking-card__title">Basic Savings Bank Deposit Account</h4>
-          <span class="card__badge card__badge--blue" style="margin-bottom:8px;">Zero Fees</span>
-          <p class="banking-card__sub">Zero balance, full banking</p>
+      <!-- Products -->
+      <div class="banking-products-grid" id="banking-products-grid">
+        <div class="banking-card">
+          <div class="banking-card__header">
+            <h4 class="banking-card__title">Basic Savings Bank Deposit Account</h4>
+            <span class="card__badge card__badge--blue" style="margin-bottom:8px;">Zero Fees</span>
+            <p class="banking-card__sub">Zero balance, full banking</p>
+          </div>
+          <div class="banking-card__rate">
+            <div class="banking-card__rate-label">Interest Rate</div>
+            <div class="banking-card__rate-value">2.70%</div>
+          </div>
+          <div class="banking-card__footer">
+            <a href="#" class="btn btn--primary" style="flex:1;">Apply Now →</a>
+            <a href="#" class="btn btn--outline" style="flex:1;">Learn More</a>
+          </div>
         </div>
-        <div class="banking-card__rate">
-          <div class="banking-card__rate-label">Interest Rate</div>
-          <div class="banking-card__rate-value">2.70%</div>
+
+        <div class="banking-card">
+          <div class="banking-card__header">
+            <h4 class="banking-card__title">SBI Salary Account</h4>
+            <span class="card__badge card__badge--blue" style="margin-bottom:8px;">Bestseller</span>
+            <p class="banking-card__sub">Made for working professionals</p>
+          </div>
+          <div class="banking-card__rate">
+            <div class="banking-card__rate-label">Interest Rate</div>
+            <div class="banking-card__rate-value">3.00%</div>
+          </div>
+          <div class="banking-card__footer">
+            <a href="#" class="btn btn--primary" style="flex:1;">Apply Now →</a>
+            <a href="#" class="btn btn--outline" style="flex:1;">Learn More</a>
+          </div>
         </div>
-        <div class="banking-card__footer">
-          <a href="#" class="btn btn--primary" style="flex:1;">Apply Now →</a>
-          <a href="#" class="btn btn--outline" style="flex:1;">Learn More</a>
+
+        <div class="banking-card">
+          <div class="banking-card__header">
+            <h4 class="banking-card__title">SBI Senior Citizen Account</h4>
+            <span class="card__badge card__badge--blue" style="margin-bottom:8px;">Popular</span>
+            <p class="banking-card__sub">Exclusive benefits for seniors</p>
+          </div>
+          <div class="banking-card__rate">
+            <div class="banking-card__rate-label">Interest Rate</div>
+            <div class="banking-card__rate-value">3.50%</div>
+          </div>
+          <div class="banking-card__footer">
+            <a href="#" class="btn btn--primary" style="flex:1;">Apply Now →</a>
+            <a href="#" class="btn btn--outline" style="flex:1;">Learn More</a>
+          </div>
         </div>
       </div>
 
-      <div class="banking-card">
-        <div class="banking-card__header">
-          <h4 class="banking-card__title">SBI Salary Account</h4>
-          <span class="card__badge card__badge--blue" style="margin-bottom:8px;">Bestseller</span>
-          <p class="banking-card__sub">Made for working professionals</p>
-        </div>
-        <div class="banking-card__rate">
-          <div class="banking-card__rate-label">Interest Rate</div>
-          <div class="banking-card__rate-value">3.00%</div>
-        </div>
-        <div class="banking-card__footer">
-          <a href="#" class="btn btn--primary" style="flex:1;">Apply Now →</a>
-          <a href="#" class="btn btn--outline" style="flex:1;">Learn More</a>
-        </div>
-      </div>
-
-      <div class="banking-card">
-        <div class="banking-card__header">
-          <h4 class="banking-card__title">SBI Senior Citizen Account</h4>
-          <span class="card__badge card__badge--blue" style="margin-bottom:8px;">Popular</span>
-          <p class="banking-card__sub">Exclusive benefits for seniors</p>
-        </div>
-        <div class="banking-card__rate">
-          <div class="banking-card__rate-label">Interest Rate</div>
-          <div class="banking-card__rate-value">3.50%</div>
-        </div>
-        <div class="banking-card__footer">
-          <a href="#" class="btn btn--primary" style="flex:1;">Apply Now →</a>
-          <a href="#" class="btn btn--outline" style="flex:1;">Learn More</a>
+      <!-- Help card -->
+      <div class="help-card">
+        <h4 class="help-card__title">Need help choosing the right product?</h4>
+        <p class="help-card__desc">Our banking experts are here to guide you through your options</p>
+        <div class="help-card__btns">
+          <a href="tel:18001122211" class="btn btn--outline">Call 1800 11 2211</a>
+          <a href="#" class="btn btn--outline">Chat with Expert</a>
+          <a href="#" class="btn btn--outline">Visit Branch</a>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Help card -->
-    <div class="help-card">
-      <h4 class="help-card__title">Need help choosing the right product?</h4>
-      <p class="help-card__desc">Our banking experts are here to guide you through your options</p>
-      <div class="help-card__btns">
-        <a href="tel:18001122211" class="btn btn--outline">Call 1800 11 2211</a>
-        <a href="#" class="btn btn--outline">Chat with Expert</a>
-        <a href="#" class="btn btn--outline">Visit Branch</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =============================================
+  <!-- =============================================
      CREDIT CARDS SHOWCASE (REVOLUT STYLE)
      ============================================= -->
-<section class="cards-showcase-section">
-  <div class="container">
-    <div class="showcase__header">
-      <h2 class="showcase__title">Elevate your spend</h2>
-      <p class="showcase__subtitle">Earn points on your purchases with one of our premium credit cards. Then redeem them for Airline Miles, luxury shopping vouchers, and travel rewards. T&amp;C apply.</p>
-      
-      <div style="display:flex; justify-content:center; margin-top:24px;">
-        <a href="#" class="btn btn--white btn--lg showcase__cta-btn">Start earning</a>
-      </div>
-    </div>
-    
-    <!-- 3D Card Showcase Deck -->
-    <div class="deck-container">
-      <div class="glass-screen">
-        <div class="cards-deck" id="cards-deck">
-          <div class="deck-card card-1">
-            <img src="images/card_simplysave.png" alt="SBI SimplySAVE Card" />
-          </div>
-          <div class="deck-card card-2">
-            <img src="images/card_aurum.png" alt="SBI AURUM Card" />
-          </div>
-          <div class="deck-card card-3">
-            <img src="images/card_platinum.png" alt="SBI Platinum Card" />
-          </div>
+  <section class="cards-showcase-section">
+    <div class="container">
+      <div class="showcase__header">
+        <h2 class="showcase__title">Elevate your spend</h2>
+        <p class="showcase__subtitle">Earn points on your purchases with one of our premium credit cards. Then redeem
+          them for Airline Miles, luxury shopping vouchers, and travel rewards. T&amp;C apply.</p>
+
+        <div style="display:flex; justify-content:center; margin-top:24px;">
+          <a href="#" class="btn btn--white btn--lg showcase__cta-btn">Start earning</a>
         </div>
       </div>
-      
-      <!-- Toggle buttons -->
-      <div class="deck-toggle">
-        <button class="deck-toggle__btn active" id="btn-physical">Physical cards</button>
-        <button class="deck-toggle__btn" id="btn-virtual">Virtual cards</button>
+
+      <!-- 3D Card Showcase Deck -->
+      <div class="deck-container">
+        <div class="glass-screen">
+          <div class="cards-deck" id="cards-deck">
+            <div class="deck-card card-1">
+              <img src="images/card_simplysave.png" alt="SBI SimplySAVE Card" />
+            </div>
+            <div class="deck-card card-2">
+              <img src="images/card_aurum.png" alt="SBI AURUM Card" />
+            </div>
+            <div class="deck-card card-3">
+              <img src="images/card_platinum.png" alt="SBI Platinum Card" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Toggle buttons -->
+        <div class="deck-toggle">
+          <button class="deck-toggle__btn active" id="btn-physical">Physical cards</button>
+          <button class="deck-toggle__btn" id="btn-virtual">Virtual cards</button>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- =============================================
+  <!-- =============================================
      YONO — Digital Banking
      ============================================= -->
-<section class="yono">
-  <div class="container">
-    <div class="yono__inner">
-      <div>
-        <span class="yono__tag">YONO Platform</span>
-        <h2 class="yono__title">
-          YONO — <span class="accent">You Only</span><br>Need One App
-        </h2>
-        <p class="yono__desc">India's most comprehensive digital banking platform. Bank, invest, shop, and more — all in one place.</p>
+  <section class="yono">
+    <div class="container">
+      <div class="yono__inner">
+        <div>
+          <span class="yono__tag">YONO Platform</span>
+          <h2 class="yono__title">
+            YONO — <span class="accent">You Only</span><br>Need One App
+          </h2>
+          <p class="yono__desc">India's most comprehensive digital banking platform. Bank, invest, shop, and more — all
+            in one place.</p>
 
-        <div class="yono__stats">
-          <div class="yono-stat">
-            <div class="yono-stat__value">56M+</div>
-            <div class="yono-stat__label">Active Users</div>
+          <div class="yono__stats">
+            <div class="yono-stat">
+              <div class="yono-stat__value">56M+</div>
+              <div class="yono-stat__label">Active Users</div>
+            </div>
+            <div class="yono-stat">
+              <div class="yono-stat__value">150M+</div>
+              <div class="yono-stat__label">Transactions/Month</div>
+            </div>
+            <div class="yono-stat">
+              <div class="yono-stat__value">4.3/5</div>
+              <div class="yono-stat__label">App Rating</div>
+            </div>
+            <div class="yono-stat">
+              <div class="yono-stat__value">89%</div>
+              <div class="yono-stat__label">Digital Adoption</div>
+            </div>
           </div>
-          <div class="yono-stat">
-            <div class="yono-stat__value">150M+</div>
-            <div class="yono-stat__label">Transactions/Month</div>
-          </div>
-          <div class="yono-stat">
-            <div class="yono-stat__value">4.3/5</div>
-            <div class="yono-stat__label">App Rating</div>
-          </div>
-          <div class="yono-stat">
-            <div class="yono-stat__value">89%</div>
-            <div class="yono-stat__label">Digital Adoption</div>
+
+          <div class="yono__actions">
+            <a href="#" class="btn btn--white btn--lg">Download YONO</a>
+            <a href="#" class="btn btn--ghost btn--lg">Learn More</a>
           </div>
         </div>
 
-        <div class="yono__actions">
-          <a href="#" class="btn btn--white btn--lg">Download YONO</a>
-          <a href="#" class="btn btn--ghost btn--lg">Learn More</a>
+        <div class="yono__phone-mockup">
+          <img src="images/yono_app.png" alt="SBI YONO Mobile App Dashboard UI Mockup" class="yono__app-image" />
         </div>
-      </div>
-
-      <div class="yono__phone-mockup">
-        <img src="images/yono_app.png" alt="SBI YONO Mobile App Dashboard UI Mockup" class="yono__app-image" />
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- =============================================
+  <!-- =============================================
      DIGITAL FEATURES
      ============================================= -->
-<section class="features">
-  <div class="container">
-    <div class="section__header">
-      <h2 class="section__title">Digital Banking Features</h2>
-      <p class="section__subtitle">Bank from anywhere, anytime with SBI's digital services</p>
+  <section class="features">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Digital Banking Features</h2>
+        <p class="section__subtitle">Bank from anywhere, anytime with SBI's digital services</p>
+      </div>
+
+      <div class="features__grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect x="5" y="2" width="14" height="20" rx="2" stroke="#0d47a1" stroke-width="1.5" />
+              <circle cx="12" cy="18" r="1" fill="#0d47a1" />
+            </svg>
+          </div>
+          <h4 class="feature-card__title">Mobile Banking</h4>
+          <p class="feature-card__desc">Manage accounts, transfer funds, pay bills on the go</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect x="2" y="6" width="20" height="13" rx="2" stroke="#0d47a1" stroke-width="1.5" />
+              <path d="M6 10H10M6 14H8" stroke="#0d47a1" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h4 class="feature-card__title">Internet Banking</h4>
+          <p class="feature-card__desc">Complete banking access through our secure web portal</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L14 8H20L15 12L17 18L12 15L7 18L9 12L4 8H10L12 2Z" stroke="#0d47a1" stroke-width="1.5"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h4 class="feature-card__title">UPI Services</h4>
+          <p class="feature-card__desc">Instant payments with BHIM SBI Pay and UPI</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2Z"
+                stroke="#0d47a1" stroke-width="1.5" />
+              <path d="M8 12H16M12 8V16" stroke="#0d47a1" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h4 class="feature-card__title">International Banking</h4>
+          <p class="feature-card__desc">Global transfers, forex, and NRI services in 34 countries</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="features__grid">
-      <div class="feature-card">
-        <div class="feature-card__icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <rect x="5" y="2" width="14" height="20" rx="2" stroke="#0d47a1" stroke-width="1.5"/>
-            <circle cx="12" cy="18" r="1" fill="#0d47a1"/>
-          </svg>
-        </div>
-        <h4 class="feature-card__title">Mobile Banking</h4>
-        <p class="feature-card__desc">Manage accounts, transfer funds, pay bills on the go</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-card__icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <rect x="2" y="6" width="20" height="13" rx="2" stroke="#0d47a1" stroke-width="1.5"/>
-            <path d="M6 10H10M6 14H8" stroke="#0d47a1" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h4 class="feature-card__title">Internet Banking</h4>
-        <p class="feature-card__desc">Complete banking access through our secure web portal</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-card__icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2L14 8H20L15 12L17 18L12 15L7 18L9 12L4 8H10L12 2Z" stroke="#0d47a1" stroke-width="1.5" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h4 class="feature-card__title">UPI Services</h4>
-        <p class="feature-card__desc">Instant payments with BHIM SBI Pay and UPI</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-card__icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2Z" stroke="#0d47a1" stroke-width="1.5"/>
-            <path d="M8 12H16M12 8V16" stroke="#0d47a1" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h4 class="feature-card__title">International Banking</h4>
-        <p class="feature-card__desc">Global transfers, forex, and NRI services in 34 countries</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =============================================
+  <!-- =============================================
      FOOTER (SBI.bank.in Style)
      ============================================= -->
-<footer class="footer-sbi">
-  <!-- Top Links Bar -->
-  <div class="footer-sbi__topbar">
-    <div class="container">
-      <nav class="footer-sbi__topbar-nav" aria-label="Footer quick links">
-        <a href="#">About Us</a>
-        <span class="footer-sbi__sep">|</span>
-        <a href="#">Subsidiaries</a>
-        <span class="footer-sbi__sep">|</span>
-        <a href="#">Corporate Governance</a>
-        <span class="footer-sbi__sep">|</span>
-        <a href="#">Investor Relations</a>
-        <span class="footer-sbi__sep">|</span>
-        <a href="#">SBI In the News</a>
-        <span class="footer-sbi__sep">|</span>
-        <a href="#">Contact Us</a>
-        <span class="footer-sbi__sep">|</span>
-        <a href="#">Careers</a>
-        <span class="footer-sbi__sep">|</span>
-        <a href="#">Site Map</a>
-        <span class="footer-sbi__sep">|</span>
-        <a href="#">Disclaimer</a>
-        <span class="footer-sbi__sep">|</span>
-        <a href="#">Feedback</a>
-      </nav>
+  <footer class="footer-sbi">
+    <!-- Top Links Bar -->
+    <div class="footer-sbi__topbar">
+      <div class="container">
+        <nav class="footer-sbi__topbar-nav" aria-label="Footer quick links">
+          <a href="#">About Us</a>
+          <span class="footer-sbi__sep">|</span>
+          <a href="#">Subsidiaries</a>
+          <span class="footer-sbi__sep">|</span>
+          <a href="#">Corporate Governance</a>
+          <span class="footer-sbi__sep">|</span>
+          <a href="#">Investor Relations</a>
+          <span class="footer-sbi__sep">|</span>
+          <a href="#">SBI In the News</a>
+          <span class="footer-sbi__sep">|</span>
+          <a href="#">Contact Us</a>
+          <span class="footer-sbi__sep">|</span>
+          <a href="#">Careers</a>
+          <span class="footer-sbi__sep">|</span>
+          <a href="#">Site Map</a>
+          <span class="footer-sbi__sep">|</span>
+          <a href="#">Disclaimer</a>
+          <span class="footer-sbi__sep">|</span>
+          <a href="#">Feedback</a>
+        </nav>
+      </div>
     </div>
-  </div>
 
-  <!-- Main Footer Columns -->
-  <div class="footer-sbi__main">
-    <div class="container">
-      <div class="footer-sbi__grid">
-        <!-- Home -->
-        <div class="footer-sbi__col">
-          <h4 class="footer-sbi__col-title">Home</h4>
-          <ul class="footer-sbi__links">
-            <li><a href="#">Forex Card Rates</a></li>
-            <li><a href="#">Interest Rates</a></li>
-            <li><a href="#">Download Forms</a></li>
-            <li><a href="#">Corporate Social Responsibility</a></li>
-            <li><a href="#">Sustainability and Business Responsibility Policy</a></li>
-            <li><a href="#">Bank Calendar</a></li>
-            <li><a href="#">RTI 2005</a></li>
-            <li><a href="#">Grahak Setu</a></li>
-            <li><a href="#">Equal Opportunity Policy for PWD</a></li>
-            <li><a href="#">Do you want to register a Complaint</a></li>
-            <li><a href="#">SEBI ODR Portal for Investors</a></li>
-          </ul>
-        </div>
+    <!-- Main Footer Columns -->
+    <div class="footer-sbi__main">
+      <div class="container">
+        <div class="footer-sbi__grid">
+          <!-- Home -->
+          <div class="footer-sbi__col">
+            <h4 class="footer-sbi__col-title">Home</h4>
+            <ul class="footer-sbi__links">
+              <li><a href="#">Forex Card Rates</a></li>
+              <li><a href="#">Interest Rates</a></li>
+              <li><a href="#">Download Forms</a></li>
+              <li><a href="#">Corporate Social Responsibility</a></li>
+              <li><a href="#">Sustainability and Business Responsibility Policy</a></li>
+              <li><a href="#">Bank Calendar</a></li>
+              <li><a href="#">RTI 2005</a></li>
+              <li><a href="#">Grahak Setu</a></li>
+              <li><a href="#">Equal Opportunity Policy for PWD</a></li>
+              <li><a href="#">Do you want to register a Complaint</a></li>
+              <li><a href="#">SEBI ODR Portal for Investors</a></li>
+            </ul>
+          </div>
 
-        <!-- NRI -->
-        <div class="footer-sbi__col">
-          <h4 class="footer-sbi__col-title">NRI</h4>
-          <ul class="footer-sbi__links">
-            <li><a href="#">Accounts</a></li>
-            <li><a href="#">Investments</a></li>
-            <li><a href="#">Loans</a></li>
-            <li><a href="#">Remittances</a></li>
-            <li><a href="#">Information</a></li>
-            <li><a href="#">Privacy Notice and Consent Forms</a></li>
-          </ul>
-        </div>
+          <!-- NRI -->
+          <div class="footer-sbi__col">
+            <h4 class="footer-sbi__col-title">NRI</h4>
+            <ul class="footer-sbi__links">
+              <li><a href="#">Accounts</a></li>
+              <li><a href="#">Investments</a></li>
+              <li><a href="#">Loans</a></li>
+              <li><a href="#">Remittances</a></li>
+              <li><a href="#">Information</a></li>
+              <li><a href="#">Privacy Notice and Consent Forms</a></li>
+            </ul>
+          </div>
 
-        <!-- Personal -->
-        <div class="footer-sbi__col">
-          <h4 class="footer-sbi__col-title">Personal</h4>
-          <ul class="footer-sbi__links">
-            <li><a href="#">Savings Account</a></li>
-            <li><a href="#">Loans</a></li>
-            <li><a href="#">Investments &amp; Deposits</a></li>
-            <li><a href="#">Cards</a></li>
-            <li><a href="#">Digital</a></li>
-            <li><a href="#">Information &amp; Services</a></li>
-            <li><a href="#">Service Charges</a></li>
-          </ul>
-        </div>
+          <!-- Personal -->
+          <div class="footer-sbi__col">
+            <h4 class="footer-sbi__col-title">Personal</h4>
+            <ul class="footer-sbi__links">
+              <li><a href="#">Savings Account</a></li>
+              <li><a href="#">Loans</a></li>
+              <li><a href="#">Investments &amp; Deposits</a></li>
+              <li><a href="#">Cards</a></li>
+              <li><a href="#">Digital</a></li>
+              <li><a href="#">Information &amp; Services</a></li>
+              <li><a href="#">Service Charges</a></li>
+            </ul>
+          </div>
 
-        <!-- International Banking -->
-        <div class="footer-sbi__col">
-          <h4 class="footer-sbi__col-title">International Banking</h4>
-          <ul class="footer-sbi__links">
-            <li><a href="#">Banking</a></li>
-            <li><a href="#">Credit Finance</a></li>
-            <li><a href="#">Services</a></li>
-          </ul>
-        </div>
+          <!-- International Banking -->
+          <div class="footer-sbi__col">
+            <h4 class="footer-sbi__col-title">International Banking</h4>
+            <ul class="footer-sbi__links">
+              <li><a href="#">Banking</a></li>
+              <li><a href="#">Credit Finance</a></li>
+              <li><a href="#">Services</a></li>
+            </ul>
+          </div>
 
-        <!-- Business -->
-        <div class="footer-sbi__col">
-          <h4 class="footer-sbi__col-title">Business</h4>
-          <ul class="footer-sbi__links">
-            <li><a href="#">CAG &amp; MCG</a></li>
-            <li><a href="#">Current Account</a></li>
-            <li><a href="#">SME - Deposits</a></li>
-            <li><a href="#">SME - Loans</a></li>
-            <li><a href="#">Information</a></li>
-          </ul>
-        </div>
+          <!-- Business -->
+          <div class="footer-sbi__col">
+            <h4 class="footer-sbi__col-title">Business</h4>
+            <ul class="footer-sbi__links">
+              <li><a href="#">CAG &amp; MCG</a></li>
+              <li><a href="#">Current Account</a></li>
+              <li><a href="#">SME - Deposits</a></li>
+              <li><a href="#">SME - Loans</a></li>
+              <li><a href="#">Information</a></li>
+            </ul>
+          </div>
 
-        <!-- Wealth Management -->
-        <div class="footer-sbi__col">
-          <h4 class="footer-sbi__col-title">Wealth Management</h4>
-          <ul class="footer-sbi__links">
-            <li><a href="#">SBI Wealth</a></li>
-            <li><a href="#">Products</a></li>
-          </ul>
+          <!-- Wealth Management -->
+          <div class="footer-sbi__col">
+            <h4 class="footer-sbi__col-title">Wealth Management</h4>
+            <ul class="footer-sbi__links">
+              <li><a href="#">SBI Wealth</a></li>
+              <li><a href="#">Products</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Disclaimer Bar -->
-  <div class="footer-sbi__disclaimer">
-    <div class="container">
-      <p><strong>IMPORTANT:</strong> State Bank of India never ask for your user id / password / pin no. through phone call / SMSes / e-mails. Any such phone call / SMSes / e-mails asking you to reveal credential or One Time Password through SMS could be attempt to withdraw money from your account. <strong>NEVER</strong> share these details to anyone. State Bank of India wants you to be secure. If you come across any such instances please inform us through e-mail to the following address- <a href="mailto:epg.cms@sbi.co.in">epg.cms@sbi.co.in</a></p>
-    </div>
-  </div>
-
-  <!-- Copyright + Social Bar -->
-  <div class="footer-sbi__bottom">
-    <div class="container">
-      <div class="footer-sbi__bottom-inner">
-        <p class="footer-sbi__copyright">&copy; Copyright State Bank of India (APM Id : Webs_Info_875)</p>
-        <p class="footer-sbi__resolution">Site best viewed at 1420 x 768 resolution in Edge, Mozilla 40 +, Google Chrome 45 +</p>
+    <!-- Disclaimer Bar -->
+    <div class="footer-sbi__disclaimer">
+      <div class="container">
+        <p><strong>IMPORTANT:</strong> State Bank of India never ask for your user id / password / pin no. through phone
+          call / SMSes / e-mails. Any such phone call / SMSes / e-mails asking you to reveal credential or One Time
+          Password through SMS could be attempt to withdraw money from your account. <strong>NEVER</strong> share these
+          details to anyone. State Bank of India wants you to be secure. If you come across any such instances please
+          inform us through e-mail to the following address- <a href="mailto:epg.cms@sbi.co.in">epg.cms@sbi.co.in</a>
+        </p>
       </div>
     </div>
-  </div>
 
-  <!-- Social Icons Bar -->
-  <div class="footer-sbi__social-bar">
-    <div class="container">
-      <div class="footer-sbi__social-inner">
-        <div class="footer-sbi__social-icons">
-          <!-- Pinterest -->
-          <a href="#" aria-label="Pinterest" class="footer-sbi__social-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 0 0-4.37 23.17c-.1-.94-.2-2.4.04-3.44l1.4-5.96s-.36-.72-.36-1.78c0-1.67.97-2.92 2.17-2.92 1.02 0 1.52.77 1.52 1.7 0 1.03-.66 2.58-1 4.01-.28 1.2.6 2.17 1.78 2.17 2.13 0 3.77-2.25 3.77-5.5 0-2.87-2.06-4.88-5.01-4.88-3.41 0-5.42 2.56-5.42 5.2 0 1.03.4 2.13.89 2.73.1.12.11.22.08.34l-.33 1.36c-.05.22-.18.27-.42.16-1.56-.73-2.54-3.01-2.54-4.84 0-3.94 2.87-7.56 8.27-7.56 4.34 0 7.72 3.1 7.72 7.24 0 4.31-2.72 7.79-6.49 7.79-1.27 0-2.46-.66-2.87-1.44l-.78 2.98c-.28 1.08-1.04 2.44-1.55 3.27A12 12 0 1 0 12 0z"/></svg>
-          </a>
-          <!-- LinkedIn -->
-          <a href="#" aria-label="LinkedIn" class="footer-sbi__social-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <!-- Facebook -->
-          <a href="#" aria-label="Facebook" class="footer-sbi__social-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          </a>
-          <!-- YouTube -->
-          <a href="#" aria-label="YouTube" class="footer-sbi__social-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
-          <!-- X (Twitter) -->
-          <a href="#" aria-label="X" class="footer-sbi__social-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <!-- Instagram -->
-          <a href="#" aria-label="Instagram" class="footer-sbi__social-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 1 1-2.882 0 1.441 1.441 0 0 1 2.882 0z"/></svg>
-          </a>
-          <!-- Quora -->
-          <a href="#" aria-label="Quora" class="footer-sbi__social-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.738 16.075c-.69-1.535-1.527-3.12-3.194-3.12-.477 0-1.005.152-1.005.152l-.483-1.082s.937-.507 2.178-.507c1.858 0 2.907.86 3.69 2.168.456-1.073.656-2.431.656-4.033 0-5.14-1.85-8.153-5.58-8.153-3.707 0-5.58 3.013-5.58 8.153S5.293 17.806 9 17.806c.79 0 1.497-.122 2.128-.383-.22-.377-.56-.935-.39-1.348zM9 21.75C4.078 21.75 0 17.4 0 9.653 0 1.906 4.078 0 9 0s9 1.906 9 9.653c0 3.458-.962 6.118-2.625 7.825.828 1.333 1.822 2.162 3.375 2.162.675 0 1.125-.15 1.125-.15L20.25 21.6s-1.047.9-3.375.9c-2.49 0-4.028-1.2-5.25-3.487-.828.435-1.68.637-2.625.637z"/></svg>
-          </a>
-        </div>
-
-        <div class="footer-sbi__utility-icons">
-          <!-- Location / Branch Locator -->
-          <a href="#" aria-label="Branch Locator" class="footer-sbi__utility-link">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </a>
-          <!-- Phone / Contact -->
-          <a href="tel:18001122211" aria-label="Contact Centre" class="footer-sbi__utility-link">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </a>
-          <!-- Mail / Contact Us -->
-          <a href="mailto:customercare@sbi.co.in" aria-label="Email Us" class="footer-sbi__utility-link">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
-          </a>
+    <!-- Copyright + Social Bar -->
+    <div class="footer-sbi__bottom">
+      <div class="container">
+        <div class="footer-sbi__bottom-inner">
+          <p class="footer-sbi__copyright">&copy; Copyright State Bank of India (APM Id : Webs_Info_875)</p>
+          <p class="footer-sbi__resolution">Site best viewed at 1420 x 768 resolution in Edge, Mozilla 40 +, Google
+            Chrome 45 +</p>
         </div>
       </div>
     </div>
-  </div>
-</footer>
 
-<!-- =============================================
+    <!-- Social Icons Bar -->
+    <div class="footer-sbi__social-bar">
+      <div class="container">
+        <div class="footer-sbi__social-inner">
+          <div class="footer-sbi__social-icons">
+            <!-- Pinterest -->
+            <a href="#" aria-label="Pinterest" class="footer-sbi__social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0a12 12 0 0 0-4.37 23.17c-.1-.94-.2-2.4.04-3.44l1.4-5.96s-.36-.72-.36-1.78c0-1.67.97-2.92 2.17-2.92 1.02 0 1.52.77 1.52 1.7 0 1.03-.66 2.58-1 4.01-.28 1.2.6 2.17 1.78 2.17 2.13 0 3.77-2.25 3.77-5.5 0-2.87-2.06-4.88-5.01-4.88-3.41 0-5.42 2.56-5.42 5.2 0 1.03.4 2.13.89 2.73.1.12.11.22.08.34l-.33 1.36c-.05.22-.18.27-.42.16-1.56-.73-2.54-3.01-2.54-4.84 0-3.94 2.87-7.56 8.27-7.56 4.34 0 7.72 3.1 7.72 7.24 0 4.31-2.72 7.79-6.49 7.79-1.27 0-2.46-.66-2.87-1.44l-.78 2.98c-.28 1.08-1.04 2.44-1.55 3.27A12 12 0 1 0 12 0z" />
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="#" aria-label="LinkedIn" class="footer-sbi__social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="#" aria-label="Facebook" class="footer-sbi__social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <!-- YouTube -->
+            <a href="#" aria-label="YouTube" class="footer-sbi__social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <!-- X (Twitter) -->
+            <a href="#" aria-label="X" class="footer-sbi__social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="#" aria-label="Instagram" class="footer-sbi__social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 1 1-2.882 0 1.441 1.441 0 0 1 2.882 0z" />
+              </svg>
+            </a>
+            <!-- Quora -->
+            <a href="#" aria-label="Quora" class="footer-sbi__social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12.738 16.075c-.69-1.535-1.527-3.12-3.194-3.12-.477 0-1.005.152-1.005.152l-.483-1.082s.937-.507 2.178-.507c1.858 0 2.907.86 3.69 2.168.456-1.073.656-2.431.656-4.033 0-5.14-1.85-8.153-5.58-8.153-3.707 0-5.58 3.013-5.58 8.153S5.293 17.806 9 17.806c.79 0 1.497-.122 2.128-.383-.22-.377-.56-.935-.39-1.348zM9 21.75C4.078 21.75 0 17.4 0 9.653 0 1.906 4.078 0 9 0s9 1.906 9 9.653c0 3.458-.962 6.118-2.625 7.825.828 1.333 1.822 2.162 3.375 2.162.675 0 1.125-.15 1.125-.15L20.25 21.6s-1.047.9-3.375.9c-2.49 0-4.028-1.2-5.25-3.487-.828.435-1.68.637-2.625.637z" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="footer-sbi__utility-icons">
+            <!-- Location / Branch Locator -->
+            <a href="#" aria-label="Branch Locator" class="footer-sbi__utility-link">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </a>
+            <!-- Phone / Contact -->
+            <a href="tel:18001122211" aria-label="Contact Centre" class="footer-sbi__utility-link">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </a>
+            <!-- Mail / Contact Us -->
+            <a href="mailto:customercare@sbi.co.in" aria-label="Email Us" class="footer-sbi__utility-link">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="M22 7l-10 7L2 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =============================================
      Tab interactivity
      ============================================= -->
-<script>
-  // Data for Hero Segment Tabs
-  const heroData = {
-    personal: {
-      title: "Maximize your earnings with custom personal banking benefits and credit card offers",
-      btnPrimary: "Start Personal Journey",
-      btnOutline: "Open Account Online"
-    },
-    student: {
-      title: "Grow your career with student accounts and low-rate education loans",
-      btnPrimary: "Start Student Journey",
-      btnOutline: "Open Student Account"
-    },
-    business: {
-      title: "Scale your business with corporate accounts and collateral-free SME loans",
-      btnPrimary: "Start Business Journey",
-      btnOutline: "Open Current Account"
-    },
-    retiree: {
-      title: "Secure your post-retirement life with high-yield pension schemes",
-      btnPrimary: "Start Retiree Journey",
-      btnOutline: "Explore Pension Plans"
-    },
-    nri: {
-      title: "Seamless global-Indian banking with fast international remittances",
-      btnPrimary: "Start NRI Journey",
-      btnOutline: "Open NRE/NRO Account"
-    }
-  };
-
-  // Data for Your Financial Journey
-  const journeyData = {
-    'first-job': {
-      products: [
-        { title: "Salary Account", desc: "Zero balance account with exclusive benefits", btn: "Open Account", badge: "Popular" },
-        { title: "Credit Card", desc: "Build your credit score with responsible spending", btn: "Apply Now", badge: "" },
-        { title: "Personal Loan", desc: "Quick funds for your personal goals", btn: "Check Eligibility", badge: "" }
-      ],
-      testimonial: {
-        quote: '"SBI helped me start my financial journey with confidence"',
-        author: "Priya Sharma, Software Engineer",
-        avatar: "images/avatar_priya.png"
+  <script>
+    // Data for Hero Segment Tabs
+    const heroData = {
+      personal: {
+        title: "Maximize your earnings with custom personal banking benefits and credit card offers",
+        btnPrimary: "Start Personal Journey",
+        btnOutline: "Open Account Online"
+      },
+      student: {
+        title: "Grow your career with student accounts and low-rate education loans",
+        btnPrimary: "Start Student Journey",
+        btnOutline: "Open Student Account"
+      },
+      business: {
+        title: "Scale your business with corporate accounts and collateral-free SME loans",
+        btnPrimary: "Start Business Journey",
+        btnOutline: "Open Current Account"
+      },
+      retiree: {
+        title: "Secure your post-retirement life with high-yield pension schemes",
+        btnPrimary: "Start Retiree Journey",
+        btnOutline: "Explore Pension Plans"
+      },
+      nri: {
+        title: "Seamless global-Indian banking with fast international remittances",
+        btnPrimary: "Start NRI Journey",
+        btnOutline: "Open NRE/NRO Account"
       }
-    },
-    'family': {
-      products: [
-        { title: "Home Loan", desc: "Low interest rates and zero processing fees", btn: "Check Interest Rates", badge: "Low Rates" },
-        { title: "Education Loan", desc: "Financing for your children's dream education", btn: "Apply Now", badge: "" },
-        { title: "Life Insurance", desc: "Robust protection for your family's future", btn: "Get Quote", badge: "" }
-      ],
-      testimonial: {
-        quote: '"SBI Home Loans made buying our first family house incredibly easy and stress-free."',
-        author: "Rohan & Meera Sen, Homeowners",
-        avatar: "images/avatar_aarav.png"
-      }
-    },
-    'business': {
-      products: [
-        { title: "Current Account", desc: "Unlimited transactions with business overdraft", btn: "Open Account", badge: "Business" },
-        { title: "SME Mudra Loan", desc: "Collateral-free loans up to ₹10 Lakhs", btn: "Check Eligibility", badge: "Govt. Scheme" },
-        { title: "Corporate Cards", desc: "Simplify employee and company expense management", btn: "Apply Now", badge: "" }
-      ],
-      testimonial: {
-        quote: '"SBI’s Mudra Loan was the launchpad our startup needed to expand production."',
-        author: "Anand Patel, Startup Founder",
-        avatar: "images/avatar_aarav.png"
-      }
-    },
-    'retirement': {
-      products: [
-        { title: "Senior Citizen Savings", desc: "High interest rates with quarterly interest payouts", btn: "Invest Now", badge: "High Yield" },
-        { title: "Pension Account", desc: "Hassle-free direct pension credit and benefits", btn: "Open Account", badge: "" },
-        { title: "Tax-Saving FD", desc: "Secure returns with Section 80C tax benefits", btn: "Calculate Return", badge: "" }
-      ],
-      testimonial: {
-        quote: '"I enjoy a peaceful retirement knowing my savings are growing securely with SBI."',
-        author: "Col. Suresh Nair (Retd.)",
-        avatar: "images/avatar_suresh.png"
-      }
-    },
-    'next-gen': {
-      products: [
-        { title: "Student Savings", desc: "Zero balance account for youth under 25", btn: "Open Account", badge: "Zero Balance" },
-        { title: "Education Loan", desc: "Special interest concessions for premier institutions", btn: "Calculate EMI", badge: "" },
-        { title: "Youth Debit Card", desc: "Exclusive rewards and contactless payments", btn: "Apply Now", badge: "" }
-      ],
-      testimonial: {
-        quote: '"My student account made managing pocket money and college expenses a breeze."',
-        author: "Aarav Mehta, College Student",
-        avatar: "images/avatar_aarav.png"
-      }
-    }
-  };
+    };
 
-  // Data for Banking Products & Services
-  const bankingData = {
-    everyday: [
-      { title: "Basic Savings Bank Deposit Account", badge: "Zero Fees", sub: "Zero balance, full banking", rateLabel: "Interest Rate", rateValue: "2.70%" },
-      { title: "SBI Salary Account", badge: "Bestseller", sub: "Made for working professionals", rateLabel: "Interest Rate", rateValue: "3.00%" },
-      { title: "SBI Senior Citizen Account", badge: "Popular", sub: "Exclusive benefits for seniors", rateLabel: "Interest Rate", rateValue: "3.50%" }
-    ],
-    loans: [
-      { title: "SBI Home Loan", badge: "Low EMIs", sub: "Simplifying home ownership", rateLabel: "Starting Interest Rate", rateValue: "8.40% p.a." },
-      { title: "SBI Car Loan", badge: "Zero Prepayment", sub: "Drive your dream car home today", rateLabel: "Starting Interest Rate", rateValue: "8.75% p.a." },
-      { title: "SBI Personal Gold Loan", badge: "Instant Approval", sub: "Liquidate gold assets easily", rateLabel: "Starting Interest Rate", rateValue: "9.20% p.a." }
-    ],
-    cards: [
-      { title: "SBI Card ELITE", badge: "Premium", sub: "Exclusive lifestyle & travel privileges", rateLabel: "Annual Fee", rateValue: "₹4,999" },
-      { title: "SimplySAVE SBI Card", badge: "Popular", sub: "Everyday savings on shopping & dining", rateLabel: "Annual Fee", rateValue: "₹499 (Waived off)" },
-      { title: "BPCL SBI Card Octane", badge: "Fuel Rewards", sub: "Highest fuel savings & privileges", rateLabel: "Annual Fee", rateValue: "₹1,499" }
-    ],
-    investments: [
-      { title: "SBI Fixed Deposit", badge: "Safe Returns", sub: "Guaranteed growth for your savings", rateLabel: "Max Interest Rate", rateValue: "7.10% p.a." },
-      { title: "SBI Mutual Funds (SIP)", badge: "Market Growth", sub: "Invest systematically in equity", rateLabel: "Average Returns", rateValue: "12%-15%*" },
-      { title: "Public Provident Fund (PPF)", badge: "Tax Free", sub: "Government-backed long term savings", rateLabel: "Current Interest Rate", rateValue: "7.10% (Tax-Free)" }
-    ],
-    insurance: [
-      { title: "SBI Life — eShield Next", badge: "Term Life", sub: "Comprehensive protection for family", rateLabel: "Sum Assured", rateValue: "Up to ₹1 Crore" },
-      { title: "SBI General Health Plus", badge: "Medical Cover", sub: "Cashless hospitalization & health care", rateLabel: "Max Coverage", rateValue: "Up to ₹10 Lakhs" },
-      { title: "SBI Life — Saral Pension", badge: "Retirement", sub: "Standard immediate annuity plan", rateLabel: "Guaranteed Payouts", rateValue: "Lifetime" }
-    ]
-  };
-
-  // Helper function to animate content changes
-  function updateContainerContent(container, updateCallback) {
-    container.classList.add('fade-out');
-    setTimeout(() => {
-      updateCallback();
-      container.classList.remove('fade-out');
-    }, 150);
-  }
-
-  // Set up Hero Tab switcher
-  const heroTabsContainer = document.getElementById('hero-tabs');
-  const heroPanelCard = document.getElementById('hero-panel-card');
-  if (heroTabsContainer && heroPanelCard) {
-    heroTabsContainer.querySelectorAll('[role="tab"]').forEach(tab => {
-      tab.addEventListener('click', () => {
-        // Toggle active tabs
-        heroTabsContainer.querySelectorAll('[role="tab"]').forEach(t => {
-          t.classList.remove('active');
-          t.removeAttribute('aria-selected');
-        });
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
-
-        const tabKey = tab.getAttribute('data-tab');
-        const data = heroData[tabKey];
-        if (data) {
-          updateContainerContent(heroPanelCard, () => {
-            document.getElementById('hero-panel-title').innerText = data.title;
-            document.getElementById('hero-panel-btn-primary').querySelector('.btn-text').innerText = data.btnPrimary;
-            document.getElementById('hero-panel-btn-outline').innerText = data.btnOutline;
-          });
+    // Data for Your Financial Journey
+    const journeyData = {
+      'first-job': {
+        products: [
+          { title: "Salary Account", desc: "Zero balance account with exclusive benefits", btn: "Open Account", badge: "Popular" },
+          { title: "Credit Card", desc: "Build your credit score with responsible spending", btn: "Apply Now", badge: "" },
+          { title: "Personal Loan", desc: "Quick funds for your personal goals", btn: "Check Eligibility", badge: "" }
+        ],
+        testimonial: {
+          quote: '"SBI helped me start my financial journey with confidence"',
+          author: "Priya Sharma, Software Engineer",
+          avatar: "images/avatar_priya.png"
         }
-      });
-    });
-  }
+      },
+      'family': {
+        products: [
+          { title: "Home Loan", desc: "Low interest rates and zero processing fees", btn: "Check Interest Rates", badge: "Low Rates" },
+          { title: "Education Loan", desc: "Financing for your children's dream education", btn: "Apply Now", badge: "" },
+          { title: "Life Insurance", desc: "Robust protection for your family's future", btn: "Get Quote", badge: "" }
+        ],
+        testimonial: {
+          quote: '"SBI Home Loans made buying our first family house incredibly easy and stress-free."',
+          author: "Rohan & Meera Sen, Homeowners",
+          avatar: "images/avatar_aarav.png"
+        }
+      },
+      'business': {
+        products: [
+          { title: "Current Account", desc: "Unlimited transactions with business overdraft", btn: "Open Account", badge: "Business" },
+          { title: "SME Mudra Loan", desc: "Collateral-free loans up to ₹10 Lakhs", btn: "Check Eligibility", badge: "Govt. Scheme" },
+          { title: "Corporate Cards", desc: "Simplify employee and company expense management", btn: "Apply Now", badge: "" }
+        ],
+        testimonial: {
+          quote: '"SBI’s Mudra Loan was the launchpad our startup needed to expand production."',
+          author: "Anand Patel, Startup Founder",
+          avatar: "images/avatar_aarav.png"
+        }
+      },
+      'retirement': {
+        products: [
+          { title: "Senior Citizen Savings", desc: "High interest rates with quarterly interest payouts", btn: "Invest Now", badge: "High Yield" },
+          { title: "Pension Account", desc: "Hassle-free direct pension credit and benefits", btn: "Open Account", badge: "" },
+          { title: "Tax-Saving FD", desc: "Secure returns with Section 80C tax benefits", btn: "Calculate Return", badge: "" }
+        ],
+        testimonial: {
+          quote: '"I enjoy a peaceful retirement knowing my savings are growing securely with SBI."',
+          author: "Col. Suresh Nair (Retd.)",
+          avatar: "images/avatar_suresh.png"
+        }
+      },
+      'next-gen': {
+        products: [
+          { title: "Student Savings", desc: "Zero balance account for youth under 25", btn: "Open Account", badge: "Zero Balance" },
+          { title: "Education Loan", desc: "Special interest concessions for premier institutions", btn: "Calculate EMI", badge: "" },
+          { title: "Youth Debit Card", desc: "Exclusive rewards and contactless payments", btn: "Apply Now", badge: "" }
+        ],
+        testimonial: {
+          quote: '"My student account made managing pocket money and college expenses a breeze."',
+          author: "Aarav Mehta, College Student",
+          avatar: "images/avatar_aarav.png"
+        }
+      }
+    };
 
-  // Set up Financial Journey Tab switcher
-  const journeyTabsContainer = document.getElementById('journey-tabs');
-  const journeyGrid = document.getElementById('journey-products-grid');
-  const journeyTestimonial = document.getElementById('journey-testimonial-card');
-  if (journeyTabsContainer && journeyGrid && journeyTestimonial) {
-    journeyTabsContainer.querySelectorAll('[role="tab"]').forEach(tab => {
-      tab.addEventListener('click', () => {
-        // Toggle active tabs
-        journeyTabsContainer.querySelectorAll('[role="tab"]').forEach(t => {
-          t.classList.remove('active');
-          t.removeAttribute('aria-selected');
-        });
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
+    // Data for Banking Products & Services
+    const bankingData = {
+      everyday: [
+        { title: "Basic Savings Bank Deposit Account", badge: "Zero Fees", sub: "Zero balance, full banking", rateLabel: "Interest Rate", rateValue: "2.70%" },
+        { title: "SBI Salary Account", badge: "Bestseller", sub: "Made for working professionals", rateLabel: "Interest Rate", rateValue: "3.00%" },
+        { title: "SBI Senior Citizen Account", badge: "Popular", sub: "Exclusive benefits for seniors", rateLabel: "Interest Rate", rateValue: "3.50%" }
+      ],
+      loans: [
+        { title: "SBI Home Loan", badge: "Low EMIs", sub: "Simplifying home ownership", rateLabel: "Starting Interest Rate", rateValue: "8.40% p.a." },
+        { title: "SBI Car Loan", badge: "Zero Prepayment", sub: "Drive your dream car home today", rateLabel: "Starting Interest Rate", rateValue: "8.75% p.a." },
+        { title: "SBI Personal Gold Loan", badge: "Instant Approval", sub: "Liquidate gold assets easily", rateLabel: "Starting Interest Rate", rateValue: "9.20% p.a." }
+      ],
+      cards: [
+        { title: "SBI Card ELITE", badge: "Premium", sub: "Exclusive lifestyle & travel privileges", rateLabel: "Annual Fee", rateValue: "₹4,999" },
+        { title: "SimplySAVE SBI Card", badge: "Popular", sub: "Everyday savings on shopping & dining", rateLabel: "Annual Fee", rateValue: "₹499 (Waived off)" },
+        { title: "BPCL SBI Card Octane", badge: "Fuel Rewards", sub: "Highest fuel savings & privileges", rateLabel: "Annual Fee", rateValue: "₹1,499" }
+      ],
+      investments: [
+        { title: "SBI Fixed Deposit", badge: "Safe Returns", sub: "Guaranteed growth for your savings", rateLabel: "Max Interest Rate", rateValue: "7.10% p.a." },
+        { title: "SBI Mutual Funds (SIP)", badge: "Market Growth", sub: "Invest systematically in equity", rateLabel: "Average Returns", rateValue: "12%-15%*" },
+        { title: "Public Provident Fund (PPF)", badge: "Tax Free", sub: "Government-backed long term savings", rateLabel: "Current Interest Rate", rateValue: "7.10% (Tax-Free)" }
+      ],
+      insurance: [
+        { title: "SBI Life — eShield Next", badge: "Term Life", sub: "Comprehensive protection for family", rateLabel: "Sum Assured", rateValue: "Up to ₹1 Crore" },
+        { title: "SBI General Health Plus", badge: "Medical Cover", sub: "Cashless hospitalization & health care", rateLabel: "Max Coverage", rateValue: "Up to ₹10 Lakhs" },
+        { title: "SBI Life — Saral Pension", badge: "Retirement", sub: "Standard immediate annuity plan", rateLabel: "Guaranteed Payouts", rateValue: "Lifetime" }
+      ]
+    };
 
-        const journeyKey = tab.getAttribute('data-journey');
-        const data = journeyData[journeyKey];
-        if (data) {
-          // Animate products grid
-          updateContainerContent(journeyGrid, () => {
-            const cards = journeyGrid.querySelectorAll('.product-card');
-            data.products.forEach((prod, index) => {
-              const card = cards[index];
-              if (card) {
-                card.querySelector('.product-card__title').innerText = prod.title;
-                card.querySelector('.product-card__desc').innerText = prod.desc;
-                card.querySelector('.product-card__btn .btn-text').innerText = prod.btn;
-                
-                const badge = card.querySelector('.card__badge');
-                if (prod.badge) {
-                  badge.innerText = prod.badge;
-                  badge.style.display = 'inline-flex';
-                } else {
-                  badge.style.display = 'none';
-                }
-              }
+    // Helper function to animate content changes
+    function updateContainerContent(container, updateCallback) {
+      container.classList.add('fade-out');
+      setTimeout(() => {
+        updateCallback();
+        container.classList.remove('fade-out');
+      }, 150);
+    }
+
+    // Set up Hero Tab switcher
+    const heroTabsContainer = document.getElementById('hero-tabs');
+    const heroPanelCard = document.getElementById('hero-panel-card');
+    if (heroTabsContainer && heroPanelCard) {
+      heroTabsContainer.querySelectorAll('[role="tab"]').forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Toggle active tabs
+          heroTabsContainer.querySelectorAll('[role="tab"]').forEach(t => {
+            t.classList.remove('active');
+            t.removeAttribute('aria-selected');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+
+          const tabKey = tab.getAttribute('data-tab');
+          const data = heroData[tabKey];
+          if (data) {
+            updateContainerContent(heroPanelCard, () => {
+              document.getElementById('hero-panel-title').innerText = data.title;
+              document.getElementById('hero-panel-btn-primary').querySelector('.btn-text').innerText = data.btnPrimary;
+              document.getElementById('hero-panel-btn-outline').innerText = data.btnOutline;
             });
-          });
-
-          // Animate testimonial
-          updateContainerContent(journeyTestimonial, () => {
-            document.getElementById('journey-testimonial-quote').innerText = data.testimonial.quote;
-            document.getElementById('journey-testimonial-author').innerText = data.testimonial.author;
-            document.getElementById('journey-testimonial-avatar').src = data.testimonial.avatar;
-          });
-        }
-      });
-    });
-  }
-
-  // Set up Banking Products Tab switcher
-  const bankingTabsContainer = document.getElementById('banking-tabs');
-  const bankingGrid = document.getElementById('banking-products-grid');
-  if (bankingTabsContainer && bankingGrid) {
-    bankingTabsContainer.querySelectorAll('[role="tab"]').forEach(tab => {
-      tab.addEventListener('click', () => {
-        // Toggle active tabs
-        bankingTabsContainer.querySelectorAll('[role="tab"]').forEach(t => {
-          t.classList.remove('active');
-          t.removeAttribute('aria-selected');
+          }
         });
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
-
-        const tabKey = tab.getAttribute('data-tab');
-        const data = bankingData[tabKey];
-        if (data) {
-          updateContainerContent(bankingGrid, () => {
-            const cards = bankingGrid.querySelectorAll('.banking-card');
-            data.forEach((item, index) => {
-              const card = cards[index];
-              if (card) {
-                card.querySelector('.banking-card__title').innerText = item.title;
-                card.querySelector('.banking-card__sub').innerText = item.sub;
-                card.querySelector('.banking-card__rate-label').innerText = item.rateLabel;
-                card.querySelector('.banking-card__rate-value').innerText = item.rateValue;
-                
-                const badge = card.querySelector('.card__badge');
-                if (item.badge) {
-                  badge.innerText = item.badge;
-                  badge.style.display = 'inline-flex';
-                } else {
-                  badge.style.display = 'none';
-                }
-              }
-            });
-          });
-        }
-      });
-    });
-  }
-
-  // Close promo banner announcement logic and nav class sync
-  const promoBar = document.getElementById('promo-bar');
-  const promoCloseBtn = document.getElementById('promo-bar-close');
-  if (promoBar && promoCloseBtn) {
-    // Check if dismissed previously
-    if (localStorage.getItem('promo-dismissed') === 'true') {
-      promoBar.style.display = 'none';
-    } else {
-      document.body.classList.add('has-promo');
-      promoCloseBtn.addEventListener('click', () => {
-        promoBar.style.height = '0';
-        promoBar.style.opacity = '0';
-        promoBar.style.padding = '0';
-        promoBar.dataset.dismissed = 'true';
-        document.body.classList.remove('has-promo');
-        localStorage.setItem('promo-dismissed', 'true');
-        setTimeout(() => {
-          promoBar.style.display = 'none';
-        }, 200);
       });
     }
-  }
 
-  // Floating Navbar scroll transition + hide promo bar on scroll
-  const navElement = document.querySelector('.nav');
-  const promoBarEl = document.getElementById('promo-bar');
-  if (navElement) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navElement.classList.add('scrolled');
-        // Hide promo bar on scroll
-        if (promoBarEl && !promoBarEl.dataset.dismissed) {
-          promoBarEl.style.height = '0';
-          promoBarEl.style.opacity = '0';
-          promoBarEl.style.padding = '0';
-          document.body.classList.remove('has-promo');
-        }
+    // Set up Financial Journey Tab switcher
+    const journeyTabsContainer = document.getElementById('journey-tabs');
+    const journeyGrid = document.getElementById('journey-products-grid');
+    const journeyTestimonial = document.getElementById('journey-testimonial-card');
+    if (journeyTabsContainer && journeyGrid && journeyTestimonial) {
+      journeyTabsContainer.querySelectorAll('[role="tab"]').forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Toggle active tabs
+          journeyTabsContainer.querySelectorAll('[role="tab"]').forEach(t => {
+            t.classList.remove('active');
+            t.removeAttribute('aria-selected');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+
+          const journeyKey = tab.getAttribute('data-journey');
+          const data = journeyData[journeyKey];
+          if (data) {
+            // Animate products grid
+            updateContainerContent(journeyGrid, () => {
+              const cards = journeyGrid.querySelectorAll('.product-card');
+              data.products.forEach((prod, index) => {
+                const card = cards[index];
+                if (card) {
+                  card.querySelector('.product-card__title').innerText = prod.title;
+                  card.querySelector('.product-card__desc').innerText = prod.desc;
+                  card.querySelector('.product-card__btn .btn-text').innerText = prod.btn;
+
+                  const badge = card.querySelector('.card__badge');
+                  if (prod.badge) {
+                    badge.innerText = prod.badge;
+                    badge.style.display = 'inline-flex';
+                  } else {
+                    badge.style.display = 'none';
+                  }
+                }
+              });
+            });
+
+            // Animate testimonial
+            updateContainerContent(journeyTestimonial, () => {
+              document.getElementById('journey-testimonial-quote').innerText = data.testimonial.quote;
+              document.getElementById('journey-testimonial-author').innerText = data.testimonial.author;
+              document.getElementById('journey-testimonial-avatar').src = data.testimonial.avatar;
+            });
+          }
+        });
+      });
+    }
+
+    // Set up Banking Products Tab switcher
+    const bankingTabsContainer = document.getElementById('banking-tabs');
+    const bankingGrid = document.getElementById('banking-products-grid');
+    if (bankingTabsContainer && bankingGrid) {
+      bankingTabsContainer.querySelectorAll('[role="tab"]').forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Toggle active tabs
+          bankingTabsContainer.querySelectorAll('[role="tab"]').forEach(t => {
+            t.classList.remove('active');
+            t.removeAttribute('aria-selected');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+
+          const tabKey = tab.getAttribute('data-tab');
+          const data = bankingData[tabKey];
+          if (data) {
+            updateContainerContent(bankingGrid, () => {
+              const cards = bankingGrid.querySelectorAll('.banking-card');
+              data.forEach((item, index) => {
+                const card = cards[index];
+                if (card) {
+                  card.querySelector('.banking-card__title').innerText = item.title;
+                  card.querySelector('.banking-card__sub').innerText = item.sub;
+                  card.querySelector('.banking-card__rate-label').innerText = item.rateLabel;
+                  card.querySelector('.banking-card__rate-value').innerText = item.rateValue;
+
+                  const badge = card.querySelector('.card__badge');
+                  if (item.badge) {
+                    badge.innerText = item.badge;
+                    badge.style.display = 'inline-flex';
+                  } else {
+                    badge.style.display = 'none';
+                  }
+                }
+              });
+            });
+          }
+        });
+      });
+    }
+
+    // Close promo banner announcement logic and nav class sync
+    const promoBar = document.getElementById('promo-bar');
+    const promoCloseBtn = document.getElementById('promo-bar-close');
+    if (promoBar && promoCloseBtn) {
+      // Check if dismissed previously
+      if (localStorage.getItem('promo-dismissed') === 'true') {
+        promoBar.style.display = 'none';
       } else {
-        navElement.classList.remove('scrolled');
-        // Show promo bar when back at top (unless manually dismissed)
-        if (promoBarEl && !promoBarEl.dataset.dismissed && localStorage.getItem('promo-dismissed') !== 'true') {
-          promoBarEl.style.height = '';
-          promoBarEl.style.opacity = '';
-          promoBarEl.style.padding = '';
-          document.body.classList.add('has-promo');
-        }
+        document.body.classList.add('has-promo');
+        promoCloseBtn.addEventListener('click', () => {
+          promoBar.style.height = '0';
+          promoBar.style.opacity = '0';
+          promoBar.style.padding = '0';
+          promoBar.dataset.dismissed = 'true';
+          document.body.classList.remove('has-promo');
+          localStorage.setItem('promo-dismissed', 'true');
+          setTimeout(() => {
+            promoBar.style.display = 'none';
+          }, 200);
+        });
       }
-    });
-  }
-
-  // Promo Carousel Autoplay and Indicators
-  const track = document.getElementById('promo-carousel-track');
-  const nav = document.getElementById('promo-carousel-nav');
-  if (track && nav) {
-    const slides = Array.from(track.children);
-    const indicators = Array.from(nav.children);
-    let currentIndex = 0;
-    let autoplayTimer;
-
-    function showSlide(index) {
-      slides[currentIndex].classList.remove('active');
-      indicators[currentIndex].classList.remove('active');
-      
-      currentIndex = index;
-      slides[currentIndex].classList.add('active');
-      indicators[currentIndex].classList.add('active');
     }
 
-    function nextSlide() {
-      const nextIndex = (currentIndex + 1) % slides.length;
-      showSlide(nextIndex);
+    // Floating Navbar scroll transition + hide promo bar on scroll
+    const navElement = document.querySelector('.nav');
+    const promoBarEl = document.getElementById('promo-bar');
+    if (navElement) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navElement.classList.add('scrolled');
+          // Hide promo bar on scroll
+          if (promoBarEl && !promoBarEl.dataset.dismissed) {
+            promoBarEl.style.height = '0';
+            promoBarEl.style.opacity = '0';
+            promoBarEl.style.padding = '0';
+            document.body.classList.remove('has-promo');
+          }
+        } else {
+          navElement.classList.remove('scrolled');
+          // Show promo bar when back at top (unless manually dismissed)
+          if (promoBarEl && !promoBarEl.dataset.dismissed && localStorage.getItem('promo-dismissed') !== 'true') {
+            promoBarEl.style.height = '';
+            promoBarEl.style.opacity = '';
+            promoBarEl.style.padding = '';
+            document.body.classList.add('has-promo');
+          }
+        }
+      });
     }
 
-    indicators.forEach((indicator, index) => {
-      indicator.addEventListener('click', () => {
-        clearInterval(autoplayTimer);
-        showSlide(index);
-        startAutoplay();
-      });
-    });
+    // Promo Carousel Autoplay and Indicators
+    const track = document.getElementById('promo-carousel-track');
+    const nav = document.getElementById('promo-carousel-nav');
+    if (track && nav) {
+      const slides = Array.from(track.children);
+      const indicators = Array.from(nav.children);
+      let currentIndex = 0;
+      let autoplayTimer;
 
-    function startAutoplay() {
-      autoplayTimer = setInterval(nextSlide, 5000);
+      function showSlide(index) {
+        slides[currentIndex].classList.remove('active');
+        indicators[currentIndex].classList.remove('active');
+
+        currentIndex = index;
+        slides[currentIndex].classList.add('active');
+        indicators[currentIndex].classList.add('active');
+      }
+
+      function nextSlide() {
+        const nextIndex = (currentIndex + 1) % slides.length;
+        showSlide(nextIndex);
+      }
+
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+          clearInterval(autoplayTimer);
+          showSlide(index);
+          startAutoplay();
+        });
+      });
+
+      function startAutoplay() {
+        autoplayTimer = setInterval(nextSlide, 5000);
+      }
+
+      startAutoplay();
     }
 
-    startAutoplay();
-  }
-
-  // Cards Deck toggle logic
-  const btnPhysical = document.getElementById('btn-physical');
-  const btnVirtual = document.getElementById('btn-virtual');
-  const cardsDeck = document.getElementById('cards-deck');
-  if (btnPhysical && btnVirtual && cardsDeck) {
-    btnPhysical.addEventListener('click', () => {
-      btnPhysical.classList.add('active');
-      btnVirtual.classList.remove('active');
-      cardsDeck.querySelectorAll('.deck-card').forEach(card => {
-        card.classList.remove('virtual');
-        card.querySelector('img').style.opacity = '1';
+    // Cards Deck toggle logic
+    const btnPhysical = document.getElementById('btn-physical');
+    const btnVirtual = document.getElementById('btn-virtual');
+    const cardsDeck = document.getElementById('cards-deck');
+    if (btnPhysical && btnVirtual && cardsDeck) {
+      btnPhysical.addEventListener('click', () => {
+        btnPhysical.classList.add('active');
+        btnVirtual.classList.remove('active');
+        cardsDeck.querySelectorAll('.deck-card').forEach(card => {
+          card.classList.remove('virtual');
+          card.querySelector('img').style.opacity = '1';
+        });
       });
-    });
-    btnVirtual.addEventListener('click', () => {
-      btnVirtual.classList.add('active');
-      btnPhysical.classList.remove('active');
-      cardsDeck.querySelectorAll('.deck-card').forEach(card => {
-        card.classList.add('virtual');
-        card.querySelector('img').style.opacity = '0.15';
+      btnVirtual.addEventListener('click', () => {
+        btnVirtual.classList.add('active');
+        btnPhysical.classList.remove('active');
+        cardsDeck.querySelectorAll('.deck-card').forEach(card => {
+          card.classList.add('virtual');
+          card.querySelector('img').style.opacity = '0.15';
+        });
       });
-    });
-  }
-</script>
+    }
+  </script>
 
 </body>
+
 </html>
