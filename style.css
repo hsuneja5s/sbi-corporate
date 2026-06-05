@@ -1852,15 +1852,15 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   background: #f0f0f0;
 }
 
-/* Card image — centered horizontally at bottom of column */
+/* Card image — left-aligned at bottom of column */
 .card-image-wrapper {
   position: absolute;
   bottom: 32px;
-  left: 50%;
+  left: 56px;
   width: 440px;
   max-width: 90%;
-  transform: translateX(-50%) scale(0.65) translateY(20px);
-  transform-origin: bottom center;
+  transform: scale(0.65) translateY(20px);
+  transform-origin: bottom left;
   opacity: 0.8;
   z-index: 2;
   transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
@@ -1868,7 +1868,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 
 .cards-column.dominant .card-image-wrapper {
-  transform: translateX(-50%) scale(1) translateY(0);
+  transform: scale(1) translateY(0);
   opacity: 1;
 }
 
