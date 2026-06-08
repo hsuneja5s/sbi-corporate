@@ -65,17 +65,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   height: 68px;
   box-sizing: border-box;
 
-  /* Glassmorphism pill */
-  background: linear-gradient(
-    93.43deg,
-    rgba(255, 255, 255, 0.18) 0%,
-    rgba(255, 255, 255, 0.36) 100%
-  );
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  /* Solid white navbar */
+  background: #ffffff;
+  border: 1px solid rgba(0, 33, 71, 0.1);
   border-radius: 100px;
-  box-shadow: 0px 8px 32px 0px rgba(0, 33, 71, 0.06);
+  box-shadow: 0px 8px 32px 0px rgba(0, 33, 71, 0.08);
 
   /* Layout */
   display: flex;
@@ -87,9 +81,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* Scrolled state transitions to a light glassmorphism to look readable over scrolled white sections */
 .nav.scrolled {
   top: 12px;
-  background: rgba(255, 255, 255, 0.9);
+  background: #ffffff;
   border: 1px solid rgba(0, 33, 71, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 33, 71, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 33, 71, 0.15);
 }
 
 /* Hide on scroll down, show on scroll up */
@@ -136,14 +130,15 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--color-navy);
   white-space: nowrap;
   transition: all 0.25s ease;
   cursor: pointer;
 }
 
 .nav__link:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(0, 33, 71, 0.06);
+  color: var(--color-blue);
 }
 
 .nav.scrolled .nav__link {
@@ -290,19 +285,17 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* Floating badges — scattered across the middle of the people image */
 .floating-badge {
   position: absolute;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: #ffffff;
+  border: 1px solid rgba(0, 33, 71, 0.1);
   border-radius: 50px;
   padding: 8px 16px;
   display: flex;
   align-items: center;
   gap: 8px;
-  color: white;
+  color: var(--color-navy);
   font-weight: 600;
   font-size: 13.5px;
-  box-shadow: 0 8px 32px rgba(0, 33, 71, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 33, 71, 0.1);
   z-index: 10;
   white-space: nowrap;
 }
@@ -393,12 +386,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 .tab-list {
   display: flex;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: var(--color-bg-alt);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 1000px;
   padding: 4px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
 .tab-list__item {
@@ -407,7 +398,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   border-radius: 1000px;
   font-size: 14px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-muted);
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -415,33 +406,30 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 
 .tab-list__item:hover {
-  color: white;
-  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-navy);
 }
 
 .tab-list__item.active {
   background: white;
   color: var(--color-navy);
-  box-shadow: 0 4px 12px rgba(0, 33, 71, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 33, 71, 0.08);
 }
 
 .tab-panel-card {
   margin-top: 20px;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #ffffff;
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 28px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  box-shadow: 0 12px 40px rgba(0, 33, 71, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 33, 71, 0.1);
 }
 
 .tab-panel-card__title {
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--color-text);
   line-height: 1.5;
   text-align: left;
 }
